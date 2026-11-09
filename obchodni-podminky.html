@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Obchodní podmínky | Pa&#x27;lante!</title>
+<meta name="description" content="Obchodní podmínky prodeje digitálních produktů Pa&#x27;lante!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>:root{
+  --paper:#F1E8D8; --paper-2:#E8DCC6; --card:#FBF8F1; --ink:#2B2116; --muted:#6B5B45; --rule:rgba(90,65,30,.13);
+  --red:#B23A22; --blue:#2340C8; --green:#2F6B3A; --tape:rgba(236,196,92,.78); --on-dark:#FBF8F1;
+  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65}
+body::after{content:"";position:fixed;inset:0;background-image:var(--grain);opacity:.14;pointer-events:none;z-index:50;mix-blend-mode:multiply}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.narrow{max-width:720px}
+h1,h2,h3{font-family:var(--display);line-height:1.06;text-wrap:balance;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(34px,5.4vw,58px);font-weight:800}
+h2{font-size:26px;font-weight:800;margin-top:42px}
+a{color:var(--blue)}
+.hand{font-family:var(--hand);font-weight:700;color:var(--red);font-size:28px;line-height:1.1;display:inline-block;transform:rotate(-2deg)}
+.ruled{background-color:var(--paper);background-image:repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:600;background:var(--ink);color:var(--paper);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+header.top{background:var(--ink);color:var(--paper);padding-block:16px}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.03em;color:var(--paper);text-decoration:none}
+.logo span{color:#FFC860}
+header.top nav{display:flex;gap:20px;flex-wrap:wrap}
+header.top nav a{color:var(--paper);opacity:.85;text-decoration:none;font-weight:500;font-size:15px}
+header.top nav a:hover,header.top nav a[aria-current]{opacity:1;text-decoration:underline}
+main{padding-block:56px 80px}
+.lead{color:var(--muted);font-size:19px;margin-top:16px;max-width:60ch}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.meta .rub{color:var(--c,var(--red))}
+/* list */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:26px;margin-top:44px}
+.card{position:relative;background:var(--card);box-shadow:0 10px 22px rgba(60,40,10,.16);border-top:6px solid var(--c);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-3px) rotate(-.4deg)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;filter:sepia(.18) saturate(.88)}
+.card .in{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px}
+.card .meta{margin:0;font-size:12px}
+.card h2{font-size:22px;margin:0}
+.card p{font-size:15px;line-height:1.5;margin:0;color:var(--muted)}
+/* article */
+article .pol{background:var(--card);padding:12px 12px 44px;box-shadow:0 14px 30px rgba(60,40,10,.22);margin:34px 0 8px;position:relative;transform:rotate(-1deg)}
+article .pol img{width:100%;max-height:440px;object-fit:cover;display:block;filter:sepia(.18) saturate(.88)}
+article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-family:var(--hand);font-size:24px}
+.tape::before{content:"";position:absolute;top:-13px;left:50%;width:92px;height:26px;margin-left:-46px;background:var(--tape);transform:rotate(-4deg);z-index:2}
+.body p,.body ul{margin:18px 0 0}
+.body li{margin-top:6px}
+.dlg{background:var(--card);padding:22px 22px 18px;margin-top:20px;box-shadow:0 8px 18px rgba(60,40,10,.12);border-left:6px solid var(--c)}
+.dlg p{margin:0 0 8px;font-family:var(--hand);font-size:25px;line-height:1.15;color:var(--blue)}
+.dlg p b{font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.dlg .cz{font-family:var(--body);font-size:15px;color:var(--muted);margin-top:12px;line-height:1.5}
+.words{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.words li{background:var(--card);padding:12px 14px;border-bottom:2px dashed color-mix(in srgb,var(--ink) 22%,transparent)}
+.words b{display:block;font-family:var(--display);font-size:20px}
+.words span{font-size:15px;color:var(--muted)}
+.src{font-size:14px;color:var(--muted);margin-top:40px;padding-top:16px;border-top:1px solid var(--rule)}
+.src ul{padding-left:18px;margin:8px 0 0}
+.cta{margin-top:44px;background:var(--ink);color:var(--paper);padding:28px 24px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta p{margin:0;max-width:44ch}
+.cta .btn{background:var(--paper);color:var(--ink)}
+.back{display:inline-block;margin-top:28px}
+footer{padding-block:36px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .hand{font-size:24px}
+@media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="logo" href="index.html">pa<span>'</span>lante<span>!</span></a>
+  <nav><a href="index.html#metoda">Metoda</a><a href="blog/index.html">Španělsko zblízka</a><a href="index.html#cenik">Ceník</a><a href="index.html#zdarma">Kurz zdarma</a></nav>
+</div></header>
+<main class="ruled"><div class="wrap narrow"><article class="body"><h1>Obchodní podmínky</h1>
+<p class="lead">Platné od 9. 11. 2026. Píšeme je co nejsrozumitelněji. Kdyby ti něco nebylo jasné, napiš na <a href="mailto:info@palante.cz">info@palante.cz</a>.</p>
+<h2>1. Kdo prodává</h2><p><b>Petr Pelisek</b>, fyzická osoba podnikající podle živnostenského zákona, zapsaná v živnostenském rejstříku<br>IČO: 17478910<br>Sídlo: Lažánky 230, 678 01 Blansko<br>Nejsem plátce DPH.<br>E-mail: <a href="mailto:info@palante.cz">info@palante.cz</a></p>
+<h2>2. Co prodáváme</h2><p>Prodáváme digitální obsah pro výuku španělštiny: e-booky (PDF s nahrávkami), audiokurzy a členství s přístupem k lekcím. Obsah, cena a délka přístupu jsou vždy uvedené u nabídky a v objednávce. Členství se samo neobnovuje.</p>
+<h2>3. Objednávka a uzavření smlouvy</h2><p>Smlouva vzniká odesláním objednávky a zaplacením ceny. Potvrzení objednávky ti pošleme e-mailem. Smlouvu uzavíráme v češtině a potvrzení si můžeš uložit.</p>
+<h2>4. Cena a platba</h2><p>Ceny jsou konečné. Nejsem plátce DPH, takže DPH neúčtuji. Platí se online kartou nebo jiným způsobem, který platební brána nabídne. Údaje o kartě zpracovává platební brána, my je nevidíme. Ke každé platbě dostaneš fakturu e-mailem.</p>
+<h2>5. Dodání</h2><p>Po zaplacení dostaneš e-mailem odkaz ke stažení nebo přístup do lekcí, obvykle během několika minut. Kdyby nic nepřišlo do 24 hodin, podívej se do spamu a napiš nám.</p>
+<h2>6. Záruka vrácení peněz</h2><p>Když ti produkt nebude vyhovovat, stačí do 14 dnů od nákupu odpovědět na e-mail s potvrzením objednávky. Vrátíme ti celou částku, bez udání důvodu, nejpozději do 14 dnů stejnou cestou, jakou jsi platil(a).</p>
+<p>Pro úplnost: podle zákona (§ 1837 písm. l) občanského zákoníku) by spotřebitel u digitálního obsahu mohl ztratit právo odstoupit od smlouvy, jakmile se s dodáním začne. Naše záruka ti ale vrácení peněz do 14 dnů dává i tak.</p>
+<h2>7. Vady a reklamace</h2><p>Kdyby obsah nefungoval nebo neodpovídal popisu (třeba nejde stáhnout nebo chybí nahrávka), napiš nám, co se děje. Vadu opravíme, nebo ti vrátíme peníze. Reklamaci vyřídíme nejpozději do 30 dnů. Tvá zákonná práva z vadného plnění tím nejsou nijak omezena.</p>
+<h2>8. Autorská práva</h2><p>Obsah je určený pro tvoji osobní potřebu. Prosíme, nepřeposílej ho a nezveřejňuj dál.</p>
+<h2>9. Spory</h2><p>Stížnost řešíme nejdřív spolu e-mailem. Spotřebitel může využít také mimosoudní řešení sporu u České obchodní inspekce (<a href="https://www.coi.cz" target="_blank" rel="noopener">www.coi.cz</a>). Dozor nad dodržováním předpisů vykonává Česká obchodní inspekce a živnostenský úřad.</p>
+<h2>10. Závěr</h2><p>Vztahy neupravené těmito podmínkami se řídí českým právem, hlavně občanským zákoníkem a zákonem o ochraně spotřebitele. Podmínky můžeme změnit. Pro tvou objednávku platí znění platné v den nákupu.</p>
+</article></div></main>
+<footer class="ruled"><div class="wrap">
+  <span>Pa'lante! · Lucía, Paco, Rafa a Honza jsou AI postavy, španělština je skutečná<br><a href="./kontakt.html" style="color:inherit">Kontakt</a> · <a href="./obchodni-podminky.html" style="color:inherit">Obchodní podmínky</a> · <a href="./ochrana-osobnich-udaju.html" style="color:inherit">Ochrana osobních údajů</a></span>
+  <span class="hand">Hecho con cariño en Chequia</span>
+</div></footer>
+</body>
+</html>
