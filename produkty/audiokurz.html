@@ -8,9 +8,17 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Audiokurz Španělština v autě | Pa'lante!</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<meta name="description" content="Audiokurz Španělština v autě: 20 lekcí, 4 hodiny 19 minut, úroveň A1 až A2, příběh z Málagy. Lekce 1 zdarma.">
+<link rel="canonical" href="https://palante.cz/produkty/audiokurz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pa&#x27;lante! španělština">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Audiokurz Španělština v autě | Pa&#x27;lante!">
+<meta property="og:description" content="Audiokurz Španělština v autě: 20 lekcí, 4 hodiny 19 minut, úroveň A1 až A2, příběh z Málagy. Lekce 1 zdarma.">
+<meta property="og:url" content="https://palante.cz/produkty/audiokurz.html">
+<meta property="og:image" content="https://palante.cz/media/sdileni.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/media/fonty/fonty.css">
 <style>
 /* Layout: a living photo of a Málaga street opens the page, then a travel journal: ruled paper, taped polaroids, handwritten notes, a postcard sign-up */
 :root{
@@ -66,7 +74,11 @@ header.site nav{display:flex;gap:22px;flex-wrap:wrap}
 header.site nav a{color:rgba(255,255,255,.88);text-decoration:none;font-weight:500;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 header.site nav a:hover{color:#fff}
 header.site .btn{background:#FBF8F1;color:#2B2116}
-@media (max-width:760px){header.site nav{display:none}}
+header.site .menu{display:none;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;width:46px;height:46px;padding:0;cursor:pointer;place-items:center}
+header.site .menu svg{width:22px;height:22px}
+@media (max-width:760px){header.site .menu{display:grid}header.site .wrap{flex-wrap:wrap;gap:10px}header.site .logo{margin-right:auto}header.site .btn{padding:11px 16px;font-size:15px}
+header.site nav{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;background:#2B2116;border-radius:14px;padding:8px 0;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+header.site.open nav{display:flex}header.site nav a{padding:12px 20px;font-size:18px;text-shadow:none}}
 
 /* hero: living photo */
 .live{position:relative;height:clamp(560px,88vh,820px);overflow:hidden;background:#1a130c;padding:0;color:#fff}
@@ -78,7 +90,7 @@ header.site .btn{background:#FBF8F1;color:#2B2116}
 @keyframes hz{to{opacity:.45;transform:scale(1.08)}}
 .live .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,12,4,.78) 0%,rgba(20,12,4,.35) 42%,transparent 65%),linear-gradient(180deg,rgba(20,12,4,.45),transparent 22%)}
 .live .copy{position:absolute;left:0;right:0;bottom:calc(56px + env(safe-area-inset-bottom,0px));z-index:5}
-.live .hand{color:#FFC860;font-size:30px}
+.live .hand{color:#FFC860;font-size:30px;text-shadow:0 1px 3px rgba(0,0,0,.8),0 0 14px rgba(0,0,0,.55)}
 .live h1{font-size:clamp(44px,7vw,92px);font-weight:800;max-width:14ch;margin-top:6px;text-shadow:0 4px 30px rgba(0,0,0,.45)}
 .live .lead{color:rgba(255,255,255,.9);font-size:19px;max-width:46ch}
 .live .btn{background:#FBF8F1;color:#2B2116}
@@ -101,6 +113,7 @@ header.site .btn{background:#FBF8F1;color:#2B2116}
 @media (max-width:560px){.scene-pols .note{display:none}.scene-pols .pol{width:150px}.scene-pols .b{left:130px}}
 .chatcard{position:relative;background:var(--card);border-radius:6px;padding:20px;box-shadow:0 18px 40px rgba(60,40,10,.2);transform:rotate(1deg)}
 .chat{display:flex;flex-direction:column;gap:12px;min-height:420px}
+@media (max-width:760px){.chat{min-height:300px}}
 .chat-head{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px dashed var(--rule)}
 .avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
 .chat-head b{display:block;font-size:16px}
@@ -303,6 +316,10 @@ footer .hand{font-size:24px}
 .dalsi{margin-top:44px}.dalsi h2{font-size:26px}.dalsi ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:10px}
 .dalsi a{display:inline-block;background:var(--card);padding:10px 16px;border-radius:999px;color:var(--ink);text-decoration:none;font-weight:600;box-shadow:0 4px 12px rgba(60,40,10,.1)}
 .dalsi a:hover{transform:translateY(-1px)}
+.pfoto{margin:0;background:var(--card);padding:10px 10px 36px;box-shadow:0 10px 22px rgba(60,40,10,.18);transform:rotate(1.5deg);position:relative;max-width:300px}
+.pfoto img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.pfoto figcaption{font-family:var(--hand);font-size:20px;position:absolute;left:12px;bottom:6px}
+.prod .ph1{font-family:var(--display);font-size:clamp(28px,4vw,36px);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin:0}
 </style>
 </head>
 <body>
@@ -314,7 +331,7 @@ footer .hand{font-size:24px}
   <a class="back" href="../index.html#cenik">← Zpět na ceník</a>
   <article class="prod" id="audiokurz">
           <div>
-            <h3>Audiokurz Španělština v autě</h3>
+            <h1 class="ph1">Audiokurz Španělština v autě</h1>
             <p class="tag">490 Kč <small>· jednorázově</small></p>
             <p>Pro tebe, jestli chceš víc než fráze na dovolenou a nejvíc času máš za volantem.</p>
             <h4>Co v tom je</h4>
@@ -323,6 +340,7 @@ footer .hand{font-size:24px}
             <p>Naučíš se skládat vlastní věty, ne jen opakovat naučené. Audio do auta jsou jen fráze z e-booku, audiokurz je celý kurz s novou látkou.</p>
           </div>
           <div class="ukazka">
+            <figure class="pfoto"><img src="../media/honza-paco.jpg" alt="Honza nakupuje u Paca na tržnici" loading="lazy"><figcaption>Lekce 2: Nejlepší rajčata na světě</figcaption></figure>
             <h4>Ukázka zdarma: celá lekce 1</h4>
             <p class="pozn">„Jedno kafe, prosím“, 14 minut. Zkus ji v autě a mluv nahlas.</p>
             <audio controls preload="none" src="../media/audiokurz-ukazka-01.mp3"></audio>

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /objednavka.html
+
+Sitemap: https://palante.cz/sitemap.xml

@@ -8,10 +8,18 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <title>Pa'lante! Španělština</title>
+<meta name="description" content="Online škola španělštiny pro Čechy a Slováky. Krátké lekce z Málagy, gramatika vysvětlená česky, e-book, audiokurz do auta a 7 lekcí zdarma.">
+<link rel="canonical" href="https://palante.cz/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pa&#x27;lante! španělština">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Pa&#x27;lante! Španělština">
+<meta property="og:description" content="Online škola španělštiny pro Čechy a Slováky. Krátké lekce z Málagy, gramatika vysvětlená česky, e-book, audiokurz do auta a 7 lekcí zdarma.">
+<meta property="og:url" content="https://palante.cz/">
+<meta property="og:image" content="https://palante.cz/media/sdileni.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/media/fonty/fonty.css">
 <style>
 /* Layout: a living photo of a Málaga street opens the page, then a travel journal: ruled paper, taped polaroids, handwritten notes, a postcard sign-up */
 :root{
@@ -67,7 +75,11 @@ header.site nav{display:flex;gap:22px;flex-wrap:wrap}
 header.site nav a{color:rgba(255,255,255,.88);text-decoration:none;font-weight:500;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 header.site nav a:hover{color:#fff}
 header.site .btn{background:#FBF8F1;color:#2B2116}
-@media (max-width:760px){header.site nav{display:none}}
+header.site .menu{display:none;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;width:46px;height:46px;padding:0;cursor:pointer;place-items:center}
+header.site .menu svg{width:22px;height:22px}
+@media (max-width:760px){header.site .menu{display:grid}header.site .wrap{flex-wrap:wrap;gap:10px}header.site .logo{margin-right:auto}header.site .btn{padding:11px 16px;font-size:15px}
+header.site nav{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;background:#2B2116;border-radius:14px;padding:8px 0;box-shadow:0 14px 30px rgba(0,0,0,.35)}
+header.site.open nav{display:flex}header.site nav a{padding:12px 20px;font-size:18px;text-shadow:none}}
 
 /* hero: living photo */
 .live{position:relative;height:clamp(560px,88vh,820px);overflow:hidden;background:#1a130c;padding:0;color:#fff}
@@ -79,7 +91,7 @@ header.site .btn{background:#FBF8F1;color:#2B2116}
 @keyframes hz{to{opacity:.45;transform:scale(1.08)}}
 .live .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(20,12,4,.78) 0%,rgba(20,12,4,.35) 42%,transparent 65%),linear-gradient(180deg,rgba(20,12,4,.45),transparent 22%)}
 .live .copy{position:absolute;left:0;right:0;bottom:calc(56px + env(safe-area-inset-bottom,0px));z-index:5}
-.live .hand{color:#FFC860;font-size:30px}
+.live .hand{color:#FFC860;font-size:30px;text-shadow:0 1px 3px rgba(0,0,0,.8),0 0 14px rgba(0,0,0,.55)}
 .live h1{font-size:clamp(44px,7vw,92px);font-weight:800;max-width:14ch;margin-top:6px;text-shadow:0 4px 30px rgba(0,0,0,.45)}
 .live .lead{color:rgba(255,255,255,.9);font-size:19px;max-width:46ch}
 .live .btn{background:#FBF8F1;color:#2B2116}
@@ -102,6 +114,7 @@ header.site .btn{background:#FBF8F1;color:#2B2116}
 @media (max-width:560px){.scene-pols .note{display:none}.scene-pols .pol{width:150px}.scene-pols .b{left:130px}}
 .chatcard{position:relative;background:var(--card);border-radius:6px;padding:20px;box-shadow:0 18px 40px rgba(60,40,10,.2);transform:rotate(1deg)}
 .chat{display:flex;flex-direction:column;gap:12px;min-height:420px}
+@media (max-width:760px){.chat{min-height:300px}}
 .chat-head{display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px dashed var(--rule)}
 .avatar{width:46px;height:46px;border-radius:50%;object-fit:cover;flex:none}
 .chat-head b{display:block;font-size:16px}
@@ -301,8 +314,9 @@ footer .hand{font-size:24px}
 <header class="site">
   <div class="wrap">
     <a class="logo" href="#top">pa<span>'</span>lante<span>!</span></a>
-    <nav><a href="#scena">Ukázka lekce</a><a href="#metoda">Metoda</a><a href="#chyby">Chyby Čechů</a><a href="#spanelsko">Španělsko</a><a href="blog/index.html">Články</a><a href="#test">Test úrovně</a><a href="#cenik">Ceník</a></nav>
+    <nav id="hlavni-menu"><a href="#scena">Ukázka lekce</a><a href="#metoda">Metoda</a><a href="#chyby">Chyby Čechů</a><a href="#spanelsko">Španělsko</a><a href="blog/index.html">Články</a><a href="#test">Test úrovně</a><a href="#cenik">Ceník</a><a href="kontakt.html">Kontakt</a></nav>
     <a class="btn" href="#zdarma">Kurz zdarma</a>
+    <button class="menu" type="button" aria-expanded="false" aria-controls="hlavni-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   </div>
 </header>
 
@@ -326,7 +340,7 @@ footer .hand{font-size:24px}
         <h2>Každá lekce je jeden den v Málaze</h2>
         <p class="lead">Takhle vypadá lekce: krátká scéna, ve které mluvíš ty. Vyber odpověď a uvidíš, co na to Lucía. Klidně zkus i tu špatnou.</p>
         <div class="scene-pols" id="pols">
-          <figure class="pol tape a" data-d="10"><div class="ph"><video src="media/bravas.mp4" poster="media/bravas-poster.jpg" autoplay muted loop playsinline aria-label="Caña a patatas bravas na pultu v tržnici"></video></div><figcaption>Caña y bravas, 3 €</figcaption></figure>
+          <figure class="pol tape a" data-d="10"><div class="ph"><video data-lazy preload="none" src="media/bravas.mp4" poster="media/bravas-poster.jpg" muted loop playsinline aria-label="Caña a patatas bravas na pultu v tržnici"></video></div><figcaption>Caña y bravas, 3 €</figcaption></figure>
           <figure class="pol tape b" data-d="18"><div class="ph"><img src="media/lucia-paco.jpg" alt="Lucía podává kávu zelináři Pacovi, on jí dává síťku citronů" style="object-position:50% 45%"></div><figcaption>Lucía a Paco, 8:15</figcaption></figure>
           <span class="note">Úrovně A1 až B1 podle evropského rámce</span>
         </div>
@@ -383,9 +397,9 @@ footer .hand{font-size:24px}
       <h2>Každý den jedno krátké video</h2>
       <p class="lead">Takhle vypadají naše videa na sociálních sítích. Klepni na video a pusť si zvuk. Lucía, Paco, Rafa a Honza jsou AI postavy s AI hlasy, španělštinu předem kontrolujeme.</p>
       <div class="reels">
-        <div class="reel"><div class="phone"><div class="screen snd"><video class="clip" src="media/reel-embarazada.mp4" poster="media/reel-embarazada-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Lucía vysvětluje, proč Češi omylem říkají, že jsou těhotní"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Pondělí: chyba Čechů</span></div>
-        <div class="reel"><div class="phone"><div class="screen snd"><video class="clip" src="media/reel-que-guay.mp4" poster="media/reel-que-guay-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Lucía na tržnici vysvětluje frázi ¡Qué guay!"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Úterý: Lucía a fráze dne</span></div>
-        <div class="reel"><div class="phone"><div class="screen snd"><video class="clip" src="media/reel-naranjos.mp4" poster="media/reel-naranjos-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Honza si u Paca omylem řekne o pomerančovníky"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Středa: Honza v Málaze</span></div>
+        <div class="reel"><div class="phone"><div class="screen snd"><video data-lazy preload="none" class="clip" src="media/reel-embarazada.mp4" poster="media/reel-embarazada-poster.jpg" muted loop playsinline aria-label="Lucía vysvětluje, proč Češi omylem říkají, že jsou těhotní"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Pondělí: chyba Čechů</span></div>
+        <div class="reel"><div class="phone"><div class="screen snd"><video data-lazy preload="none" class="clip" src="media/reel-que-guay.mp4" poster="media/reel-que-guay-poster.jpg" muted loop playsinline aria-label="Lucía na tržnici vysvětluje frázi ¡Qué guay!"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Úterý: Lucía a fráze dne</span></div>
+        <div class="reel"><div class="phone"><div class="screen snd"><video data-lazy preload="none" class="clip" src="media/reel-naranjos.mp4" poster="media/reel-naranjos-poster.jpg" muted loop playsinline aria-label="Honza si u Paca omylem řekne o pomerančovníky"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Středa: Honza v Málaze</span></div>
       </div>
     </div>
   </section>
@@ -473,14 +487,14 @@ footer .hand{font-size:24px}
         <div class="back">
           <div class="stamp"><div><b>7</b>lekcí<br>zdarma</div></div>
           <h2>Španělština na dovolenou za 7 dní</h2>
-          <ul><li>7 lekcí po 10 minutách</li><li>Audio ke každé frázi</li><li>Tahák 50 frází do mobilu</li></ul>
+          <ul><li>7 lekcí po 10 minutách, každé ráno e-mailem</li><li>Audio ke každé frázi</li><li>Tahák 50 frází do mobilu</li></ul>
           <form id="signup" novalidate>
             <label for="name">Komu to posíláme?</label>
             <input type="text" id="name" placeholder="Petr" autocomplete="given-name">
             <label for="email">Na jakou adresu?</label>
             <input type="email" id="email" placeholder="ty@email.cz" autocomplete="email" required>
             <button class="btn" type="submit">Poslat první pohled</button>
-            <p class="form-note" id="formnote">Prototyp: e-mail se zatím nikam neodesílá. Odhlásit se půjde jedním kliknutím.</p>
+            <p class="form-note" id="formnote">Žádný spam. Odhlásit se můžeš jedním kliknutím v každém e-mailu. Víc v <a href="ochrana-osobnich-udaju.html" style="color:inherit">ochraně údajů</a>.</p>
           </form>
         </div>
       </div>
@@ -492,6 +506,12 @@ footer .hand{font-size:24px}
       <span class="hand">Účtenka</span>
       <h2>Vyber si, kolik španělštiny chceš</h2>
       <div class="plans">
+        <div class="plan">
+          <h3><a class="plan-link" href="produkty/kurz-zdarma.html">Kurz zdarma</a></h3>
+          <p class="price">0 Kč <small>stačí e-mail</small></p>
+          <ul><li>7 lekcí po 10 minutách, každé ráno e-mailem</li><li>50 frází na dovolenou s nahrávkou</li><li>Tahák do mobilu</li></ul>
+          <a class="btn ghost" href="#zdarma">Chci kurz zdarma</a>
+        </div>
         <div class="plan">
           <h3><a class="plan-link" href="produkty/ebook.html">E-book na dovolenou</a></h3>
           <p class="price">199 Kč <small>jednorázově</small></p>
@@ -785,7 +805,9 @@ footer .hand{font-size:24px}
   "vysledekCta": "Začít mini kurz zdarma",
   "vysledekZnovu": "Zkusit znovu",
   "emailChyba": "Zkontroluj prosím e-mail. Chybí v něm zavináč nebo doména.",
-  "emailOk": "¡Genial{jmeno}! V ostré verzi by ti teď přišla lekce 1. V prototypu se e-mail neukládá."
+  "emailOk": "¡Genial{jmeno}! Lekce 1 ti právě letí do schránky. Kdyby do pár minut nedorazila, mrkni do spamu nebo do záložky Promoakce.",
+  "emailZatim": "¡Genial{jmeno}! Rozesílání e-mailů právě zapojujeme. Nečekej a začni hned tady:",
+  "emailChybaOdeslani": "Něco se pokazilo při odesílání. Zkus to prosím za chvilku znovu, nebo začni rovnou tady:"
  }
 }
 </script>
@@ -854,8 +876,15 @@ footer .hand{font-size:24px}
   document.getElementById('signup').addEventListener('submit',function(e){
     e.preventDefault();var em=document.getElementById('email'),note=document.getElementById('formnote');
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){note.className='form-note';note.textContent=U.emailChyba;em.focus();return}
-    var n=document.getElementById('name').value.trim();
-    note.className='ok-msg';note.textContent=f(U.emailOk,{jmeno:n?', '+n:''});
+    var n=document.getElementById('name').value.trim(),j={jmeno:n?', '+n:''};
+    // Adresa formuláře MailerLite (Forms → embedded → action). Prázdná = e-maily ještě nejsou napojené.
+    var ML='';
+    function hotovo(text,odkaz){note.className='ok-msg';note.textContent=text;if(odkaz){var a=document.createElement('a');a.href='kurz/den-1.html';a.textContent=' Lekce 1 →';a.style.color='inherit';note.appendChild(a)}}
+    if(!ML){hotovo(f(U.emailZatim,j),true);return}
+    var d=new URLSearchParams();d.append('fields[email]',em.value.trim());d.append('fields[name]',n);d.append('ml-submit','1');d.append('anticsrf','true');
+    var btn=this.querySelector('button');btn.disabled=true;
+    fetch(ML,{method:'POST',body:d}).then(function(r){return r.json()}).then(function(r){if(r&&r.success)hotovo(f(U.emailOk,j));else throw 0})
+      .catch(function(){btn.disabled=false;hotovo(U.emailChybaOdeslani,true)});
   });
 
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -876,6 +905,17 @@ footer .hand{font-size:24px}
     if(q.bottom>0&&q.top<window.innerHeight){pols.forEach(function(el,i){var d=+el.dataset.d;el.style.translate=(tx*d).toFixed(1)+'px '+(ty*d).toFixed(1)+'px'})}
     requestAnimationFrame(frame)}
   if(!reduce)requestAnimationFrame(frame);
+
+  // ---------- videos below the fold: load and play only when visible ----------
+  (function(){var vs=[].slice.call(document.querySelectorAll('video[data-lazy]'));
+    if(!('IntersectionObserver' in window)){vs.forEach(function(v){v.play&&v.play().catch(function(){})});return}
+    var io=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target;if(en.isIntersecting){var p=v.play();p&&p.catch&&p.catch(function(){})}else if(!v.paused){v.pause()}})},{rootMargin:'200px 0px'});
+    vs.forEach(function(v){io.observe(v)})})();
+
+  // ---------- mobile menu ----------
+  (function(){var h=document.querySelector('header.site'),b=h&&h.querySelector('.menu');if(!b)return;
+    b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+    h.querySelectorAll('nav a').forEach(function(a){a.addEventListener('click',function(){h.classList.remove('open');b.setAttribute('aria-expanded','false')})})})();
 
   // ---------- reels with sound: tap to unmute ----------
   [].slice.call(document.querySelectorAll('.screen.snd')).forEach(function(el){
