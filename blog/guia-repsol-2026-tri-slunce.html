@@ -83,6 +83,27 @@ article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-f
 footer{padding-block:36px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .hand{font-size:24px}
+
+/* bilingual */
+.mode{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.mode button{font:inherit;font-weight:600;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.par{margin-top:22px}
+.par .es{font-size:19px;margin:0}
+.par .tr{font:inherit;font-size:14px;font-weight:600;color:var(--c,var(--red));background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.par .cz{margin:8px 0 0;padding:10px 14px;background:var(--card);border-left:4px solid var(--c,var(--red));color:var(--muted);font-size:16px}
+.show-cz .par .tr{display:none}
+.show-cz .par .cz{display:block!important}
+.w{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--c,var(--red));text-decoration-thickness:2px;text-underline-offset:4px;position:relative}
+.w.on{background:color-mix(in srgb,var(--c,var(--red)) 14%,transparent)}
+.tip{position:absolute;z-index:5;background:var(--ink);color:var(--paper);font-size:15px;padding:6px 10px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.25);max-width:240px;pointer-events:none}
+.mine{margin-top:16px;display:none}
+.mine.has{display:block}
+.mine h3{font-size:18px}
+.mine ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mine li{background:var(--card);padding:6px 12px;border-radius:999px;font-size:15px}
+.mine li b{font-family:var(--display)}
+.h1es{font-family:var(--hand);font-size:30px;color:var(--c,var(--red));margin-top:10px;line-height:1.1}
 @media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
 </style>
 </head>
@@ -95,9 +116,12 @@ footer .hand{font-size:24px}
 <article style="--c:var(--red)">
   <div class="meta"><span class="rub">Pacův stánek</span><span>Galicie · Madrid · Mallorca</span><span>9. 11. 2026</span></div>
   <h1>Tři nová „slunce“: kam na jídlo podle Guía Repsol 2026</h1>
+  <p class="h1es" lang="es">Tres soles nuevos: dónde comer según la Guía Repsol 2026</p>
   <p class="lead">Španělsko má vlastního průvodce po restauracích a místo hvězdiček rozdává slunce. Letos přibyly tři restaurace s nejvyšším hodnocením. Paco to komentuje po svém.</p>
   <figure class="pol tape"><img src="../media/table.webp" alt="Tapas se dobře jedí i bez slunce" loading="lazy"><figcaption>Tapas se dobře jedí i bez slunce</figcaption></figure>
-  <div class="body"><p><b>Guía Repsol</b> je španělský průvodce po restauracích. Hodnotí je slunci, <i>soles</i>: jedno, dvě, nebo tři. Tři slunce jsou to nejvyšší, co může podnik dostat.</p><p>Vydání 2026 bylo představeno v Tarragoně. Nejvyšší ocenění nově získaly tři restaurace:</p><ul><li><b>A Tafona</b> v Santiagu de Compostela, kde vaří šéfkuchařka Lucía Freitas,</li><li><b>Ramón Freixa Atelier</b> v Madridu, malý bar jen pro deset hostů,</li><li><b>Voro</b> v Capdepeře na Mallorce se šéfkuchařem Álvarem Salazarem.</li></ul><p>Celkem má teď tři slunce 46 restaurací. Pokud počítáme všechny podniky s aspoň jedním sluncem, je jich 808. Nejvíc sluncí má Katalánsko (122), druhý je Madrid (98).</p><p>Proč to zmiňujeme v kurzu španělštiny? Protože jídlo je ve Španělsku téma číslo jedna. Když se naučíš pár slov z jídelního lístku, rozumíš polovině rozhovorů u stolu.</p></div>
+  <div class="mode" role="group" aria-label="Překlad"><span>Čti nejdřív španělsky.</span><button type="button" data-m="es" aria-pressed="true">Překlad na klepnutí</button><button type="button" data-m="cz" aria-pressed="false">Vždy s překladem</button></div>
+  <div class="body"><div class="par"><p class="es" lang="es">La <b>Guía Repsol</b> es una guía española de <button type="button" class="w" data-cz="restaurace">restaurantes</button>. No da <button type="button" class="w" data-cz="hvězdy">estrellas</button>, da <button type="button" class="w" data-cz="slunce">soles</button>: uno, dos o tres. Tres soles es lo máximo.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz0">Ukázat česky</button><p class="cz" id="cz0" lang="cs" hidden>Guía Repsol je španělský průvodce po restauracích. Nedává hvězdičky, ale slunce: jedno, dvě, nebo tři. Tři slunce jsou maximum.</p></div><div class="par"><p class="es" lang="es">La guía de 2026 se presentó en Tarragona. Tres restaurantes <button type="button" class="w" data-cz="získávají">consiguen</button> tres soles por primera vez:<br>• <b>A Tafona</b>, en Santiago de Compostela, de la <button type="button" class="w" data-cz="kuchařka">cocinera</button> Lucía Freitas,<br>• <b>Ramón Freixa Atelier</b>, en Madrid, una barra para solo diez personas,<br>• <b>Voro</b>, en Capdepera (Mallorca), del cocinero Álvaro Salazar.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz1">Ukázat česky</button><p class="cz" id="cz1" lang="cs" hidden>Průvodce 2026 byl představen v Tarragoně. Tři restaurace poprvé získaly tři slunce:<br>• A Tafona v Santiagu de Compostela, kde vaří šéfkuchařka Lucía Freitas,<br>• Ramón Freixa Atelier v Madridu, malý bar jen pro deset hostů,<br>• Voro v Capdepeře na Mallorce se šéfkuchařem Álvarem Salazarem.</p></div><div class="par"><p class="es" lang="es">Ahora hay 46 restaurantes con tres soles y 808 con <button type="button" class="w" data-cz="aspoň">al menos</button> un sol. Cataluña tiene más soles que nadie, 122. Le <button type="button" class="w" data-cz="následuje">sigue</button> Madrid, con 98.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz2">Ukázat česky</button><p class="cz" id="cz2" lang="cs" hidden>Teď má tři slunce 46 restaurací a aspoň jedno slunce 808 podniků. Nejvíc sluncí má Katalánsko, 122. Za ním je Madrid s 98.</p></div><div class="par"><p class="es" lang="es">¿Por qué hablamos de esto en un curso de español? Porque en España la <button type="button" class="w" data-cz="jídlo">comida</button> es el tema número uno. Si sabes unas palabras de la <button type="button" class="w" data-cz="jídelní lístek">carta</button>, entiendes la <button type="button" class="w" data-cz="polovina">mitad</button> de las conversaciones a la mesa.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz3">Ukázat česky</button><p class="cz" id="cz3" lang="cs" hidden>Proč o tom mluvíme v kurzu španělštiny? Protože jídlo je ve Španělsku téma číslo jedna. Když znáš pár slov z jídelního lístku, rozumíš polovině rozhovorů u stolu.</p></div></div>
+  <div class="mine"><h3>Tvoje slovíčka z článku</h3><ul></ul></div>
   <h2>Mezitím u Lucíe</h2>
   <div class="dlg" lang="es"><p><b>Lucía</b>Paco, ¿sabes que hay tres restaurantes nuevos con tres soles?</p><p><b>Paco</b>¿Tres soles? Yo con uno en la playa me apaño.</p><p><b>Lucía</b>Son restaurantes muy buenos, hombre.</p><p><b>Paco</b>Pues mis tomates también merecen un sol. ¡Uno pequeñito!</p><p class="cz" lang="cs">Lucía: „Paco, víš, že jsou tři nové restaurace se třemi slunci?“ Paco: „Tři slunce? Mně stačí jedno na pláži.“ Lucía: „To jsou moc dobré restaurace, člověče.“ Paco: „Moje rajčata si taky zaslouží slunce. Aspoň malinké!“</p></div>
   <h2>Slovíčka k článku</h2>
@@ -106,7 +130,29 @@ footer .hand{font-size:24px}
   <div class="src">Zdroje (ověřeno 9. 11. 2026):<ul><li><a href="https://www.directoalpaladar.com/viajes/santiago-compostela-madrid-mallorca-se-llevan-nuevos-3-soles-guia-repsol-que-suma-83-nuevos-establecimientos" target="_blank" rel="noopener">Directo al Paladar: Santiago, Madrid a Mallorca mají nová tři slunce Guía Repsol</a></li></ul></div>
   <a class="back" href="index.html">← Všechny články</a>
 </article>
-</div></main>
+</div></main><script>
+(function(){
+  var art=document.querySelector('article'); if(!art) return;
+  art.addEventListener('click',function(e){
+    var t=e.target.closest('.tr');
+    if(t){var cz=document.getElementById(t.getAttribute('aria-controls'));var open=cz.hidden;cz.hidden=!open;t.setAttribute('aria-expanded',open);t.textContent=open?'Skrýt překlad':'Ukázat česky';return;}
+    var w=e.target.closest('.w'); if(!w) return;
+    document.querySelectorAll('.tip').forEach(function(x){x.remove()});
+    var tip=document.createElement('span');tip.className='tip';tip.textContent=w.dataset.cz;
+    w.appendChild(tip);tip.style.left='0';tip.style.top='calc(100% + 6px)';
+    var r=tip.getBoundingClientRect();if(r.right>window.innerWidth-8){tip.style.left='auto';tip.style.right='0';}
+    setTimeout(function(){tip.remove()},2600);
+    if(!w.classList.contains('on')){w.classList.add('on');
+      var list=document.querySelector('.mine ul');var li=document.createElement('li');
+      li.innerHTML='<b lang="es"></b> – <span></span>';li.firstChild.textContent=w.firstChild.textContent;li.lastChild.textContent=w.dataset.cz;
+      list.appendChild(li);document.querySelector('.mine').classList.add('has');}
+  });
+  document.querySelectorAll('.mode button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.mode button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    art.classList.toggle('show-cz',b.dataset.m==='cz');
+  })});
+})();
+</script>
 <footer class="ruled"><div class="wrap">
   <span>Pa'lante! · Lucía, Paco, Rafa a Honza jsou AI postavy, španělština je skutečná<br><a href="../kontakt.html" style="color:inherit">Kontakt</a> · <a href="../obchodni-podminky.html" style="color:inherit">Obchodní podmínky</a> · <a href="../ochrana-osobnich-udaju.html" style="color:inherit">Ochrana osobních údajů</a></span>
   <span class="hand">Hecho con cariño en Chequia</span>

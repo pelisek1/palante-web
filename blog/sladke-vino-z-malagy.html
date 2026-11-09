@@ -83,6 +83,27 @@ article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-f
 footer{padding-block:36px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .hand{font-size:24px}
+
+/* bilingual */
+.mode{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.mode button{font:inherit;font-weight:600;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.par{margin-top:22px}
+.par .es{font-size:19px;margin:0}
+.par .tr{font:inherit;font-size:14px;font-weight:600;color:var(--c,var(--red));background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.par .cz{margin:8px 0 0;padding:10px 14px;background:var(--card);border-left:4px solid var(--c,var(--red));color:var(--muted);font-size:16px}
+.show-cz .par .tr{display:none}
+.show-cz .par .cz{display:block!important}
+.w{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--c,var(--red));text-decoration-thickness:2px;text-underline-offset:4px;position:relative}
+.w.on{background:color-mix(in srgb,var(--c,var(--red)) 14%,transparent)}
+.tip{position:absolute;z-index:5;background:var(--ink);color:var(--paper);font-size:15px;padding:6px 10px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.25);max-width:240px;pointer-events:none}
+.mine{margin-top:16px;display:none}
+.mine.has{display:block}
+.mine h3{font-size:18px}
+.mine ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mine li{background:var(--card);padding:6px 12px;border-radius:999px;font-size:15px}
+.mine li b{font-family:var(--display)}
+.h1es{font-family:var(--hand);font-size:30px;color:var(--c,var(--red));margin-top:10px;line-height:1.1}
 @media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
 </style>
 </head>
@@ -95,9 +116,12 @@ footer .hand{font-size:24px}
 <article style="--c:var(--green)">
   <div class="meta"><span class="rub">Lucía nalévá</span><span>Andalusie</span><span>9. 11. 2026</span></div>
   <h1>Sladké víno z Málagy: hrozny sušené na slunci</h1>
+  <p class="h1es" lang="es">El vino dulce de Málaga: uvas secadas al sol</p>
   <p class="lead">Málaga není jen pláž a espetos. Víno se tu dělá přes pět set let a chráněné označení původu má od roku 1932. Lucía vysvětluje, proč je tak sladké.</p>
   <figure class="pol tape"><img src="../media/lucia-bar.jpg" alt="Lucía za barem, skleničky připravené" loading="lazy"><figcaption>Lucía za barem, skleničky připravené</figcaption></figure>
-  <div class="body"><p>Víno z Málagy má <b>chráněné označení původu</b> (DO Málaga) od roku 1932. Regulační rada vznikla o rok později. Tradice je ale mnohem starší: už v roce 1502 potvrdili Katoličtí králové zdejší cech vinařů.</p><p>Hlavní odrůdy jsou <b>Pedro Ximénez</b> a <b>Moscatel</b>, dále Doradilla a Romé. Typická je metoda <i>asoleo</i>: sklizené hrozny se suší na slunci, ztratí vodu a cukr se v nich zahustí. Proto jsou zdejší vína tak sladká.</p><p>Víno pak zraje v dubových sudech, často systémem <i>solera</i>, kdy se mladší víno postupně dolévá ke staršímu. Na etiketách uvidíš tradiční názvy jako <i>Lágrima</i> nebo <i>Pajarete</i>.</p><p>Vinice leží v několika oblastech provincie, například v Axarquíi východně od Málagy nebo v Los Montes kolem města. Nejvýš položené vinice jsou u Rondy, asi 750 metrů nad mořem.</p><p>A jak si ho objednat? Ve Španělsku se sladké víno pije v malé skleničce, často k dezertu nebo k sýru.</p></div>
+  <div class="mode" role="group" aria-label="Překlad"><span>Čti nejdřív španělsky.</span><button type="button" data-m="es" aria-pressed="true">Překlad na klepnutí</button><button type="button" data-m="cz" aria-pressed="false">Vždy s překladem</button></div>
+  <div class="body"><div class="par"><p class="es" lang="es">El vino de Málaga tiene <button type="button" class="w" data-cz="chráněné označení původu">denominación de origen</button> desde 1932. Un año después nació su <button type="button" class="w" data-cz="regulační rada">consejo regulador</button>. Pero la tradición es mucho más <button type="button" class="w" data-cz="stará">antigua</button>: en 1502, los Reyes Católicos ya confirmaron la Hermandad de <button type="button" class="w" data-cz="vinaři">Viñeros</button> de Málaga.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz0">Ukázat česky</button><p class="cz" id="cz0" lang="cs" hidden>Víno z Málagy má chráněné označení původu od roku 1932. O rok později vznikla jeho regulační rada. Tradice je ale mnohem starší: už v roce 1502 potvrdili Katoličtí králové málažský cech vinařů.</p></div><div class="par"><p class="es" lang="es">Las <button type="button" class="w" data-cz="hrozny">uvas</button> principales son Pedro Ximénez y Moscatel. También hay Doradilla y Romé. Es típico el <i>asoleo</i>: las uvas se <button type="button" class="w" data-cz="suší">secan</button> al sol, pierden agua y el <button type="button" class="w" data-cz="cukr">azúcar</button> se concentra. Por eso estos vinos son tan <button type="button" class="w" data-cz="sladké">dulces</button>.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz1">Ukázat česky</button><p class="cz" id="cz1" lang="cs" hidden>Hlavní odrůdy jsou Pedro Ximénez a Moscatel, dále Doradilla a Romé. Typické je asoleo: hrozny se suší na slunci, ztratí vodu a cukr se v nich zahustí. Proto jsou zdejší vína tak sladká.</p></div><div class="par"><p class="es" lang="es">Después, el vino <button type="button" class="w" data-cz="zraje">envejece</button> en <button type="button" class="w" data-cz="sudy">barricas</button> de roble, muchas veces con el sistema de <i>solera</i>: el vino joven se mezcla poco a poco con el viejo. En las <button type="button" class="w" data-cz="etikety">etiquetas</button> verás nombres tradicionales como Lágrima o Pajarete.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz2">Ukázat česky</button><p class="cz" id="cz2" lang="cs" hidden>Potom víno zraje v dubových sudech, často systémem solera: mladší víno se postupně míchá se starším. Na etiketách uvidíš tradiční názvy jako Lágrima nebo Pajarete.</p></div><div class="par"><p class="es" lang="es">Las <button type="button" class="w" data-cz="vinice">viñas</button> están en varias zonas de la provincia, como la Axarquía, al este de Málaga, o los Montes, alrededor de la ciudad. Las más altas están cerca de Ronda, a unos 750 metros.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz3">Ukázat česky</button><p class="cz" id="cz3" lang="cs" hidden>Vinice leží v několika oblastech provincie, například v Axarquíi východně od Málagy nebo v Los Montes kolem města. Nejvýš položené jsou u Rondy, asi 750 metrů nad mořem.</p></div><div class="par"><p class="es" lang="es">¿Y cómo se <button type="button" class="w" data-cz="objednává">pide</button>? En España el vino dulce se toma en una <button type="button" class="w" data-cz="sklenička">copa</button> pequeña, muchas veces con el <button type="button" class="w" data-cz="dezert">postre</button> o con <button type="button" class="w" data-cz="sýr">queso</button>.</p><button type="button" class="tr" aria-expanded="false" aria-controls="cz4">Ukázat česky</button><p class="cz" id="cz4" lang="cs" hidden>A jak si ho objednat? Ve Španělsku se sladké víno pije v malé skleničce, často k dezertu nebo k sýru.</p></div></div>
+  <div class="mine"><h3>Tvoje slovíčka z článku</h3><ul></ul></div>
   <h2>Mezitím u Lucíe</h2>
   <div class="dlg" lang="es"><p><b>Rafa</b>Lucía, ¿me pones un dulce?</p><p><b>Lucía</b>Un dulce, pero pequeñito, que es mediodía.</p><p><b>Rafa</b>¿Es de aquí?</p><p><b>Lucía</b>Claro, de Málaga. Moscatel. ¡Salud!</p><p class="cz" lang="cs">Rafa: „Lucío, naliješ mi sladké?“ Lucía: „Sladké, ale malinké, je poledne.“ Rafa: „Je odsud?“ Lucía: „Jasně, z Málagy. Muškát. Na zdraví!“</p></div>
   <h2>Slovíčka k článku</h2>
@@ -106,7 +130,29 @@ footer .hand{font-size:24px}
   <div class="src">Zdroje (ověřeno 9. 11. 2026):<ul><li><a href="https://www.juntadeandalucia.es/export/drupaljda/Documento_Unico_Malaga.pdf" target="_blank" rel="noopener">Junta de Andalucía: jednotný dokument DOP Málaga (odrůdy, typy vín, metody)</a></li><li><a href="https://en.wikipedia.org/wiki/M%C3%A1laga_and_Sierras_de_M%C3%A1laga" target="_blank" rel="noopener">Wikipedia: Málaga and Sierras de Málaga (historie, oblasti)</a></li></ul></div>
   <a class="back" href="index.html">← Všechny články</a>
 </article>
-</div></main>
+</div></main><script>
+(function(){
+  var art=document.querySelector('article'); if(!art) return;
+  art.addEventListener('click',function(e){
+    var t=e.target.closest('.tr');
+    if(t){var cz=document.getElementById(t.getAttribute('aria-controls'));var open=cz.hidden;cz.hidden=!open;t.setAttribute('aria-expanded',open);t.textContent=open?'Skrýt překlad':'Ukázat česky';return;}
+    var w=e.target.closest('.w'); if(!w) return;
+    document.querySelectorAll('.tip').forEach(function(x){x.remove()});
+    var tip=document.createElement('span');tip.className='tip';tip.textContent=w.dataset.cz;
+    w.appendChild(tip);tip.style.left='0';tip.style.top='calc(100% + 6px)';
+    var r=tip.getBoundingClientRect();if(r.right>window.innerWidth-8){tip.style.left='auto';tip.style.right='0';}
+    setTimeout(function(){tip.remove()},2600);
+    if(!w.classList.contains('on')){w.classList.add('on');
+      var list=document.querySelector('.mine ul');var li=document.createElement('li');
+      li.innerHTML='<b lang="es"></b> – <span></span>';li.firstChild.textContent=w.firstChild.textContent;li.lastChild.textContent=w.dataset.cz;
+      list.appendChild(li);document.querySelector('.mine').classList.add('has');}
+  });
+  document.querySelectorAll('.mode button').forEach(function(b){b.addEventListener('click',function(){
+    document.querySelectorAll('.mode button').forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    art.classList.toggle('show-cz',b.dataset.m==='cz');
+  })});
+})();
+</script>
 <footer class="ruled"><div class="wrap">
   <span>Pa'lante! · Lucía, Paco, Rafa a Honza jsou AI postavy, španělština je skutečná<br><a href="../kontakt.html" style="color:inherit">Kontakt</a> · <a href="../obchodni-podminky.html" style="color:inherit">Obchodní podmínky</a> · <a href="../ochrana-osobnich-udaju.html" style="color:inherit">Ochrana osobních údajů</a></span>
   <span class="hand">Hecho con cariño en Chequia</span>

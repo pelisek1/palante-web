@@ -83,6 +83,27 @@ article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-f
 footer{padding-block:36px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .hand{font-size:24px}
+
+/* bilingual */
+.mode{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.mode button{font:inherit;font-weight:600;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.par{margin-top:22px}
+.par .es{font-size:19px;margin:0}
+.par .tr{font:inherit;font-size:14px;font-weight:600;color:var(--c,var(--red));background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.par .cz{margin:8px 0 0;padding:10px 14px;background:var(--card);border-left:4px solid var(--c,var(--red));color:var(--muted);font-size:16px}
+.show-cz .par .tr{display:none}
+.show-cz .par .cz{display:block!important}
+.w{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--c,var(--red));text-decoration-thickness:2px;text-underline-offset:4px;position:relative}
+.w.on{background:color-mix(in srgb,var(--c,var(--red)) 14%,transparent)}
+.tip{position:absolute;z-index:5;background:var(--ink);color:var(--paper);font-size:15px;padding:6px 10px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.25);max-width:240px;pointer-events:none}
+.mine{margin-top:16px;display:none}
+.mine.has{display:block}
+.mine h3{font-size:18px}
+.mine ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mine li{background:var(--card);padding:6px 12px;border-radius:999px;font-size:15px}
+.mine li b{font-family:var(--display)}
+.h1es{font-family:var(--hand);font-size:30px;color:var(--c,var(--red));margin-top:10px;line-height:1.1}
 @media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
 </style>
 </head>
