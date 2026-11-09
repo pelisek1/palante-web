@@ -83,6 +83,29 @@ article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-f
 footer{padding-block:36px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer .hand{font-size:24px}
+
+/* bilingual */
+.mode{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.mode button{font:inherit;font-weight:600;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.par{margin-top:22px}
+.par .es{font-size:19px;margin:0}
+.par .tr{font:inherit;font-size:14px;font-weight:600;color:var(--c,var(--red));background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.par .cz{margin:8px 0 0;padding:10px 14px;background:var(--card);border-left:4px solid var(--c,var(--red));color:var(--muted);font-size:16px}
+.show-cz .par .tr{display:none}
+.show-cz .par .cz{display:block!important}
+.w{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--c,var(--red));text-decoration-thickness:2px;text-underline-offset:4px;position:relative}
+.w.on{background:color-mix(in srgb,var(--c,var(--red)) 14%,transparent)}
+.tip{position:absolute;z-index:5;background:var(--ink);color:var(--paper);font-size:15px;padding:6px 10px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.25);max-width:240px;pointer-events:none}
+.real{margin:34px 0 8px}.real img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;box-shadow:0 14px 30px rgba(60,40,10,.22);background:var(--paper-2)}.real figcaption{font-size:13px;color:var(--muted);margin-top:8px}.real a{color:inherit}
+article .pol.small{max-width:300px;margin:18px auto 22px;transform:rotate(1.5deg)}article .pol.small img{max-height:300px}
+.mine{margin-top:16px;display:none}
+.mine.has{display:block}
+.mine h3{font-size:18px}
+.mine ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mine li{background:var(--card);padding:6px 12px;border-radius:999px;font-size:15px}
+.mine li b{font-family:var(--display)}
+.h1es{font-family:var(--hand);font-size:30px;color:var(--c,var(--red));margin-top:10px;line-height:1.1}
 @media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
 </style>
 </head>
@@ -101,7 +124,7 @@ footer .hand{font-size:24px}
 <li><b>Když nám napíšeš:</b> tvůj e-mail a obsah zprávy, abychom ti mohli odpovědět.</li>
 </ul>
 <h2>Jak dlouho</h2><p>Údaje pro odběr uchováváme, dokud se neodhlásíš. Údaje z nákupů uchováváme po dobu, kterou ukládají daňové a účetní předpisy. Korespondenci nejdéle 3 roky.</p>
-<h2>Komu údaje předáváme</h2><p>Jen službám, které potřebujeme k provozu: hosting webu (GitHub Pages), e-mailová schránka (WEDOS), a po spuštění také platební brána a služba pro rozesílání e-mailů. Jejich konkrétní seznam doplníme sem, než je začneme používat. Web načítá písma ze služby Google Fonts, která přitom vidí tvou IP adresu.</p>
+<h2>Komu údaje předáváme</h2><p>Jen službám, které potřebujeme k provozu: hosting webu (GitHub Pages), e-mailová schránka (WEDOS), a po spuštění také platební brána a služba pro rozesílání e-mailů. Jejich konkrétní seznam doplníme sem, než je začneme používat. Web načítá písma ze služby Google Fonts a některé fotky ze služby Unsplash. Tyto služby přitom vidí tvou IP adresu.</p>
 <h2>Cookies</h2><p>Web zatím nepoužívá sledovací ani reklamní cookies. Pokud je někdy přidáme, nejdřív se tě zeptáme.</p>
 <h2>Tvoje práva</h2><p>Máš právo na přístup ke svým údajům, jejich opravu, výmaz, omezení zpracování a přenositelnost. Můžeš vznést námitku a kdykoli odvolat souhlas. Stačí napsat na <a href="mailto:info@palante.cz">info@palante.cz</a>. Stížnost můžeš podat u Úřadu pro ochranu osobních údajů (<a href="https://uoou.gov.cz" target="_blank" rel="noopener">uoou.gov.cz</a>).</p>
 </article></div></main>
