@@ -287,6 +287,12 @@ footer .hand{font-size:24px}
 @media (prefers-reduced-motion:reduce){.bulb,.haze,.msg,.cap span,.screen .kb{animation:none}.btn,.ff{transition:none}}
 .clip{position:relative}.clip .src,.clip .more{position:relative;z-index:2}.clip .more a{font-weight:600;color:var(--green);font-size:15px}.cal-link{text-decoration:none}.cal-link:hover{text-decoration:underline}
 .pc-link{color:inherit;text-decoration:none}.pc-link::after{content:"";position:absolute;inset:0;z-index:1}.pc:hover h3{text-decoration:underline}.pc .src,.pc .more{position:relative;z-index:2}.pc .more a{font-weight:600;color:var(--c,var(--red));font-size:15px}
+.plans{grid-template-columns:1fr!important;max-width:980px;gap:18px!important}
+.plan{display:grid!important;grid-template-columns:290px minmax(0,1fr) 250px;grid-template-areas:"t u b" "p u b";column-gap:28px;row-gap:6px;align-items:center;transition:transform .15s,box-shadow .15s}
+.plan:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(60,40,10,.2)}
+.plan h3{grid-area:t}.plan .price{grid-area:p}.plan ul{grid-area:u}.plan>.btn{grid-area:b;position:relative;z-index:2;white-space:nowrap;justify-self:end}
+.plan-link{color:inherit;text-decoration:none}.plan-link::after{content:"";position:absolute;inset:0;z-index:1}.plan:hover h3{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:760px){.plan{grid-template-columns:1fr;grid-template-areas:"t" "p" "u" "b"}.plan>.btn{justify-self:start}}
 </style>
 
 <header class="site">
@@ -484,24 +490,35 @@ footer .hand{font-size:24px}
       <h2>Vyber si, kolik španělštiny chceš</h2>
       <div class="plans">
         <div class="plan">
-          <h3>E-book na dovolenou</h3>
-          <p class="price">199 Kč</p>
-          <ul><li>E-book: 100 frází v 10 situacích na dovolené</li><li>100 nahrávek a výslovnost psaná česky</li><li>Jednorázově, stáhneš hned, 14 dní záruka</li></ul>
-          <a class="btn ghost" href="objednavka.html">Koupit e-book</a>
-          <a class="pozn" href="#ebook">Co přesně v něm je</a>
+          <h3><a class="plan-link" href="#ebook">E-book na dovolenou</a></h3>
+          <p class="price">199 Kč <small>jednorázově</small></p>
+          <ul><li>E-book: 100 frází v 10 situacích na dovolené</li><li>100 nahrávek a výslovnost psaná česky</li><li>Stáhneš hned, 14 dní záruka vrácení peněz</li></ul>
+          <a class="btn" href="objednavka.html">Koupit e-book</a>
         </div>
         <div class="plan star">
           <span class="hand">Vyjde nejlevněji</span>
-          <h3>Půlroční členství</h3>
+          <h3><a class="plan-link" href="#clenstvi">Půlroční členství</a></h3>
           <p class="price">1 290 Kč <small>/ půl roku</small><span class="later">vychází na 215 Kč měsíčně, o 450 Kč méně než 6× měsíční platba</span></p>
           <ul><li>Lekce na každý den, od úplné nuly po B1</li><li>Rozhovory s Lucíou, píšeš nebo mluvíš</li><li>Jedna platba, sama se neobnovuje</li></ul>
-          <a class="btn" href="#clenstvi">Dej mi vědět o spuštění</a>
+          <a class="btn ghost" href="#clenstvi">Dej mi vědět o spuštění</a>
         </div>
         <div class="plan">
-          <h3>Měsíčně</h3>
+          <h3><a class="plan-link" href="#clenstvi">Měsíčně</a></h3>
           <p class="price">290 Kč <small>/ měsíc</small></p>
           <ul><li>Vše z členství</li><li>Zrušíš kdykoli</li><li>7 dní zdarma na vyzkoušení</li></ul>
           <a class="btn ghost" href="#clenstvi">Dej mi vědět o spuštění</a>
+        </div>
+        <div class="plan">
+          <h3><a class="plan-link" href="#audio-do-auta">Audio do auta</a></h3>
+          <p class="price">99 Kč <small>doplněk k e-booku</small></p>
+          <ul><li>Všech 100 frází z e-booku na poslech</li><li>11 stop, 19 minut, MP3 do mobilu</li><li>Přidáš zaškrtnutím při objednávce e-booku</li></ul>
+          <a class="btn ghost" href="objednavka.html">Přidat k e-booku</a>
+        </div>
+        <div class="plan">
+          <h3><a class="plan-link" href="#audiokurz">Audiokurz Španělština v autě</a></h3>
+          <p class="price">490 Kč <small>jednorázově</small></p>
+          <ul><li>20 lekcí po čtvrt hodině, od začátků po A2</li><li>Příběh Honzy v Málaze</li><li>Připravujeme, hotové jsou první 3 lekce z 20</li></ul>
+          <a class="btn ghost" href="#zdarma">Dej mi vědět, až bude</a>
         </div>
       </div>
       <p class="cenik-pozn">Členství spustíme, až bude hotových prvních 30 lekcí. Do té doby si můžeš zkusit <a href="lekce/lekce-1-ukazka.html">ukázkovou lekci</a> a kurz zdarma. <a href="#co-dostanes">Co přesně který produkt obsahuje</a></p>
