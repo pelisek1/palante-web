@@ -321,7 +321,8 @@ footer .hand{font-size:24px}
 .kmain{padding-block:40px 72px}
 .dny{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:26px;list-style:none;padding:0}
 .dny a,.dny span{display:inline-grid;place-items:center;min-width:44px;height:44px;padding:0 12px;border-radius:999px;background:var(--card);color:var(--ink);text-decoration:none;font-weight:600;box-shadow:0 3px 8px rgba(60,40,10,.1)}
-.dny .ted{background:var(--ink);color:var(--paper)}
+.dny .ted{background:var(--ink);color:var(--paper)}.dny .pozdeji{opacity:.45;box-shadow:none}
+.zitra{margin:0;align-self:center;font-size:17px}
 .khead{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
 .khead h1{font-size:clamp(34px,5vw,56px);font-weight:800;margin-top:8px}
 .khead .es{font-family:var(--hand);color:var(--red);font-size:28px;margin-top:6px}
@@ -373,7 +374,7 @@ footer .hand{font-size:24px}
 <body>
 <header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#chyby">Chyby Čechů</a><a href="/index.html#spanelsko">Španělsko</a><a href="/blog/index.html">Články</a><a href="/index.html#test">Test úrovně</a><a href="/index.html#cenik">Ceník</a><a href="/kontakt.html">Kontakt</a></nav><a class="shead-btn" href="/index.html#zdarma">Kurz zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
 <main class="ruled kmain"><div class="wrap">
-<ul class="dny" aria-label="Dny kurzu"><li><span class="ted" aria-current="page">Den 1</span></li><li><a href="den-2.html">Den 2</a></li><li><a href="den-3.html">Den 3</a></li><li><a href="den-4.html">Den 4</a></li><li><a href="den-5.html">Den 5</a></li></ul>
+<ul class="dny" aria-label="Dny kurzu"><li><span class="ted" aria-current="page">Den 1</span></li><li><span class="pozdeji" title="Přijde e-mailem">Den 2</span></li><li><span class="pozdeji" title="Přijde e-mailem">Den 3</span></li><li><span class="pozdeji" title="Přijde e-mailem">Den 4</span></li><li><span class="pozdeji" title="Přijde e-mailem">Den 5</span></li></ul>
 <div class="khead">
   <div>
     <span class="hand">Španělština na dovolenou · den 1 ze 5</span>
@@ -387,7 +388,7 @@ footer .hand{font-size:24px}
 <p class="lead" style="margin:0 0 16px">Pusť si každou frázi, zopakuj ji nahlas a pak se vyzkoušej: zakryj španělštinu a podle češtiny ji řekni bez nápovědy. Klepnutím na rozmazaný text ho odkryješ.</p>
 <ul class="fl"><li class="fr"><button class="play" data-src="../media/kurz-001.mp3" aria-label="Přehrát: ¡Hola!"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">¡Hola!</p><p class="cz">Ahoj! / Dobrý den!</p><p class="vy">čti: <b>o</b>-la</p><p class="tip">H se ve španělštině nevyslovuje nikdy. Hola funguje na kamaráda i na prodavačku.</p></li><li class="fr"><button class="play" data-src="../media/kurz-002.mp3" aria-label="Přehrát: Buenos días."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">Buenos días.</p><p class="cz">Dobré ráno. / Dobrý den.</p><p class="vy">čti: <b>bue</b>-nos <b>dy</b>-as</p><p class="tip">Říká se zhruba do oběda, tedy ve Španělsku klidně do dvou.</p></li><li class="fr"><button class="play" data-src="../media/kurz-004.mp3" aria-label="Přehrát: Buenas noches."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">Buenas noches.</p><p class="cz">Dobrý večer. / Dobrou noc.</p><p class="vy">čti: <b>bue</b>-nas <b>no</b>-čes</p><p class="tip">Pozdrav i rozloučení po setmění. V deset ráno ne, viz Honza.</p></li><li class="fr"><button class="play" data-src="../media/kurz-005.mp3" aria-label="Přehrát: Por favor."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">Por favor.</p><p class="cz">Prosím.</p><p class="vy">čti: por fa-<b>bor</b></p><p class="tip">V se čte jako b. Fabor, ne favor.</p></li><li class="fr"><button class="play" data-src="../media/kurz-006.mp3" aria-label="Přehrát: Muchas gracias."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">Muchas gracias.</p><p class="cz">Moc děkuju.</p><p class="vy">čti: <b>mu</b>-čas <b>gra</b>-thjas</p></li><li class="fr"><button class="play" data-src="../media/kurz-007.mp3" aria-label="Přehrát: De nada."><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 4.5v15l13-7.5z"/></svg></button><p class="es" lang="es">De nada.</p><p class="cz">Není zač.</p><p class="vy">čti: de <b>na</b>-da</p></li></ul>
 <div class="ukol"><h2>Úkol na dnešek</h2><p>Až dnes někoho potkáš, pozdrav ho v duchu španělsky podle denní doby: buenos días, nebo buenas noches.</p></div>
-<div class="dal"><span></span><a class="btn" href="den-2.html">Den 2 →</a></div>
+<div class="dal"><span></span><p class="zitra">Lekce 2 ti přijde <b>zítra ráno e-mailem</b>.</p></div>
 
 </div></main>
 <footer class="ruled"><div class="wrap">
