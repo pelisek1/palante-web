@@ -878,7 +878,7 @@ footer .hand{font-size:24px}
     if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em.value)){note.className='form-note';note.textContent=U.emailChyba;em.focus();return}
     var n=document.getElementById('name').value.trim(),j={jmeno:n?', '+n:''};
     // Adresa formuláře MailerLite (Forms → embedded → action). Prázdná = e-maily ještě nejsou napojené.
-    var ML='';
+    var ML='https://assets.mailerlite.com/jsonp/2781487/forms/203670046615012518/subscribe';
     function hotovo(text,odkaz){note.className='ok-msg';note.textContent=text;if(odkaz){var a=document.createElement('a');a.href='kurz/den-1.html';a.textContent=' Lekce 1 →';a.style.color='inherit';note.appendChild(a)}}
     if(!ML){hotovo(f(U.emailZatim,j),true);return}
     var d=new URLSearchParams();d.append('fields[email]',em.value.trim());d.append('fields[name]',n);d.append('ml-submit','1');d.append('anticsrf','true');
