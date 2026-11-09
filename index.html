@@ -75,6 +75,8 @@ header.site nav{display:flex;gap:22px;flex-wrap:wrap}
 header.site nav a{color:rgba(255,255,255,.88);text-decoration:none;font-weight:500;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 header.site nav a:hover{color:#fff}
 header.site .btn{background:#FBF8F1;color:#2B2116}
+header.site.fix{position:fixed;background:#2B2116;padding-block:10px;box-shadow:0 2px 12px rgba(0,0,0,.25);transform:translateY(-110%);transition:transform .25s}
+header.site.fix.ukaz{transform:none}header.site.fix .logo{font-size:26px}header.site.fix nav a{text-shadow:none}
 header.site .menu{display:none;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;width:46px;height:46px;padding:0;cursor:pointer;place-items:center}
 header.site .menu svg{width:22px;height:22px}
 @media (max-width:760px){header.site .menu{display:grid}header.site .wrap{flex-wrap:wrap;gap:10px}header.site .logo{margin-right:auto}header.site .btn{padding:11px 16px;font-size:15px}
@@ -913,6 +915,16 @@ footer .hand{font-size:24px}
     if(!('IntersectionObserver' in window)){vs.forEach(function(v){v.play&&v.play().catch(function(){})});return}
     var io=new IntersectionObserver(function(es){es.forEach(function(en){var v=en.target;if(en.isIntersecting){var p=v.play();p&&p.catch&&p.catch(function(){})}else if(!v.paused){v.pause()}})},{rootMargin:'200px 0px'});
     vs.forEach(function(v){io.observe(v)})})();
+
+  // ---------- header: after the hero it hides, and slides back in when scrolling up ----------
+  (function(){var h=document.querySelector('header.site'),hero=document.getElementById('live');if(!h||!hero)return;var last=window.scrollY,tick=false;
+    function upd(){var y=window.scrollY,hh=hero.offsetHeight;
+      if(y<hh*.6){h.classList.remove('fix','ukaz')}
+      else{if(!h.classList.contains('fix')){h.classList.add('fix')}
+        if(y<last-4)h.classList.add('ukaz');else if(y>last+4&&!h.classList.contains('open'))h.classList.remove('ukaz')}
+      last=y;tick=false}
+    window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(upd)}},{passive:true});
+    h.addEventListener('focusin',function(){if(h.classList.contains('fix'))h.classList.add('ukaz')})})();
 
   // ---------- mobile menu ----------
   (function(){var h=document.querySelector('header.site'),b=h&&h.querySelector('.menu');if(!b)return;

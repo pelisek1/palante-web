@@ -74,6 +74,8 @@ header.site nav{display:flex;gap:22px;flex-wrap:wrap}
 header.site nav a{color:rgba(255,255,255,.88);text-decoration:none;font-weight:500;font-size:15px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
 header.site nav a:hover{color:#fff}
 header.site .btn{background:#FBF8F1;color:#2B2116}
+header.site.fix{position:fixed;background:#2B2116;padding-block:10px;box-shadow:0 2px 12px rgba(0,0,0,.25);transform:translateY(-110%);transition:transform .25s}
+header.site.fix.ukaz{transform:none}header.site.fix .logo{font-size:26px}header.site.fix nav a{text-shadow:none}
 header.site .menu{display:none;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:999px;width:46px;height:46px;padding:0;cursor:pointer;place-items:center}
 header.site .menu svg{width:22px;height:22px}
 @media (max-width:760px){header.site .menu{display:grid}header.site .wrap{flex-wrap:wrap;gap:10px}header.site .logo{margin-right:auto}header.site .btn{padding:11px 16px;font-size:15px}
@@ -349,12 +351,24 @@ footer .hand{font-size:24px}
 @media (max-width:560px){.tahak td{display:block;width:auto!important;border:0;padding:4px 12px}.tahak tr{display:block;border-bottom:1px solid var(--rule);padding:6px 0}}
 @media print{.ptop,footer,.dny,.noprint,body::after{display:none!important}.tahak table{background:none}}
 </style>
+<style>
+.shead{position:sticky;top:0;z-index:40;background:#2B2116;color:#FBF8F1;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.shead-in{max-width:1120px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:18px}
+.shead-logo{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.03em;color:#FBF8F1;text-decoration:none;margin-right:auto}
+.shead-logo span{color:#FFC860}
+.shead nav{display:flex;gap:16px;flex-wrap:wrap}
+.shead nav a{color:#FBF8F1;opacity:.85;text-decoration:none;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:500;font-size:15px}
+.shead nav a:hover{opacity:1}
+.shead-btn{background:#FBF8F1;color:#2B2116;border-radius:999px;padding:9px 16px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.shead-menu{display:none;background:transparent;border:1px solid rgba(251,248,241,.5);color:#FBF8F1;border-radius:999px;width:42px;height:42px;padding:0;cursor:pointer;place-items:center}
+.shead-menu svg{width:20px;height:20px}
+@media (max-width:1000px){.shead-menu{display:grid}.shead-in{flex-wrap:wrap;gap:10px}
+.shead nav{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;padding:6px 0}
+.shead.open nav{display:flex}.shead nav a{padding:11px 4px;font-size:18px;border-top:1px solid rgba(251,248,241,.1)}}
+</style>
 </head>
 <body>
-<header class="ptop"><div class="wrap">
-  <a class="logo" href="../index.html">pa<span>'</span>lante<span>!</span></a>
-  <nav><a href="tahak.html">Tahák</a><a href="../index.html#cenik">Ceník</a><a href="../blog/index.html">Články</a></nav>
-</div></header>
+<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#chyby">Chyby Čechů</a><a href="/index.html#spanelsko">Španělsko</a><a href="/blog/index.html">Články</a><a href="/index.html#test">Test úrovně</a><a href="/index.html#cenik">Ceník</a><a href="/kontakt.html">Kontakt</a></nav><a class="shead-btn" href="/index.html#zdarma">Kurz zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
 <main class="ruled kmain"><div class="wrap">
 <ul class="dny" aria-label="Dny kurzu"><li><a href="den-1.html">Den 1</a></li><li><a href="den-2.html">Den 2</a></li><li><a href="den-3.html">Den 3</a></li><li><span class="ted" aria-current="page">Den 4</span></li><li><a href="den-5.html">Den 5</a></li><li><a href="den-6.html">Den 6</a></li><li><a href="den-7.html">Den 7</a></li></ul>
 <div class="khead">
@@ -391,5 +405,7 @@ footer .hand{font-size:24px}
     l.addEventListener('click',function(ev){var x=ev.target.closest('.es');if(x&&l.classList.contains('skryj'))x.classList.toggle('ukaz')});}
 })();
 </script>
+<script>(function(){var h=document.querySelector('.shead'),b=h&&h.querySelector('.shead-menu');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)})})();</script>
 </body>
 </html>
