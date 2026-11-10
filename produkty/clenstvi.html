@@ -374,6 +374,7 @@ footer .hand{font-size:24px}
               .lvl-a{display:flex;gap:10px 16px;align-items:center;flex-wrap:wrap}.lvl-a a{color:var(--red);font-weight:600}
               .lvl-btn{font:inherit;font-weight:700;font-size:14px;padding:8px 14px;border-radius:999px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
               .lvl.on .lvl-btn{background:var(--ink);color:var(--paper)}
+              .prod .lvls li.lvl{cursor:pointer;transition:border-color .15s,box-shadow .15s}.prod .lvls li.lvl:hover{border-color:rgba(192,57,43,.45);box-shadow:0 4px 12px rgba(60,40,10,.1)}
               .lvl-btn:focus-visible{outline:3px solid var(--red);outline-offset:2px}
               .lvl-ok{margin-top:10px;font-weight:600}
             </style>
@@ -385,7 +386,7 @@ footer .hand{font-size:24px}
                 var ok=document.getElementById('lvl-ok');ok.hidden=false;ok.textContent='Začínáš na úrovni '+N[u]+'. Zapamatujeme si to: v objednávce ji budeš mít předvybranou a v aplikaci ji kdykoli změníš.';
                 if(klik){try{localStorage.setItem('palante-uroven',u)}catch(e){}}
               }
-              document.querySelectorAll('.lvl-btn').forEach(function(b){b.addEventListener('click',function(){nastav(b.dataset.u,true)})});
+              document.querySelectorAll('.lvls .lvl').forEach(function(l){l.addEventListener('click',function(e){if(e.target.closest('a'))return;nastav(l.dataset.u,true)})});
               try{var u=localStorage.getItem('palante-uroven');if(N[u])nastav(u,false)}catch(e){}
             })();
             </script>
