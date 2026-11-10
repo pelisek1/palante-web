@@ -252,7 +252,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   }
   function konec(){
     var s=$('stahnout'), polozky=[['E-book 100 frází na dovolenou','PDF, 37 stran','ebook/palante-100-frazi.pdf'],['Nahrávky k e-booku','ZIP, 100 MP3','ebook/palante-100-frazi-audio.zip']];
-    if(stav.bump)polozky.push(['100 frází do uší','ZIP, 11 stop, 19 minut','audio-do-auta/palante-audio-do-auta.zip']);
+    if(stav.bump)polozky.push(['100 frází do uší','ZIP, 11 stop, 19 minut','audio-do-auta/palante-100-frazi-do-usi.zip']);
     s.innerHTML=''; polozky.forEach(function(p){var a=document.createElement('a');a.href=p[2];a.download='';a.innerHTML=p[0]+' <span>'+p[1]+'</span>';s.appendChild(a)});
     var u=' Začínáš na úrovni '+UROVNE[uroven()]+'.';
     $('shrnuti').textContent=stav.clenstvi==='pulrok'?'Členství na půl roku máš aktivní.'+u+' Stejné odkazy máš i v e-mailu.':stav.clenstvi==='mesic'?'Zkušebních 5 dní běží.'+u+' Stejné odkazy máš i v e-mailu.':'Stejné odkazy máš i v e-mailu.';
