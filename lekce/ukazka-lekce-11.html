@@ -72,6 +72,7 @@ ol.steps .min{font-size:13px;color:var(--muted);font-variant-numeric:tabular-num
 .av{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
 .bar b{display:block;font-size:15px}
 .bar small{color:var(--muted);font-size:12px}
+.screen{position:relative}.more{position:absolute;right:14px;bottom:86px;width:40px;height:40px;border-radius:50%;border:0;background:var(--red,#c0392b);color:#fff;font-size:22px;font-weight:700;box-shadow:0 4px 12px rgba(0,0,0,.25);cursor:pointer;opacity:0;pointer-events:none;transition:opacity .2s}.more.on{opacity:.92;pointer-events:auto}
 .log{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){.log{scroll-behavior:auto}.msg{animation:none!important}}
 .day{align-self:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--card);padding:3px 10px;border-radius:10px}
@@ -602,7 +603,11 @@ function waveHTML(text){
 }
 function dur(text){const s=Math.max(2,Math.round(text.split(/\s+/).length*0.5));return '0:'+String(s).padStart(2,'0')}
 function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
-function scroll(){log.scrollTop=log.scrollHeight}
+let hold=false;function scroll(){if(!hold)log.scrollTop=log.scrollHeight}
+/* arrow that shows there is more conversation below */
+const more=document.createElement('button');more.className='more';more.type='button';more.setAttribute('aria-label','↓');more.textContent='↓';log.parentElement.appendChild(more);
+function moreUpd(){const c=log.nextElementSibling;more.style.bottom=((c?c.offsetHeight:0)+12)+'px';more.classList.toggle('on',log.scrollHeight-log.scrollTop-log.clientHeight>40)}
+log.addEventListener('scroll',moreUpd,{passive:true});more.onclick=()=>{log.scrollTop=Math.min(log.scrollTop+log.clientHeight*.8,log.scrollHeight)};new ResizeObserver(moreUpd).observe(log);new MutationObserver(moreUpd).observe(log,{childList:true,subtree:true});
 
 function voiceMsg(m,open){
   const d=document.createElement('div');
@@ -681,7 +686,7 @@ function showChoice(m){
     };
     box.appendChild(b);
   });
-  requestAnimationFrame(scroll);
+  if(!hold)requestAnimationFrame(scroll);
 }
 function feedback(){
   const Z=U.zpetnaVazba,good=notes.filter(n=>n.startsWith('ok')).length;
@@ -695,7 +700,7 @@ function showEnd(){
   comp.innerHTML='<span class="lbl">'+U.konec+'</span><button class="btn ghost" id="again">'+U.znovu+'</button>';
   document.getElementById('again').onclick=reset;
 }
-function reset(){stopAll();notes=[];queue=[...S];log.innerHTML='<span class="day">'+U.den+'</span>';run(true)}
+function reset(){stopAll();notes=[];queue=[...S];log.innerHTML='<span class="day">'+U.den+'</span>';hold=true;run(true).finally(()=>{hold=false;log.scrollTop=0;moreUpd()})}
 
 /* grammar of the day on the left (membership lessons) */
 if(O.gramatika){const g=document.getElementById('gram');g.hidden=false;document.getElementById('gramH').innerHTML=O.gramatika.nadpis;document.getElementById('gramB').innerHTML=O.gramatika.html}
@@ -708,8 +713,8 @@ phrases.forEach(([es,cz])=>{
   d.querySelector('.play').onclick=()=>speak(es,'lucia',d,true);ph.appendChild(d);
 });
 
-/* open in a ready state: first messages visible, waiting for the student's first voice reply */
-run(true);
+/* open in a ready state: conversation shown from its start, waiting for the student's first voice reply */
+hold=true;run(true).finally(()=>{hold=false;log.scrollTop=0;moreUpd()});
 </script>
 
 <script>(function(){var h=document.querySelector('.shead'),b=h&&h.querySelector('.shead-menu');if(!b)return;
