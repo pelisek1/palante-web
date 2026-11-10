@@ -688,7 +688,8 @@ let queue=[...S];
 function typing(ms){return new Promise(r=>{const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';log.appendChild(t);scroll();statusEl.textContent=U.nahrava;setTimeout(()=>{t.remove();statusEl.textContent=U.stav;r()},ms)})}
 
 /* wait until a line is fully spoken before the next one starts (max 25 s) */
-function talk(...a){return Promise.race([Promise.resolve(speak(...a)),new Promise(r=>setTimeout(r,25000))])}
+function busyNow(){try{if(speechSynthesis.speaking)return true}catch(e){}return !!(player&&!player.paused&&!player.ended)}
+async function talk(...a){const t0=Date.now();while(busyNow()&&Date.now()-t0<25000)await new Promise(r=>setTimeout(r,200));return Promise.race([Promise.resolve(speak(...a)),new Promise(r=>setTimeout(r,25000))])}
 async function run(instant){
   while(queue.length){
     const m=queue.shift();
