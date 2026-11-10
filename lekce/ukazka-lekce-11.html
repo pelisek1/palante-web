@@ -581,7 +581,7 @@ function speak(text,kind,el,slow){
     try{speechSynthesis.cancel()}catch(e){} if(player)player.pause(); if(current&&current!==el){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY}
     player=new Audio(src);if(slow&&kind!=='honza')player.playbackRate=0.8;current=el;el.classList.add('on');btn.innerHTML=STOP;
     const done=()=>{if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY};
-    player.onended=done;player.onerror=done;player.play().catch(done);return;
+    return new Promise(res=>{const fin=()=>{done();res()};player.onended=fin;player.onerror=fin;player.onpause=fin;player.play().catch(fin)});
   }
   if(player){player.pause();player=null;if(current){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY;current=null}}
   if(!('speechSynthesis' in window)){statusEl.textContent=U.neumiHlas;return}
@@ -595,8 +595,7 @@ function speak(text,kind,el,slow){
   const btn=el.querySelector('.play');
   u.onstart=()=>{current=el;el.classList.add('on');btn.innerHTML=STOP;btn.setAttribute('aria-label',U.zastavit)};
   const done=()=>{if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY;btn.setAttribute('aria-label',U.prehrat)};
-  u.onend=done;u.onerror=done;
-  speechSynthesis.speak(u);
+  return new Promise(res=>{u.onend=()=>{done();res()};u.onerror=()=>{done();res()};speechSynthesis.speak(u)});
 }
 function waveHTML(text){
   let h='',seed=text.length;for(let i=0;i<28;i++){seed=(seed*9301+49297)%233280;h+=`<i style="height:${6+Math.round(seed/233280*20)}px"></i>`}return h;
@@ -656,13 +655,15 @@ function hint(t){const d=document.createElement('div');d.className='hint';d.text
 let queue=[...S];
 function typing(ms){return new Promise(r=>{const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';log.appendChild(t);scroll();statusEl.textContent=U.nahrava;setTimeout(()=>{t.remove();statusEl.textContent=U.stav;r()},ms)})}
 
+/* wait until a line is fully spoken before the next one starts (max 25 s) */
+function talk(...a){return Promise.race([Promise.resolve(speak(...a)),new Promise(r=>setTimeout(r,25000))])}
 async function run(instant){
   while(queue.length){
     const m=queue.shift();
     if(m.t==='c'){showChoice(m);return}
     if(m.t==='end'){showEnd();return}
     if(!instant&&(m.t==='v'||m.t==='x'||m.t==='fb'||m.t==='video'||m.t==='g'))await typing(m.t==='v'?900:600);
-    if(m.t==='v'){const d=voiceMsg(m,instant||!!m.fb);if(!instant)speak(m.es,m.who,d,m.slow)}
+    if(m.t==='v'){const d=voiceMsg(m,instant||!!m.fb);if(!instant)await talk(m.es,m.who,d,m.slow)}
     else if(m.t==='video'){await videoMsg(m,!instant)}
     else if(m.t==='x')textMsg(m);
     else if(m.t==='g')gramMsg(m);
@@ -679,10 +680,10 @@ function showChoice(m){
     b.innerHTML=`${MIC}<span><span>${esc(o.es)}</span><small>${o.sub}</small></span>`;
     b.onclick=()=>{
       comp.innerHTML='';
-      const d=voiceMsg({es:o.es,who:'me'},true);speak(o.es,'me',d);
+      const d=voiceMsg({es:o.es,who:'me'},true);
       if(o.note)notes.push(o.note);
       if(o.reply)queue=[...o.reply,...queue];
-      setTimeout(()=>run(false),Math.min(2600,900+o.es.length*45));
+      talk(o.es,'me',d).then(()=>setTimeout(()=>run(false),350));
     };
     box.appendChild(b);
   });
