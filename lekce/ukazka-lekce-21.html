@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Lekce španělštiny A2: předpřítomný čas | Pa'lante!</title>
+<meta name="description" content="Ukázka lekce 21 (úroveň A2): předpřítomný čas. Večer v baru v Málaze s Lucíí a Rafou.">
+<link rel="canonical" href="https://palante.cz/lekce/ukazka-lekce-21.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pa&#x27;lante! španělština">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Lekce španělštiny A2: předpřítomný čas | Pa&#x27;lante!">
+<meta property="og:description" content="Ukázka lekce 21 (úroveň A2): předpřítomný čas. Večer v baru v Málaze s Lucíí a Rafou.">
+<meta property="og:url" content="https://palante.cz/lekce/ukazka-lekce-21.html">
+<meta property="og:image" content="https://palante.cz/media/sdileni.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="/media/fonty/fonty.css">
+<style>
+/* Layout: travel-journal paper; left = what the lesson is, right = phone with the live chat demo */
+:root{
+  --paper:#f1e8d8; --paper-2:#e8dcc6; --card:#fbf8f1; --ink:#2b2116; --muted:#6b5b45; --rule:#d9ccb4;
+  --red:#b23a22; --sol:#f2b33d; --blue:#2340c8; --green:#2f6b3a;
+  --chat:#e9e1d1; --me:#f7e3b0; --phone:#1d1813;
+  --font-display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --font-body:"Instrument Sans",ui-sans-serif,system-ui,sans-serif;
+  --font-hand:"Caveat","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1d1813; --paper-2:#262019; --card:#2c251d; --ink:#f1e8d8; --muted:#b9a98f; --rule:#3a3128;
+  --red:#ff8a6e; --sol:#f2b33d; --blue:#9db0ff; --green:#7fc48c; --chat:#231d17; --me:#4a3b1c; --phone:#0e0b08; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1d1813; --paper-2:#262019; --card:#2c251d; --ink:#f1e8d8; --muted:#b9a98f; --rule:#3a3128;
+  --red:#ff8a6e; --sol:#f2b33d; --blue:#9db0ff; --green:#7fc48c; --chat:#231d17; --me:#4a3b1c; --phone:#0e0b08; color-scheme:dark}
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.55}
+.wrap{max-width:1080px;margin:0 auto;padding-block:40px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:48px;align-items:start}
+@media (max-width:860px){.wrap{grid-template-columns:minmax(0,1fr);gap:32px}}
+.stamp{display:inline-flex;padding:5px 10px;border:2px solid var(--red);color:var(--red);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-3deg)}
+h1{font-family:var(--font-display);font-weight:800;font-size:clamp(38px,6vw,60px);letter-spacing:-.03em;line-height:.98;margin:18px 0 10px;text-wrap:balance}
+h1 em{font-style:normal;color:var(--red)}
+.hand{font-family:var(--font-hand);font-weight:700;color:var(--red);font-size:26px;line-height:1.1;display:inline-block;transform:rotate(-2deg)}
+.lead{max-width:60ch;color:var(--muted);margin:14px 0 0}
+h2{font-family:var(--font-display);font-weight:800;font-size:24px;letter-spacing:-.02em;margin:0 0 12px}
+section{margin-top:36px}
+ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:10px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:34px 1fr auto;gap:12px;align-items:baseline;padding:10px 0;border-bottom:1px solid var(--rule)}
+ol.steps li::before{content:counter(s);font-family:var(--font-display);font-weight:800;font-size:22px;color:var(--red)}
+ol.steps b{display:block}
+ol.steps span.t{color:var(--muted);font-size:14px}
+ol.steps .min{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.phrases{display:grid;gap:8px}
+.phrase{display:flex;gap:12px;align-items:center;background:var(--card);padding:10px 14px;border-radius:3px;box-shadow:0 1px 0 var(--rule)}
+.phrase .es{font-weight:700}
+.phrase .cz{color:var(--muted);font-size:14px}
+.phrase div{min-width:0}
+.play{flex:none;width:38px;height:38px;border-radius:50%;border:0;background:var(--red);color:var(--card);cursor:pointer;display:grid;place-items:center}
+.play svg{width:14px;height:14px;fill:currentColor}
+.play:focus-visible,.chip:focus-visible,.btn:focus-visible,.tr:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+.note{background:var(--paper-2);padding:16px 18px;border-radius:3px;font-size:14px;color:var(--muted)}
+.note b{color:var(--ink)}
+.note ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+
+/* phone */
+.phone{position:sticky;top:calc(env(safe-area-inset-top,0px) + 16px);background:var(--phone);border-radius:34px;padding:10px;box-shadow:0 20px 50px rgba(30,20,10,.25)}
+.screen{background:var(--chat);border-radius:26px;overflow:hidden;display:flex;flex-direction:column;height:min(720px,82vh)}
+@media (max-width:860px){.phone{position:static}.screen{height:640px}}
+.bar{display:flex;gap:10px;align-items:center;padding:12px 14px;background:var(--card);border-bottom:1px solid var(--rule)}
+.av{width:40px;height:40px;border-radius:50%;object-fit:cover;flex:none}
+.bar b{display:block;font-size:15px}
+.bar small{color:var(--muted);font-size:12px}
+.log{flex:1;overflow-y:auto;padding:14px 12px;display:flex;flex-direction:column;gap:8px;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){.log{scroll-behavior:auto}.msg{animation:none!important}}
+.day{align-self:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:var(--card);padding:3px 10px;border-radius:10px}
+.msg{max-width:86%;padding:8px 11px;border-radius:14px;background:var(--card);font-size:14.5px;line-height:1.45;animation:in .25s ease-out;overflow-wrap:anywhere}
+@keyframes in{from{transform:translateY(6px);opacity:.3}to{transform:none;opacity:1}}
+.msg.me{align-self:flex-end;background:var(--me);border-bottom-right-radius:4px}
+.msg.them{align-self:flex-start;border-bottom-left-radius:4px}
+.who{font-size:12px;font-weight:700;color:var(--red);display:block;margin-bottom:2px}
+.who.paco{color:var(--green)}
+.who.honza{color:var(--blue)}
+.honza-v .play{background:var(--blue)}
+.voice{display:flex;align-items:center;gap:9px}
+.voice .play{width:34px;height:34px}
+.paco-v .play{background:var(--green)}
+.who.rafa{color:#a0521b}.rafa-v .play{background:#a0521b}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .who.rafa{color:#f0a35e}:root:not([data-theme="light"]) .rafa-v .play{background:#f0a35e;color:#1d1813}}
+:root[data-theme="dark"] .who.rafa{color:#f0a35e}:root[data-theme="dark"] .rafa-v .play{background:#f0a35e;color:#1d1813}
+.msg.karta{border-left:4px solid var(--sol);border-radius:6px 14px 14px 6px;max-width:92%}
+.msg.karta .kt{display:block;font-family:var(--font-display);font-weight:800;font-size:15px;margin-bottom:4px}
+.msg.karta table{border-collapse:collapse;margin:6px 0 2px;font-size:13.5px}.msg.karta td{padding:2px 10px 2px 0;vertical-align:top}.msg.karta td:first-child{font-weight:700}
+.gram table{border-collapse:collapse;margin:8px 0 0}.gram td{padding:3px 14px 3px 0;vertical-align:top}.gram td:first-child{font-weight:700;color:var(--ink)}
+.me .play{background:var(--ink);color:var(--me)}
+.wave{display:flex;gap:2px;align-items:center;height:26px;flex:1;min-width:90px}
+.wave i{display:block;width:3px;border-radius:2px;background:currentColor;opacity:.45}
+.voice.on .wave i{opacity:1}
+.dur{font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tr{display:inline-block;margin-top:5px;font-size:12px;color:var(--blue);background:none;border:0;padding:0;cursor:pointer;font-family:inherit;text-decoration:underline}
+.trans{margin-top:5px;font-size:13.5px}
+.trans .es{font-weight:600}
+.trans .cz{color:var(--muted)}
+.fb{border-left:3px solid var(--green);padding-left:8px}
+.fb.warn{border-color:var(--red)}
+.msg.vid{padding:6px 6px 8px;width:min(230px,70%)}
+.msg.vid .who{padding:0 5px}
+.msg.vid video{display:block;width:100%;aspect-ratio:9/16;border-radius:10px;background:#000;object-fit:cover}
+.msg.vid .tr{margin-left:5px}
+.msg.vid .trans{padding:0 5px}
+.hint{align-self:center;font-family:var(--font-hand);font-size:20px;color:var(--red);text-align:center;line-height:1.1}
+.composer{padding:10px 12px 12px;background:var(--card);border-top:1px solid var(--rule);display:grid;gap:8px}
+.composer .lbl{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.chips{display:grid;gap:6px}
+.chip{display:flex;gap:8px;align-items:center;text-align:left;font:inherit;font-size:14px;padding:9px 12px;border-radius:12px;border:1.5px solid var(--rule);background:var(--paper);color:var(--ink);cursor:pointer}
+.chip:hover{border-color:var(--red)}
+.chip svg{flex:none;width:16px;height:16px;fill:var(--red)}
+.chip small{color:var(--muted);display:block;font-size:12px}
+.btn{font:inherit;font-weight:700;font-size:14px;padding:10px 14px;border-radius:12px;border:0;background:var(--red);color:var(--card);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--muted);border:1.5px solid var(--rule);font-weight:600}
+.typing{align-self:flex-start;background:var(--card);border-radius:14px;padding:10px 14px;display:flex;gap:4px}
+.typing i{width:6px;height:6px;border-radius:50%;background:var(--muted);animation:b 1s infinite}
+.typing i:nth-child(2){animation-delay:.15s}.typing i:nth-child(3){animation-delay:.3s}
+@keyframes b{50%{opacity:.25}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.foot{grid-column:1/-1;font-size:13px;color:var(--muted);border-top:1px solid var(--rule);padding-top:16px}
+.ltop{background:var(--ink)}.ltop div{max-width:1080px;margin:0 auto;padding:14px max(16px,env(safe-area-inset-left,0px));display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ltop .logo{font-family:var(--font-display,inherit);font-weight:800;font-size:26px;letter-spacing:-.03em;color:var(--paper);text-decoration:none}.ltop .logo span{color:#FFC860}
+.ltop nav{display:flex;gap:16px;flex-wrap:wrap}.ltop nav a{color:var(--paper);opacity:.85;text-decoration:none;font-size:15px;font-weight:500}
+.dal{margin-top:22px;background:var(--paper-2);border-radius:3px;padding:20px 22px}.dal h2{margin:0 0 6px}.dal p{margin:0 0 14px;color:var(--muted)}
+.cta{display:inline-block;margin:0 10px 8px 0;background:var(--ink);color:var(--paper);border-radius:999px;padding:12px 22px;font-weight:600;text-decoration:none}.cta.ghost{background:transparent;color:var(--ink);border:2px solid currentColor}
+</style>
+
+<style>
+.shead{position:sticky;top:0;z-index:40;background:#2B2116;color:#FBF8F1;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.shead-in{max-width:1120px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:18px}
+.shead-logo{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.03em;color:#FBF8F1;text-decoration:none;margin-right:auto}
+.shead-logo span{color:#FFC860}
+.shead nav{display:flex;gap:16px;flex-wrap:wrap}
+.shead nav a{color:#FBF8F1;opacity:.85;text-decoration:none;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:500;font-size:15px}
+.shead nav a:hover{opacity:1}
+.shead-btn{background:#FBF8F1;color:#2B2116;border-radius:999px;padding:9px 16px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.shead-menu{display:none;background:transparent;border:1px solid rgba(251,248,241,.5);color:#FBF8F1;border-radius:999px;width:42px;height:42px;padding:0;cursor:pointer;place-items:center}
+.shead-menu svg{width:20px;height:20px}
+@media (max-width:1000px){.shead-menu{display:grid}.shead-in{flex-wrap:wrap;gap:10px}
+.shead nav{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;padding:6px 0}
+.shead.open nav{display:flex}.shead nav a{padding:11px 4px;font-size:18px;border-top:1px solid rgba(251,248,241,.1)}}
+</style>
+<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#chyby">Chyby Čechů</a><a href="/index.html#spanelsko">Španělsko</a><a href="/blog/index.html">Články</a><a href="/index.html#test">Test úrovně</a><a href="/index.html#cenik">Ceník</a><a href="/kontakt.html">Kontakt</a></nav><a class="shead-btn" href="/index.html#zdarma">Kurz zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
+<div class="wrap">
+  <div>
+    <span class="stamp">Ukázka · Lekce 21 · úroveň A2</span>
+    <h1>Lekce 21: <em>He comprado pescado</em></h1>
+    <span class="hand">Večer v baru a předpřítomný čas</span>
+    <p class="lead">První lekce úrovně A2. Lucía právě zavřela bar, Rafa přišel z pláže a každý vypráví, co dneska dělal. Naučíš se předpřítomný čas, kterým Španělé mluví o dnešku a o zážitcích.</p>
+
+    <section>
+      <h2>Jak lekce běží</h2>
+      <ol class="steps">
+        <li><div><b>Příběh</b><span class="t">Večer po zavírací době si všichni povídají, jaký měli den.</span></div><span class="min">1 min</span></li>
+        <li><div><b>Nové věty</b><span class="t">Poslechneš si je pomalu a rozumíš každému slovu.</span></div><span class="min">2 min</span></li>
+        <li><div><b>Gramatika česky</b><span class="t">Předpřítomný čas: he comprado</span></div><span class="min">2 min</span></li>
+        <li><div><b>Zopakuj a zahraj si scénku</b><span class="t">Rafa tě pozve na espeto a vyptává se na tvůj den.</span></div><span class="min">4 min</span></li>
+        <li><div><b>Honzův tip</b><span class="t">Krátká česká hlasovka od Honzy: co spletl on, abys to nespletl(a) ty.</span></div><span class="min">1 min</span></li>
+        <li><div><b>Úkol na zítra</b><span class="t">Tři věci, které jsi dneska udělal(a), začni Hoy he…</span></div><span class="min">1 min</span></li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Dnešní věty</h2>
+      <div class="phrases" id="phrases"></div>
+    </section>
+    <section id="gram" hidden><h2 id="gramH"></h2><div class="note gram" id="gramB"></div></section>
+
+    <section>
+      <div class="note">
+        <b>Jak to funguje v členství</b>
+        <ul>
+          <li>Lucía, Paco i Honza mluví vlastními hlasy, stejnými jako ve videích.</li>
+          <li>Tady odpověď vybíráš tlačítkem. V členství ji můžeš napsat nebo namluvit a Lucía reaguje na to, co opravdu říkáš.</li>
+          <li>Lekce běží ve webové aplikaci v mobilu i na počítači, každý den jedna. Přihlásíš se odkazem z e-mailu, bez hesla.</li>
+          <li>Lucía, Paco, Rafa a Honza jsou AI postavy, španělština je skutečná.</li>
+        </ul>
+      </div>
+      <div class="dal">
+        <h2>Chceš pokračovat?</h2>
+        <p>V členství přijde každý den jedna lekce na tvé úrovni. Prvních 5 dní je zdarma.</p>
+        <div><a class="cta" href="../produkty/clenstvi.html">Členství</a><a class="cta ghost" href="../index.html#test">Test úrovně</a></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="phone" aria-label="Ukázka chatu s Lucíí">
+    <div class="screen">
+      <div class="bar">
+        <img class="av" alt="Lucía" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/6xaJSlACEQAAAAEAABZ/anVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAFllqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOmEzMDkyMzVlLWFlYjMtNGI4YS05MzY1LTM2OTAxN2VlYzlkYQAAAAOUanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAAuWp1bWIAAABEanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5pbmdyZWRpZW50LnYzAAAAABhjMnNouiAi9Sbrveu/KbsqqQxKKwAAAG1jYm9yo2lkYzpmb3JtYXRqaW1hZ2UvanBlZ2ppbnN0YW5jZUlEeCx4bXA6aWlkOmQ5ZWE4YThmLTBkZTktNDI1MS04N2VhLWY5ZmFkODI3MWZmOGxyZWxhdGlvbnNoaXBocGFyZW50T2YAAAHianVtYgAAAEFqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmFjdGlvbnMudjIAAAAAGGMyc2hmEXnGT3whyAMVUWlKyQ5BAAABmWNib3KiZ2FjdGlvbnOComZhY3Rpb25rYzJwYS5vcGVuZWRqcGFyYW1ldGVyc6FraW5ncmVkaWVudHOBomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDxNz4/Z7wBO3lXzfA9UlNUWT4HFydi/i/KlE6MX0y5EaRmYWN0aW9ueB1jb20uYW50aHJvcGljLmNsYXVkZS5wcm92aWRlZGpwYXJhbWV0ZXJzoXgfY29tLmFudGhyb3BpYy5vcmlnaW4tY29uZmlkZW5jZWd1bmtub3dua2Rlc2NyaXB0aW9ueGZDbGF1ZGUgcHJvdmlkZWQgdGhpcyBmaWxlIGF0IHRoZSByZXF1ZXN0IG9mIGEgdXNlciBhbmQgbWF5IGhhdmUgY3JlYXRlZCBvciBtb2RpZmllZCB0aGUgZmlsZSBjb250ZW50cy5tc29mdHdhcmVBZ2VudKFkbmFtZWZDbGF1ZGVyYWxsQWN0aW9uc0luY2x1ZGVk9QAAAMhqdW1iAAAAQGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaGFzaC5kYXRhAAAAABhjMnNoR9D3eOB+1DHQxX0NZ1mzqQAAAIBjYm9ypWNhbGdmc2hhMjU2Y3BhZE4AAAAAAAAAAAAAAAAAAGRoYXNoWCAlEM3ZZegroGQDAoPCzrx/Rxcb7PFICgs3wJGsR0a2JmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBRmbGVuZ3RoGRaLAAACPmp1bWIAAAAnanVtZGMyY2wAEQAQgAAAqgA4m3EDYzJwYS5jbGFpbS52MgAAAAIPY2JvcqVjYWxnZnNoYTI1NmlzaWduYXR1cmV4TXNlbGYjanVtYmY9L2MycGEvdXJuOmMycGE6YTMwOTIzNWUtYWViMy00YjhhLTkzNjUtMzY5MDE3ZWVjOWRhL2MycGEuc2lnbmF0dXJlamluc3RhbmNlSUR4LHhtcDppaWQ6YjliNzFjYWEtODU4My00MDdkLTljNTItNjY0OTJhNDYzN2ZlcmNyZWF0ZWRfYXNzZXJ0aW9uc4OiY3VybHgtc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50LnYzZGhhc2hYIPE3Pj9nvAE7eVfN8D1SU1RZPgcXJ2L+L8qUToxfTLkRomN1cmx4KnNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuYWN0aW9ucy52MmRoYXNoWCCTcaiTpl/sj8+f41QkYKy0MkLTKyqcoWLcx78wWkQeKqJjdXJseClzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmhhc2guZGF0YWRoYXNoWCBsT9EYeSn0UfvcaP3PjwW9vtMu9MOSA9yWdwo93PjgV3RjbGFpbV9nZW5lcmF0b3JfaW5mb6NkbmFtZW9BbnRocm9waWMgRmlsZXNndmVyc2lvbmUxLjAuMGtzcGVjVmVyc2lvbmUyLjQuMAAAEDhqdW1iAAAAKGp1bWRjMmNzABEAEIAAAKoAOJtxA2MycGEuc2lnbmF0dXJlAAAAEAhjYm9y0oRZAhKiASYYIVkCCjCCAgYwggGNoAMCAQICFEDloAruwjnQvriD+gZCBT1nVRMAMAoGCCqGSM49BAMDMEkxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMS4wLAYDVQQDEyVBbnRocm9waWMgQ29udGVudCBDcmVkZW50aWFscyBSb290IENBMB4XDTI2MDgwNzE4NDM1NloXDTI4MDgwNjE5NDM1NlowRDEXMBUGA1UEChMOQW50aHJvcGljLCBQQkMxKTAnBgNVBAMTIEFudGhyb3BpYyBDbGF1ZGUgQ29udGVudCBTaWduaW5nMFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEmHoKa8tQGAUU1TS9QqU5W0Tp2N3XsvlK7BfQt6YWKwEzd2R3/dzKPEUDdCjlLjp9fT+KFjRVnuZ9v0oXvTe3k6NYMFYwDgYDVR0PAQH/BAQDAgeAMBUGA1UdJQQOMAwGCisGAQQBg+heAgEwDAYDVR0TAQH/BAIwADAfBgNVHSMEGDAWgBTOUeIEgU5kWyP448TPmj6cwddcwjAKBggqhkjOPQQDAwNnADBkAjAxcx0UngF60stVjs5G4T2eiptsBk5mf9oCtfJPAUBl8qs/PEXa8+gk1/X5QJ2DVcYCMHBfXN31YapiSqYvlIWrDVDJKOvXMl+kkz37Wt0PBI8sw486Mq6JeOhT+lRR4b1HCaFjcGFkWQ2eAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA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">
+        <div><b>Co jsi dneska dělal(a)? · Lucía,  Rafa,  Paco,  Honza</b><small id="status">AI postavy · Málaga</small></div>
+      </div>
+      <div class="log" id="log" aria-live="polite">
+        <span class="day">Lekce 21 · A2</span>
+      </div>
+      <div class="composer" id="composer"></div>
+    </div>
+  </div>
+
+  <p class="foot">Ukázka lekce 21 z členství Pa'lante! (úroveň A2). Hlasy postav jsou vytvořené pomocí AI.</p>
+</div>
+
+<script type="application/json" id="obsah">
+{
+ "phrases": [
+  [
+   "¿Qué has hecho hoy?",
+   "Co jsi dneska dělal(a)?"
+  ],
+  [
+   "He comprado pescado en el mercado.",
+   "Koupil(a) jsem na trhu rybu."
+  ],
+  [
+   "Hoy he trabajado mucho.",
+   "Dneska jsem hodně pracoval(a)."
+  ],
+  [
+   "Todavía no he comido.",
+   "Ještě jsem nejedl(a)."
+  ],
+  [
+   "¿Has estado alguna vez en Ronda?",
+   "Byl(a) jsi někdy v Rondě?"
+  ]
+ ],
+ "S": [
+  {
+   "t": "x",
+   "who": "lucia",
+   "html": "Ahoj! Jestli se s námi potkáváš poprvé: jsem <b>Lucía<\/b>, mám bar na tržnici Atarazanas v Málaze. Vedle je stánek zelináře <b>Paca<\/b>, můj přítel <b>Rafa<\/b> je kuchař na pláži a <b>Honza<\/b> z Brna tu žije už měsíc. Na téhle úrovni budeme hodně vyprávět, co se stalo."
+  },
+  {
+   "t": "v",
+   "who": "lucia",
+   "es": "Son las ocho de la tarde. Acabo de cerrar el bar y estoy muerta. Hoy ha sido un día muy largo.",
+   "cz": "Je osm večer. Právě jsem zavřela bar a jsem mrtvá. Dneska to byl moc dlouhý den."
+  },
+  {
+   "t": "v",
+   "who": "rafa",
+   "es": "¡Hola, cariño! Yo hoy he preparado cien espetos. ¡Cien!",
+   "cz": "Ahoj, miláčku! Já jsem dneska připravil sto espet. Sto!"
+  },
+  {
+   "t": "v",
+   "who": "lucia",
+   "es": "¿Cien? Pues yo he servido no sé cuántos cafés y he hablado con todos los turistas de Málaga.",
+   "cz": "Sto? No a já jsem udělala nevím kolik kafí a mluvila jsem se všemi turisty v Málaze."
+  },
+  {
+   "t": "x",
+   "who": "lucia",
+   "html": "Slyšíš to <b>he preparado, he servido, he hablado<\/b>? To je předpřítomný čas. Ve Španělsku ho používáš, když mluvíš o dnešku."
+  },
+  {
+   "t": "g",
+   "title": "Předpřítomný čas: he comprado",
+   "html": "Tvoří se z <b>haber<\/b> a příčestí.<table><tr><td>he<\/td><td>hemos<\/td><\/tr><tr><td>has<\/td><td>habéis<\/td><\/tr><tr><td>ha<\/td><td>han<\/td><\/tr><\/table> Příčestí: <b>-ar → -ado<\/b> (comprado), <b>-er, -ir → -ido<\/b> (comido, vivido). Nepravidelná: <b>hecho<\/b> (hacer), <b>dicho<\/b> (decir), <b>visto<\/b> (ver), <b>puesto<\/b>, <b>escrito<\/b>, <b>vuelto<\/b>.<br> Ve Španělsku ho používáš pro <b>dnešek a tento týden<\/b> a pro <b>zážitky<\/b>: hoy, esta mañana, esta semana, alguna vez, nunca, todavía no."
+  },
+  {
+   "t": "v",
+   "who": "lucia",
+   "es": "¿Qué has hecho hoy? He comprado pescado en el mercado. Todavía no he comido.",
+   "cz": "Co jsi dneska dělal(a)? Koupil(a) jsem rybu na trhu. Ještě jsem nejedl(a).",
+   "slow": true
+  },
+  {
+   "t": "v",
+   "who": "honza",
+   "es": "Ahoj, Honza. Já jsem se španělsky učil z mexických videí a tam se říká Hoy compré pescado. Rafa se směje, že mluvím jako z telenovely. Ve Španělsku se o dnešku řekne He comprado. O včerejšku zase jinak, ale to až příště.",
+   "audio": "h1"
+  },
+  {
+   "t": "c",
+   "label": "Řekni Lucíi, co jsi dneska dělal(a)",
+   "opts": [
+    {
+     "es": "Hoy he trabajado mucho.",
+     "sub": "pracoval(a) jsem",
+     "reply": [
+      {
+       "t": "v",
+       "who": "lucia",
+       "es": "¡Como yo! He trabajado, perfecto.",
+       "cz": "Jako já! He trabajado, perfektní.",
+       "fb": "ok"
+      }
+     ]
+    },
+    {
+     "es": "Hoy he hacido muchas cosas.",
+     "sub": "s typickou chybou",
+     "reply": [
+      {
+       "t": "v",
+       "who": "lucia",
+       "es": "Casi. Hacer es irregular: he hecho.",
+       "cz": "Skoro. Hacer je nepravidelné: he hecho.",
+       "fb": "warn"
+      },
+      {
+       "t": "c",
+       "label": "Zkus to znovu",
+       "opts": [
+        {
+         "es": "Hoy he hecho muchas cosas.",
+         "sub": "opraveno",
+         "reply": [
+          {
+           "t": "v",
+           "who": "lucia",
+           "es": "¡Eso es! Ahora sí.",
+           "cz": "Přesně tak! Teď to sedí.",
+           "fb": "ok"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "v",
+   "who": "paco",
+   "es": "¡Buenas noches, familia! Yo hoy he vendido todas las chirimoyas. ¡Todas!",
+   "cz": "Dobrý večer, rodino! Já jsem dneska prodal všechny chirimoye. Všechny!"
+  },
+  {
+   "t": "v",
+   "who": "lucia",
+   "es": "Paco, ¿has estado alguna vez en Ronda? Rafa y yo queremos ir el domingo.",
+   "cz": "Paco, byl jsi někdy v Rondě? S Rafou tam chceme jet v neděli."
+  },
+  {
+   "t": "v",
+   "who": "paco",
+   "es": "¿En Ronda? ¡Claro! He estado mil veces.",
+   "cz": "V Rondě? Jasně! Byl jsem tam tisíckrát."
+  },
+  {
+   "t": "x",
+   "who": "lucia",
+   "html": "<b>¿Has estado alguna vez…?<\/b> je nejlepší otázka na zážitky: byl(a) jsi někdy…? Odpověď: <b>sí, he estado<\/b>, nebo <b>no, nunca he estado<\/b>."
+  },
+  {
+   "t": "c",
+   "label": "Odpověz za sebe: byl(a) jsi v Rondě?",
+   "opts": [
+    {
+     "es": "No, nunca he estado en Ronda.",
+     "sub": "nikdy",
+     "reply": [
+      {
+       "t": "v",
+       "who": "lucia",
+       "es": "¡Pues tienes que ir! Nunca he estado, muy bien dicho.",
+       "cz": "Tak tam musíš jet! Nunca he estado, dobře řečeno.",
+       "fb": "ok"
+      }
+     ]
+    },
+    {
+     "es": "Sí, he estado una vez.",
+     "sub": "jednou",
+     "reply": [
+      {
+       "t": "v",
+       "who": "lucia",
+       "es": "¡Qué bien! Una vez, perfecto.",
+       "cz": "Paráda! Una vez, perfektní.",
+       "fb": "ok"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "x",
+   "who": "lucia",
+   "html": "Rafa si přisedl k tobě. <b>Mluví jen on a ty.<\/b>"
+  },
+  {
+   "t": "h",
+   "text": "Scénka: večer v baru"
+  },
+  {
+   "t": "v",
+   "who": "rafa",
+   "es": "Oye, ¿y tú qué tal? ¿Has comido ya? Tengo espetos de sobra.",
+   "cz": "Hele, a co ty? Už jsi jedl(a)? Mám espeta navíc."
+  },
+  {
+   "t": "c",
+   "label": "Odpověz Rafovi",
+   "opts": [
+    {
+     "es": "No, todavía no he comido. ¡Tengo hambre!",
+     "sub": "správně",
+     "note": "ok1"
+    },
+    {
+     "es": "No, todavía no comí.",
+     "sub": "jako v Mexiku",
+     "note": "comi"
+    }
+   ]
+  },
+  {
+   "t": "v",
+   "who": "rafa",
+   "es": "¡Pues ven, siéntate aquí! ¿Y qué has hecho hoy?",
+   "cz": "Tak pojď, sedni si sem! A co jsi dneska dělal(a)?"
+  },
+  {
+   "t": "c",
+   "label": "Odpověz Rafovi",
+   "opts": [
+    {
+     "es": "He estado en la playa y he visto el atardecer.",
+     "sub": "pláž a západ slunce",
+     "note": "ok2"
+    },
+    {
+     "es": "He estado en la playa y he veído el atardecer.",
+     "sub": "s typickou chybou",
+     "note": "visto"
+    }
+   ]
+  },
+  {
+   "t": "v",
+   "who": "rafa",
+   "es": "¡Qué bonito! Esta semana he visto tres atardeceres desde el chiringuito.",
+   "cz": "To je krása! Tenhle týden jsem z chiringuita viděl tři západy slunce."
+  },
+  {
+   "t": "c",
+   "label": "Zeptej se Rafy",
+   "opts": [
+    {
+     "es": "¿Y tú, has descansado algo hoy?",
+     "sub": "odpočinul sis?",
+     "note": "ok3"
+    },
+    {
+     "es": "¿Y tú, has descansando algo hoy?",
+     "sub": "s typickou chybou",
+     "note": "ando"
+    }
+   ]
+  },
+  {
+   "t": "v",
+   "who": "rafa",
+   "es": "¿Descansar? Hoy no. Pero ahora sí, con vosotros.",
+   "cz": "Odpočívat? Dneska ne. Ale teď ano, s vámi."
+  },
+  {
+   "t": "fb"
+  },
+  {
+   "t": "v",
+   "who": "lucia",
+   "es": "Muy bien. Ya sabes contar tu día. Mañana Rafa y yo te contamos nuestro domingo en Ronda, pero con otro tiempo verbal.",
+   "cz": "Moc dobře. Už umíš vyprávět svůj den. Zítra ti s Rafou povíme o naší neděli v Rondě, ale v jiném čase."
+  },
+  {
+   "t": "x",
+   "who": "lucia",
+   "html": "<b>Úkol na zítra:<\/b> pošli mi hlasovku se třemi věcmi, které jsi dneska udělal(a). Začni <b>Hoy he…<\/b> Aspoň jedna ať je nepravidelná: hecho, visto, dicho nebo vuelto. ¡Hasta mañana!"
+  },
+  {
+   "t": "end"
+  }
+ ],
+ "audio": {
+  "h1": "audio/21/honza-88a9233cc2.mp3"
+ },
+ "ui": {
+  "jmenovky": {
+   "lucia": "Lucía",
+   "paco": "Paco · zelinář",
+   "honza": "Honza · z Brna",
+   "tahak": "Honzův tahák",
+   "rafa": "Rafa · kuchař"
+  },
+  "prehrat": "Přehrát",
+  "zastavit": "Zastavit",
+  "prepis": "Přepis",
+  "skrytPrepis": "Skrýt přepis",
+  "nahrava": "nahrává hlasovku…",
+  "stav": "AI postavy · Málaga",
+  "neumiHlas": "Tento prohlížeč neumí přehrát hlas",
+  "vyberUkazka": "(ukázka: vyber, co řekneš)",
+  "den": "Lekce 21 · A2",
+  "konec": "Konec lekce 21",
+  "znovu": "Projít lekci znovu",
+  "tts_jazyk": "es-ES",
+  "zpetnaVazba": {
+   "nadpis": "<b>Jak to šlo s Rafou:<\/b><br>",
+   "poznamky": {
+    "comi": "• <b>Todavía no comí<\/b> řeknou v Mexiku. Ve Španělsku o dnešku: <b>todavía no he comido<\/b>.<br>",
+    "visto": "• Ver je nepravidelné: <b>he visto<\/b>, ne „veído“.<br>",
+    "ando": "• Po <b>has<\/b> patří příčestí na -ado: <b>has descansado<\/b>.<br>"
+   },
+   "pocetSpravne": 3,
+   "vseOk": "Všechno sedělo. Mluvíš o dnešku jako ve Španělsku.",
+   "zaver": "<br>Naostro tu bude i poznámka k výslovnosti z tvé nahrávky."
+  }
+ },
+ "video": {},
+ "hlasy": {
+  "lucia|Son las ocho de la tarde. Acabo de cerrar el bar y estoy muerta. Hoy ha sido un día muy largo.": "audio/21/lucia-2033539519.mp3",
+  "rafa|¡Hola, cariño! Yo hoy he preparado cien espetos. ¡Cien!": "audio/21/rafa-99da5ec37d.mp3",
+  "lucia|¿Cien? Pues yo he servido no sé cuántos cafés y he hablado con todos los turistas de Málaga.": "audio/21/lucia-48c8da4f18.mp3",
+  "lucia|¿Qué has hecho hoy? He comprado pescado en el mercado. Todavía no he comido.": "audio/21/lucia-24c048c277.mp3",
+  "lucia|¡Como yo! He trabajado, perfecto.": "audio/21/lucia-e4d4f01d36.mp3",
+  "lucia|Casi. Hacer es irregular: he hecho.": "audio/21/lucia-553d667ee6.mp3",
+  "lucia|¡Eso es! Ahora sí.": "audio/21/lucia-2dac2084e8.mp3",
+  "paco|¡Buenas noches, familia! Yo hoy he vendido todas las chirimoyas. ¡Todas!": "audio/21/paco-5338be0acc.mp3",
+  "lucia|Paco, ¿has estado alguna vez en Ronda? Rafa y yo queremos ir el domingo.": "audio/21/lucia-de23f32415.mp3",
+  "paco|¿En Ronda? ¡Claro! He estado mil veces.": "audio/21/paco-615c134800.mp3",
+  "lucia|¡Pues tienes que ir! Nunca he estado, muy bien dicho.": "audio/21/lucia-f05b4aaed4.mp3",
+  "lucia|¡Qué bien! Una vez, perfecto.": "audio/21/lucia-800609c7bc.mp3",
+  "rafa|Oye, ¿y tú qué tal? ¿Has comido ya? Tengo espetos de sobra.": "audio/21/rafa-c4b4d5e3ed.mp3",
+  "rafa|¡Pues ven, siéntate aquí! ¿Y qué has hecho hoy?": "audio/21/rafa-422bf775d6.mp3",
+  "rafa|¡Qué bonito! Esta semana he visto tres atardeceres desde el chiringuito.": "audio/21/rafa-fec0729e8e.mp3",
+  "rafa|¿Descansar? Hoy no. Pero ahora sí, con vosotros.": "audio/21/rafa-c2cc068b11.mp3",
+  "lucia|Muy bien. Ya sabes contar tu día. Mañana Rafa y yo te contamos nuestro domingo en Ronda, pero con otro tiempo verbal.": "audio/21/lucia-cd19f758f7.mp3",
+  "lucia|¿Qué has hecho hoy?": "audio/21/lucia-a125cf1b6c.mp3",
+  "lucia|He comprado pescado en el mercado.": "audio/21/lucia-d095b74a5e.mp3",
+  "lucia|Hoy he trabajado mucho.": "audio/21/lucia-7b844d4c5e.mp3",
+  "lucia|Todavía no he comido.": "audio/21/lucia-a5269f39ca.mp3",
+  "lucia|¿Has estado alguna vez en Ronda?": "audio/21/lucia-780fbe413c.mp3"
+ },
+ "gramatika": {
+  "nadpis": "Předpřítomný čas: he comprado",
+  "html": "Tvoří se z <b>haber<\/b> a příčestí.<table><tr><td>he<\/td><td>hemos<\/td><\/tr><tr><td>has<\/td><td>habéis<\/td><\/tr><tr><td>ha<\/td><td>han<\/td><\/tr><\/table> Příčestí: <b>-ar → -ado<\/b> (comprado), <b>-er, -ir → -ido<\/b> (comido, vivido). Nepravidelná: <b>hecho<\/b> (hacer), <b>dicho<\/b> (decir), <b>visto<\/b> (ver), <b>puesto<\/b>, <b>escrito<\/b>, <b>vuelto<\/b>.<br> Ve Španělsku ho používáš pro <b>dnešek a tento týden<\/b> a pro <b>zážitky<\/b>: hoy, esta mañana, esta semana, alguna vez, nunca, todavía no."
+ }
+}
+</script>
+<script>
+const O=JSON.parse(document.getElementById('obsah').textContent),U=O.ui;
+const PLAY='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>';
+const STOP='<svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="3.5" width="9" height="9" rx="1"/></svg>';
+const MIC='<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5a2.5 2.5 0 0 0-2.5 2.5v4a2.5 2.5 0 0 0 5 0V4A2.5 2.5 0 0 0 8 1.5zM3.5 7.5h1A3.5 3.5 0 0 0 11.5 8h1A4.5 4.5 0 0 1 8.5 12.5V14.5h-1v-2A4.5 4.5 0 0 1 3.5 7.5z"/></svg>';
+
+const phrases=O.phrases;
+
+/* the lesson script */
+const S=O.S;
+
+const log=document.getElementById('log'),comp=document.getElementById('composer'),statusEl=document.getElementById('status');
+let notes=[];
+let voices=[];
+function loadVoices(){try{voices=speechSynthesis.getVoices()}catch(e){voices=[]}}
+if('speechSynthesis' in window){loadVoices();speechSynthesis.onvoiceschanged=loadVoices}
+const FEM=/(m[oó]nica|paulina|helena|laura|elvira|lucia|luc[ií]a|sabina|marisol|esperanza|female|mujer|google español$)/i;
+const MAL=/(jorge|diego|juan|pablo|alvaro|álvaro|carlos|enrique|male|hombre)/i;
+function pickVoice(kind){
+  const es=voices.filter(v=>/^es[-_]ES/i.test(v.lang)); const any=es.length?es:voices.filter(v=>/^es/i.test(v.lang));
+  if(!any.length)return null;
+  const re=kind==='paco'?MAL:FEM; return any.find(v=>re.test(v.name))||any[0];
+}
+let current=null;
+const AUD=O.audio;
+const HZ={};S.forEach(m=>{if(m.audio)HZ[m.es]=m.audio});
+const EL=O.hlasy||{};
+let player=null;
+function speak(text,kind,el,slow){
+  log.querySelectorAll('video').forEach(v=>v.pause());
+  const src=kind==='honza'?AUD[HZ[text]]:EL[kind+'|'+text];
+  if(src){
+    const btn=el.querySelector('.play');
+    if(player&&current===el){player.pause();player=null;current=null;el.classList.remove('on');btn.innerHTML=PLAY;return}
+    try{speechSynthesis.cancel()}catch(e){} if(player)player.pause(); if(current&&current!==el){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY}
+    player=new Audio(src);if(slow&&kind!=='honza')player.playbackRate=0.8;current=el;el.classList.add('on');btn.innerHTML=STOP;
+    const done=()=>{if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY};
+    player.onended=done;player.onerror=done;player.play().catch(done);return;
+  }
+  if(player){player.pause();player=null;if(current){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY;current=null}}
+  if(!('speechSynthesis' in window)){statusEl.textContent=U.neumiHlas;return}
+  if(current===el){speechSynthesis.cancel();return}
+  speechSynthesis.cancel();
+  const u=new SpeechSynthesisUtterance(text);
+  const v=pickVoice(kind); if(v){u.voice=v;u.lang=v.lang}else{u.lang=U.tts_jazyk}
+  u.rate=slow?0.72:(kind==='me'?0.9:0.88);
+  const sameVoice=v&&pickVoice('paco')===pickVoice('lucia');
+  u.pitch=kind==='paco'?(sameVoice?0.7:0.95):kind==='me'?0.85:1.08;
+  const btn=el.querySelector('.play');
+  u.onstart=()=>{current=el;el.classList.add('on');btn.innerHTML=STOP;btn.setAttribute('aria-label',U.zastavit)};
+  const done=()=>{if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY;btn.setAttribute('aria-label',U.prehrat)};
+  u.onend=done;u.onerror=done;
+  speechSynthesis.speak(u);
+}
+function waveHTML(text){
+  let h='',seed=text.length;for(let i=0;i<28;i++){seed=(seed*9301+49297)%233280;h+=`<i style="height:${6+Math.round(seed/233280*20)}px"></i>`}return h;
+}
+function dur(text){const s=Math.max(2,Math.round(text.split(/\s+/).length*0.5));return '0:'+String(s).padStart(2,'0')}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function scroll(){log.scrollTop=log.scrollHeight}
+
+function voiceMsg(m,open){
+  const d=document.createElement('div');
+  const kind=m.who||'me';
+  d.className='msg '+(kind==='me'?'me':'them')+(kind==='paco'?' paco-v':'')+(kind==='honza'?' honza-v':'')+(kind==='rafa'?' rafa-v':'');
+  const name=U.jmenovky[kind]?`<span class="who${kind==='lucia'?'':' '+kind}">${U.jmenovky[kind]}</span>`:'';
+  const fb=m.fb?` fb${m.fb==='warn'?' warn':''}`:'';
+  d.innerHTML=`${name}<div class="voice"><button class="play" aria-label="${U.prehrat}">${PLAY}</button><div class="wave">${waveHTML(m.es)}</div><span class="dur">${dur(m.es)}</span></div>
+  <button class="tr" aria-expanded="${open?'true':'false'}">${open?U.skrytPrepis:U.prepis}</button>
+  <div class="trans${fb}" ${open?'':'hidden'}><div class="es">${esc(m.es)}</div>${m.cz?`<div class="cz">${esc(m.cz)}</div>`:''}</div>`;
+  d.querySelector('.play').onclick=()=>speak(m.es,kind,d.querySelector('.voice').parentElement===d?d:d,m.slow);
+  const tr=d.querySelector('.tr'),box=d.querySelector('.trans');
+  tr.onclick=()=>{box.hidden=!box.hidden;tr.textContent=box.hidden?U.prepis:U.skrytPrepis;tr.setAttribute('aria-expanded',String(!box.hidden))};
+  log.appendChild(d);scroll();return d;
+}
+function stopAll(except){
+  try{speechSynthesis.cancel()}catch(e){}
+  if(player){player.pause();player=null}
+  if(current){current.classList.remove('on');const b=current.querySelector('.play');if(b)b.innerHTML=PLAY;current=null}
+  log.querySelectorAll('video').forEach(v=>{if(v!==except)v.pause()});
+}
+function videoMsg(m,auto){
+  const d=document.createElement('div');const kind=m.who||'lucia';
+  d.className='msg them vid';
+  const V=O.video[m.v];
+  d.innerHTML=`<span class="who${kind==='lucia'?'':' '+kind}">${m.label||U.jmenovky[kind]}</span><video controls playsinline preload="metadata"${V.poster?` poster="${V.poster}"`:''} src="${V.src}"></video>${m.es?`<button class="tr" aria-expanded="false">${U.prepis}</button><div class="trans" hidden><div class="es">${esc(m.es)}</div>${m.cz?`<div class="cz">${esc(m.cz)}</div>`:''}</div>`:''}`;
+  const vid=d.querySelector('video');vid.addEventListener('play',()=>stopAll(vid));
+  const tr=d.querySelector('.tr');if(tr){const box=d.querySelector('.trans');tr.onclick=()=>{box.hidden=!box.hidden;tr.textContent=box.hidden?U.prepis:U.skrytPrepis;tr.setAttribute('aria-expanded',String(!box.hidden))}}
+  log.appendChild(d);scroll();
+  if(!auto)return Promise.resolve();
+  return new Promise(r=>{
+    const busy=()=>{try{if(speechSynthesis.speaking)return true}catch(e){}return !!(player&&!player.paused&&!player.ended)};
+    const t0=Date.now();
+    const go=()=>{if(busy()&&Date.now()-t0<8000)return setTimeout(go,200);vid.play().catch(()=>{})};go();let ok=false;const fin=()=>{if(!ok){ok=true;r()}};vid.addEventListener('ended',fin);vid.addEventListener('pause',fin);vid.addEventListener('error',fin);setTimeout(fin,(V.s||10)*1000+9500)});
+}
+function textMsg(m){
+  const d=document.createElement('div');d.className='msg them';
+  d.innerHTML=`<span class="who">${U.jmenovky.lucia}</span>${m.html}`;log.appendChild(d);scroll();
+}
+function gramMsg(m){
+  const d=document.createElement('div');d.className='msg them karta';
+  d.innerHTML=`<span class="who">${U.jmenovky.lucia}</span><span class="kt">${m.title}</span>${m.html}`;log.appendChild(d);scroll();
+}
+function hint(t){const d=document.createElement('div');d.className='hint';d.textContent=t;log.appendChild(d);scroll()}
+
+let queue=[...S];
+function typing(ms){return new Promise(r=>{const t=document.createElement('div');t.className='typing';t.innerHTML='<i></i><i></i><i></i>';log.appendChild(t);scroll();statusEl.textContent=U.nahrava;setTimeout(()=>{t.remove();statusEl.textContent=U.stav;r()},ms)})}
+
+async function run(instant){
+  while(queue.length){
+    const m=queue.shift();
+    if(m.t==='c'){showChoice(m);return}
+    if(m.t==='end'){showEnd();return}
+    if(!instant&&(m.t==='v'||m.t==='x'||m.t==='fb'||m.t==='video'||m.t==='g'))await typing(m.t==='v'?900:600);
+    if(m.t==='v'){const d=voiceMsg(m,instant||!!m.fb);if(!instant)speak(m.es,m.who,d,m.slow)}
+    else if(m.t==='video'){await videoMsg(m,!instant)}
+    else if(m.t==='x')textMsg(m);
+    else if(m.t==='g')gramMsg(m);
+    else if(m.t==='h')hint(m.text);
+    else if(m.t==='fb')feedback();
+    if(!instant)await new Promise(r=>setTimeout(r,450));
+  }
+}
+function showChoice(m){
+  comp.innerHTML=`<span class="lbl">${m.label} <span style="text-transform:none;letter-spacing:0">${U.vyberUkazka}</span></span><div class="chips"></div>`;
+  const box=comp.querySelector('.chips');
+  m.opts.forEach(o=>{
+    const b=document.createElement('button');b.className='chip';
+    b.innerHTML=`${MIC}<span><span>${esc(o.es)}</span><small>${o.sub}</small></span>`;
+    b.onclick=()=>{
+      comp.innerHTML='';
+      const d=voiceMsg({es:o.es,who:'me'},true);speak(o.es,'me',d);
+      if(o.note)notes.push(o.note);
+      if(o.reply)queue=[...o.reply,...queue];
+      setTimeout(()=>run(false),Math.min(2600,900+o.es.length*45));
+    };
+    box.appendChild(b);
+  });
+  requestAnimationFrame(scroll);
+}
+function feedback(){
+  const Z=U.zpetnaVazba,good=notes.filter(n=>n.startsWith('ok')).length;
+  let html=Z.nadpis;
+  Object.keys(Z.poznamky).forEach(k=>{if(notes.includes(k))html+=Z.poznamky[k]});
+  if(good===Z.pocetSpravne)html+=Z.vseOk;
+  html+=Z.zaver;
+  const d=document.createElement('div');d.className='msg them';d.innerHTML=`<span class="who">${U.jmenovky.lucia}</span>${html}`;log.appendChild(d);scroll();
+}
+function showEnd(){
+  comp.innerHTML='<span class="lbl">'+U.konec+'</span><button class="btn ghost" id="again">'+U.znovu+'</button>';
+  document.getElementById('again').onclick=reset;
+}
+function reset(){stopAll();notes=[];queue=[...S];log.innerHTML='<span class="day">'+U.den+'</span>';run(true)}
+
+/* grammar of the day on the left (membership lessons) */
+if(O.gramatika){const g=document.getElementById('gram');g.hidden=false;document.getElementById('gramH').innerHTML=O.gramatika.nadpis;document.getElementById('gramB').innerHTML=O.gramatika.html}
+
+/* phrase list on the left */
+const ph=document.getElementById('phrases');
+phrases.forEach(([es,cz])=>{
+  const d=document.createElement('div');d.className='phrase';
+  d.innerHTML=`<button class="play" aria-label="${U.prehrat}: ${esc(es)}">${PLAY}</button><div><div class="es">${esc(es)}</div><div class="cz">${esc(cz)}</div></div>`;
+  d.querySelector('.play').onclick=()=>speak(es,'lucia',d,true);ph.appendChild(d);
+});
+
+/* open in a ready state: first messages visible, waiting for the student's first voice reply */
+run(true);
+</script>
+
+<script>(function(){var h=document.querySelector('.shead'),b=h&&h.querySelector('.shead-menu');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)})})();</script>
