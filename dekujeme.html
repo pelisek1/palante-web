@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Děkujeme · Pa'lante! Španělština</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="/media/fonty/fonty.css">
+<style>
+/* Layout: the same travel journal as the home page; the order is a paper receipt with one taped-on add-on, then a postcard offer after payment */
+:root{
+  --paper:#F1E8D8; --paper-2:#E8DCC6; --card:#FBF8F1; --ink:#2B2116; --muted:#6B5B45; --rule:rgba(90,65,30,.13);
+  --red:#B23A22; --blue:#2340C8; --green:#2F6B3A; --tape:rgba(236,196,92,.78); --on-dark:#FBF8F1;
+  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;position:relative}
+body::after{content:"";position:fixed;inset:0;background-image:var(--grain);opacity:.14;pointer-events:none;z-index:50;mix-blend-mode:multiply}
+.wrap{max-width:980px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);line-height:1.06;text-wrap:balance;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(32px,5vw,50px);font-weight:800}
+h2{font-size:clamp(26px,3.6vw,38px);font-weight:800}
+h3{font-size:20px;font-weight:800}
+p{margin:0}
+.hand{font-family:var(--hand);font-weight:700;color:var(--red);font-size:27px;line-height:1.1;display:inline-block;transform:rotate(-2deg)}
+.lead{color:var(--muted);max-width:60ch;margin-top:10px}
+.ruled{background-color:var(--paper);background-image:repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:15px 26px;font:inherit;font-weight:600;cursor:pointer;background:var(--ink);color:var(--paper);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid currentColor}
+.btn.link{background:none;color:var(--muted);padding:10px 4px;text-decoration:underline;font-weight:500}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.top{padding-block:20px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.03em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--red)}
+.kroky{display:flex;gap:6px;list-style:none;margin:0;padding:0;font-size:14px;color:var(--muted)}
+.kroky li{padding:4px 12px;border-radius:999px;border:1px solid var(--rule)}
+.kroky li[aria-current="step"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.proto{background:var(--tape);color:#2B2116;font-size:14px;padding:8px 0}
+main{padding-block:28px 72px}
+[hidden]{display:none!important}
+.mriz{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:32px;margin-top:28px;align-items:start}
+@media (max-width:820px){.mriz{grid-template-columns:1fr}}
+.karta{background:var(--card);border-radius:4px;padding:24px;box-shadow:0 12px 28px rgba(60,40,10,.14)}
+.produkt{display:flex;gap:18px;align-items:center}
+.obal{flex:none;width:92px;aspect-ratio:3/4;background:var(--red);color:#FBF8F1;border-radius:3px;display:flex;flex-direction:column;justify-content:flex-end;padding:10px;font-family:var(--display);font-weight:800;font-size:15px;line-height:1.05;transform:rotate(-3deg);box-shadow:0 8px 16px rgba(60,40,10,.25)}
+.obal small{font-family:var(--hand);font-size:17px;font-weight:700;color:#FFC860}
+.produkt ul{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:15px}
+form{display:grid;gap:14px;margin-top:22px}
+label.pole{display:grid;gap:4px;font-weight:600;font-size:15px}
+input[type=email],input[type=text]{font:inherit;padding:12px 14px;border-radius:6px;border:1.5px solid var(--muted);background:var(--paper);color:var(--ink)}
+.bump{position:relative;border:2.5px dashed var(--red);border-radius:6px;padding:18px;margin-top:6px;background:color-mix(in srgb,var(--red) 6%,var(--card))}
+.bump::before{content:"";position:absolute;top:-13px;left:28px;width:84px;height:24px;background:var(--tape);transform:rotate(-4deg)}
+.bump label{display:flex;gap:12px;align-items:flex-start;cursor:pointer}
+.bump input{width:24px;height:24px;flex:none;margin-top:3px;accent-color:var(--red)}
+.bump b{font-family:var(--display);font-size:19px}
+.bump p{color:var(--muted);font-size:15px;margin-top:6px}
+.bump audio{width:100%;margin-top:12px;height:38px}
+.souhlas{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:var(--muted)}
+.souhlas input{width:20px;height:20px;flex:none;margin-top:2px}
+.uctenka{font-family:var(--body);background:var(--card);padding:22px 22px 30px;box-shadow:0 12px 28px rgba(60,40,10,.14);position:relative;
+  -webkit-mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat,radial-gradient(circle 6px at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 10px repeat-x;
+  mask:linear-gradient(#000 0 0) top/100% calc(100% - 10px) no-repeat,radial-gradient(circle 6px at 8px 100%,transparent 6px,#000 6.5px) bottom/16px 10px repeat-x}
+.uctenka h3{font-size:18px}
+.radek{display:flex;justify-content:space-between;gap:12px;padding-block:8px;border-bottom:1px dashed var(--rule);font-size:15px}
+.radek.celkem{font-weight:700;font-size:20px;border-bottom:0;padding-top:14px}
+.zaruka{display:flex;gap:14px;align-items:flex-start;margin-top:22px}
+.razitko{flex:none;width:74px;height:74px;border-radius:50%;border:3px solid var(--green);color:var(--green);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:13px;line-height:1.05;transform:rotate(-8deg)}
+.zaruka p{font-size:15px;color:var(--muted)}
+.chyba{color:var(--red);font-size:14px;min-height:1em}
+.pohled{background:var(--card);padding:30px;box-shadow:0 14px 30px rgba(60,40,10,.18);margin-top:28px;border-left:6px solid var(--blue)}
+.pohled .cena{font-family:var(--display);font-weight:800;font-size:clamp(34px,5vw,46px);margin-top:14px}
+.pohled .cena small{font-family:var(--body);font-weight:500;font-size:16px;color:var(--muted)}
+.vypocet{font-size:15px;color:var(--muted);margin-top:4px}
+.pohled ul{margin:16px 0 0;padding-left:20px}
+.akce{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:24px}
+.pozn{font-size:14px;color:var(--muted);margin-top:14px}
+.stahnout{display:grid;gap:10px;margin-top:20px}
+.stahnout a{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--card);padding:14px 18px;border-radius:6px;color:var(--ink);text-decoration:none;box-shadow:0 6px 14px rgba(60,40,10,.1);font-weight:600}
+.stahnout a span{color:var(--muted);font-weight:400;font-size:14px}
+.uroven{margin-top:22px;border:0;padding:0}
+.uroven legend{font-weight:700;font-size:16px;margin-bottom:8px}
+.volby{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+.volby label{display:flex;flex-direction:column;gap:2px;border:1.5px solid color-mix(in srgb,var(--ink) 22%,transparent);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:15px}
+.volby label:has(input:checked){border-color:var(--blue);background:color-mix(in srgb,var(--blue) 9%,transparent)}
+.volby input{position:absolute;opacity:0;pointer-events:none}
+.volby label:has(input:focus-visible){outline:3px solid var(--blue);outline-offset:2px}
+.volby b{font-family:var(--display);font-size:18px}
+.volby small{color:var(--muted);font-size:13px;line-height:1.3}
+.uroven .pozn a{color:inherit}
+footer{padding-block:32px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.stav{margin-top:28px;max-width:640px}
+.karta p+p{margin-top:12px}
+.tocka{display:inline-block;width:18px;height:18px;border:3px solid var(--muted);border-top-color:transparent;border-radius:50%;animation:t 1s linear infinite;vertical-align:-3px;margin-right:8px}
+@keyframes t{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.tocka{animation:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">pa<span>'</span>lante<span>!</span></a>
+    <ol class="kroky" aria-label="Kroky objednávky"><li>1 Objednávka</li><li id="k2" aria-current="step">2 Zaplaceno</li><li id="k3">3 Ke stažení</li></ol>
+  </div>
+</header>
+
+<main class="ruled">
+  <div class="wrap">
+    <section class="stav" aria-live="polite">
+
+      <div id="cekame">
+        <span class="hand">Momentík…</span>
+        <h1>Ověřujeme platbu</h1>
+        <div class="karta" style="margin-top:22px"><p><span class="tocka" aria-hidden="true"></span>Platební brána nám právě posílá potvrzení. Obvykle to trvá pár sekund.</p>
+        <p class="pozn" id="prevod" hidden>Pokud jsi platil(a) převodem, může potvrzení z banky chvíli trvat. Tuhle stránku můžeš zavřít: jakmile platba dorazí, pošleme ti odkaz ke stažení e-mailem.</p></div>
+      </div>
+
+      <div id="hotovo" hidden>
+        <span class="hand">Hotovo, díky!</span>
+        <h1>Zaplaceno. Tady je tvoje stahování</h1>
+        <p class="lead" id="coMas"></p>
+        <div class="akce"><a class="btn" id="stahnout" href="#">Otevřít soubory ke stažení</a><a class="btn link" id="doklad" href="#" target="_blank" rel="noopener">Doklad o zaplacení</a></div>
+        <p class="pozn">Stejný odkaz ti posíláme i e-mailem na <b id="kam"></b>. Kdyby nepřišel do pár minut, mrkni do spamu nebo do záložky Promoakce. Do 14 dní ti vrátíme peníze, když tě to nebude bavit: stačí odpovědět na ten e-mail.</p>
+      </div>
+
+      <div id="zruseno" hidden>
+        <span class="hand">Nevadí</span>
+        <h1>Platba se nedokončila</h1>
+        <p class="lead">Nic jsme ti nestrhli. Můžeš to zkusit znovu, třeba jinou kartou nebo převodem z banky.</p>
+        <div class="akce"><a class="btn" id="znovu" href="objednavka.html">Zkusit znovu</a></div>
+      </div>
+
+      <div id="chyba" hidden>
+        <span class="hand">Jejda</span>
+        <h1>Objednávku jsme tu nenašli</h1>
+        <p class="lead">Jestli jsi zaplatil(a), odkaz ke stažení ti přijde e-mailem. Kdyby nepřišel, napiš nám na <a href="mailto:info@palante.cz">info@palante.cz</a> a hned to vyřešíme.</p>
+      </div>
+
+    </section>
+  </div>
+</main>
+
+<footer class="ruled">
+  <div class="wrap">
+    <span>Pa'lante! · <a href="obchodni-podminky.html" style="color:inherit">Obchodní podmínky</a> · <a href="kontakt.html" style="color:inherit">Kontakt</a></span>
+    <span class="hand">Hecho con cariño en Chequia</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Stejná adresa jako v objednavka.html
+  var OBCHOD='';
+  var $=function(i){return document.getElementById(i)};
+  var q=new URLSearchParams(location.search), obj=q.get('obj'), t=q.get('t');
+  function ukaz(id){['cekame','hotovo','zruseno','chyba'].forEach(function(k){$(k).hidden=(k!==id)});
+    if(id==='hotovo'){$('k2').removeAttribute('aria-current');$('k3').setAttribute('aria-current','step')}}
+  if(!OBCHOD||!obj||!t){ukaz('chyba');return}
+  var pokus=0;
+  function zjisti(){
+    pokus++;
+    fetch(OBCHOD+'/stav?obj='+encodeURIComponent(obj)+'&t='+encodeURIComponent(t)).then(function(r){return r.json()}).then(function(d){
+      if(d.stav==='PAID'){
+        $('coMas').textContent='Koupil(a) jsi: '+d.polozky.join(', ')+'.';
+        $('stahnout').href=d.stahnout; $('doklad').href=d.doklad; $('kam').textContent=d.email; ukaz('hotovo');
+      }else if(d.stav==='CANCELLED'){
+        if(d.polozky&&d.polozky[0]&&d.polozky[0].indexOf('Audiokurz')===0)$('znovu').href='objednavka.html?produkt=audiokurz';
+        ukaz('zruseno');
+      }else if(d.stav){
+        if(pokus>4)$('prevod').hidden=false;
+        setTimeout(zjisti,pokus<12?3000:15000);
+      }else ukaz('chyba');
+    }).catch(function(){if(pokus<6)setTimeout(zjisti,4000);else ukaz('chyba')});
+  }
+  zjisti();
+})();
+</script>
+</body>
+</html>
