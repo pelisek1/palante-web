@@ -180,7 +180,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         $('coMas').textContent='Koupil(a) jsi: '+d.polozky.join(', ')+'.';
         $('stahnout').href=d.stahnout; $('doklad').href=d.doklad; $('kam').textContent=d.email; ukaz('hotovo');
       }else if(d.stav==='CANCELLED'){
-        if(d.polozky&&d.polozky[0]&&d.polozky[0].indexOf('Audiokurz')===0)$('znovu').href='objednavka.html?produkt=audiokurz';
+        var p0=(d.polozky&&d.polozky[0])||'';if(p0.indexOf('Audiokurz')===0)$('znovu').href='objednavka.html?produkt=audiokurz';else if(p0.indexOf('Balíček')===0)$('znovu').href='objednavka.html?produkt=balicek';
         ukaz('zruseno');
       }else if(d.stav){
         if(pokus>4)$('prevod').hidden=false;
