@@ -241,7 +241,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   var OBCHOD='';
   var C={ebook:199,bump:99,pulrok:1290,mesic:290};
   // Druhý produkt na stejné stránce: objednavka.html?produkt=audiokurz
-  var PRODUKTY={audiokurz:{cena:490,hand:'Španělština do sluchátek',h1:'Audiokurz Španělsky do uší',lead:'20 lekcí ke stažení: MP3 a tahák v PDF ke každé lekci. Stáhneš hned po zaplacení.',obal:'Španělsky do uší',nazev:'Audiokurz Španělsky do uší',body:['20 audiolekcí, dohromady 4 hodiny 19 minut, úroveň A1 až A2','Příběh na pokračování z Málagy, odpovídáš nahlas','Ke každé lekci tahák v PDF'],radek:'Audiokurz, 20 lekcí MP3 + PDF'}};
+  var PRODUKTY={audiokurz:{cena:490,hand:'Španělština do sluchátek',h1:'Audiokurz Španělsky do uší',lead:'20 lekcí ke stažení: MP3 a tahák v PDF ke každé lekci. Stáhneš hned po zaplacení.',obal:'Španělsky do uší',nazev:'Audiokurz Španělsky do uší',body:['20 audiolekcí, dohromady 4 hodiny 19 minut, úroveň A1 až A2','Příběh na pokračování z Málagy, odpovídáš nahlas','Ke každé lekci tahák v PDF'],radek:'Audiokurz, 20 lekcí MP3 + PDF'},balicek:{cena:690,hand:'Všechno na poslech i do kapsy',h1:'Balíček: e-book, 100 frází do uší a audiokurz',lead:'Tři produkty v jednom: zvlášť by stály 788 Kč. Stáhneš hned po zaplacení.',obal:'Balíček',nazev:'Balíček Pa\'lante!',body:['E-book 100 frází na dovolenou se 100 nahrávkami (199 Kč)','100 frází do uší, 19 minut MP3 (99 Kč)','Audiokurz Španělsky do uší, 20 lekcí A1 až A2 (490 Kč)'],radek:'Balíček: e-book, 100 frází do uší, audiokurz'}};
   var produkt=(location.search.match(/[?&]produkt=([a-z]+)/)||[])[1];
   if(!PRODUKTY[produkt])produkt='ebook';
   if(produkt!=='ebook'){var P=PRODUKTY[produkt];C.ebook=P.cena;
