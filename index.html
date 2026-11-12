@@ -265,6 +265,7 @@ form .btn{align-self:flex-start;margin-top:10px}
 .cenik-pozn{max-width:760px;margin:28px 0 0;color:var(--muted);font-size:15px}
 .cenik-pozn a,.plan a.pozn,.prod p a{color:var(--red);text-underline-offset:3px}
 .plan a.pozn{font-size:15px}
+.kotva{display:block;position:relative;top:-80px;height:0}
 details{border-bottom:1px dashed color-mix(in srgb,var(--ink) 25%,transparent);padding-block:16px;max-width:760px}
 summary{font-weight:600;cursor:pointer;font-size:18px}
 details p{color:var(--muted);margin-top:8px}
@@ -322,7 +323,7 @@ footer .hand{font-size:24px}
 <header class="site">
   <div class="wrap">
     <a class="logo" href="#top">pa<span>'</span>lante<span>!</span></a>
-    <nav id="hlavni-menu"><a href="#scena">Ukázka lekce</a><a href="#metoda">Metoda</a><a href="#chyby">Chyby Čechů</a><a href="#test">Test úrovně</a><a href="#cenik">Ceník</a><a href="#spanelsko">Španělsko</a><a href="blog/index.html">Články</a><a href="kontakt.html">Kontakt</a></nav>
+    <nav id="hlavni-menu"><a href="#scena">Ukázka lekce</a><a href="#metoda">Metoda</a><a href="#chyby">Chyby Čechů</a><a href="#test">Test úrovně</a><a href="#produkty">Produkty</a><a href="#spanelsko">Španělsko</a><a href="blog/index.html">Články</a><a href="kontakt.html">Kontakt</a></nav>
     <a class="btn" href="#zdarma">Kurz zdarma</a>
     <button class="menu" type="button" aria-expanded="false" aria-controls="hlavni-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   </div>
@@ -448,9 +449,10 @@ footer .hand{font-size:24px}
     </div>
   </section>
 
-  <section class="ruled" id="cenik">
+  <section class="ruled" id="produkty">
+    <span id="cenik" class="kotva" aria-hidden="true"></span>
     <div class="wrap">
-      <span class="hand">Účtenka</span>
+      <span class="hand">Produkty</span>
       <h2>Vyber si, kolik španělštiny chceš</h2>
       <div class="plans">
         <div class="plan">
@@ -575,7 +577,7 @@ footer .hand{font-size:24px}
         <span class="hand">¡Vamos!</span>
         <h2>Začni zdarma ještě dnes</h2>
         <p class="lead">5 krátkých lekcí, 30 frází s nahrávkou a tahák do mobilu. Stačí e-mail, odhlásíš se jedním kliknutím.</p>
-        <div class="cta-row"><a class="btn" href="#zdarma">Chci 5 lekcí zdarma</a><a class="btn ghost" href="#cenik">Ceník</a></div>
+        <div class="cta-row"><a class="btn" href="#zdarma">Chci 5 lekcí zdarma</a><a class="btn ghost" href="#produkty">Produkty</a></div>
       </div>
     </div>
   </section>
