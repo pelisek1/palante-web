@@ -494,8 +494,8 @@ ol.steps .min{font-size:13px;color:var(--muted);font-variant-numeric:tabular-num
   }
  ],
  "audio": {
-  "h1": "soubory/6ed433f01065.mp3",
-  "h2": "soubory/d88282f020d6.mp3"
+  "h1": "soubory/87eba4565acf.mp3",
+  "h2": "soubory/71cf03dc118a.mp3"
  },
  "ui": {
   "jmenovky": {
@@ -529,21 +529,21 @@ ol.steps .min{font-size:13px;color:var(--muted);font-variant-numeric:tabular-num
  },
  "video": {
   "V1": {
-   "src": "soubory/908e34114c4f.mp4",
+   "src": "soubory/95569467508c.mp4",
    "poster": "soubory/62b3032a3a0d.jpg",
    "s": 8
   },
   "V1t": {
-   "src": "soubory/72bdbe205bbd.mp4",
+   "src": "soubory/c90a53e8ff48.mp4",
    "s": 6
   },
   "N1": {
-   "src": "soubory/496b694f6225.mp4",
+   "src": "soubory/1fddad1c12e0.mp4",
    "poster": "soubory/063f90753c0e.jpg",
    "s": 8
   },
   "N1t": {
-   "src": "soubory/84edc467878d.mp4",
+   "src": "soubory/cf6f0552cd62.mp4",
    "s": 8
   }
  },
@@ -604,16 +604,19 @@ const AUD=O.audio;
 const HZ={};S.forEach(m=>{if(m.audio)HZ[m.es]=m.audio});
 const EL=O.hlasy||{};
 let player=null;
+/* jeden přehrávač pro všechny hlasovky: po prvním kliknutí ho prohlížeč (i iPhone) pustí hrát samo */
+const AP=new Audio();AP.preload='auto';const SIL='data:audio/wav;base64,UklGRrQBAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YZABAACAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA';
 function speak(text,kind,el,slow){
   log.querySelectorAll('video').forEach(v=>v.pause());
   const src=kind==='honza'?AUD[HZ[text]]:EL[kind+'|'+text];
+  if(src&&autoEl===el&&autoGo&&!(player===AP&&!AP.paused)){autoGo();return}
   if(src){
     const btn=el.querySelector('.play');
     if(player&&current===el){player.pause();player=null;current=null;el.classList.remove('on');btn.innerHTML=PLAY;return}
     try{speechSynthesis.cancel()}catch(e){} if(player)player.pause(); if(current&&current!==el){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY}
-    player=new Audio(src);if(slow&&kind!=='honza')player.playbackRate=0.8;current=el;el.classList.add('on');btn.innerHTML=STOP;
+    player=AP;player.onended=player.onerror=player.onpause=player.onplaying=null;player.src=src;player.playbackRate=(slow&&kind!=='honza')?0.8:1;current=el;el.classList.add('on');btn.innerHTML=STOP;
     const done=()=>{if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY};
-    return new Promise(res=>{const fin=()=>{done();res()};player.onended=fin;player.onerror=fin;player.onpause=fin;player.play().catch(fin)});
+    return new Promise(res=>{let ok=false,st=false;const fin=()=>{if(ok)return;ok=true;done();res()};player.onplaying=()=>{st=true};player.onended=fin;player.onerror=fin;player.onpause=()=>{if(st)fin()};player.play().catch(fin)});
   }
   if(player){player.pause();player=null;if(current){current.classList.remove('on');current.querySelector('.play').innerHTML=PLAY;current=null}}
   if(!('speechSynthesis' in window)){statusEl.textContent=U.neumiHlas;return}
@@ -669,10 +672,9 @@ function videoMsg(m,auto){
   const tr=d.querySelector('.tr');if(tr){const box=d.querySelector('.trans');tr.onclick=()=>{box.hidden=!box.hidden;tr.textContent=box.hidden?U.prepis:U.skrytPrepis;tr.setAttribute('aria-expanded',String(!box.hidden))}}
   log.appendChild(d);scroll();
   if(!auto)return Promise.resolve();
-  return new Promise(r=>{
-    const busy=()=>{try{if(speechSynthesis.speaking)return true}catch(e){}return !!(player&&!player.paused&&!player.ended)};
-    const t0=Date.now();
-    const go=()=>{if(busy()&&Date.now()-t0<8000)return setTimeout(go,200);vid.play().catch(()=>{})};go();let ok=false;const fin=()=>{if(!ok){ok=true;r()}};vid.addEventListener('ended',fin);vid.addEventListener('pause',fin);vid.addEventListener('error',fin);setTimeout(fin,(V.s||10)*1000+9500)});
+  return new Promise(r=>{let ok=false;const fin=()=>{if(ok)return;ok=true;comp.innerHTML='';r()};
+    comp.innerHTML='<span class="lbl" style="text-transform:none;letter-spacing:0">▶ Pusť si video. Lekce bude pokračovat, až dohraje.</span><button class="btn ghost" id="skipV" type="button">Pokračovat bez videa</button>';
+    if(!hold)requestAnimationFrame(scroll);document.getElementById('skipV').onclick=()=>{vid.pause();fin()};vid.addEventListener('ended',fin);vid.addEventListener('error',fin)});
 }
 function textMsg(m){
   const d=document.createElement('div');d.className='msg them';
@@ -690,21 +692,45 @@ function typing(ms){return new Promise(r=>{const t=document.createElement('div')
 /* wait until a line is fully spoken before the next one starts (max 25 s) */
 function busyNow(){try{if(speechSynthesis.speaking)return true}catch(e){}return !!(player&&!player.paused&&!player.ended)}
 async function talk(...a){const t0=Date.now();while(busyNow()&&Date.now()-t0<25000)await new Promise(r=>setTimeout(r,200));return Promise.race([Promise.resolve(speak(...a)),new Promise(r=>setTimeout(r,25000))])}
+/* automatická hlasovka: pauza = lekce čeká, dokud ji student znovu nepustí */
+let autoEl=null,autoGo=null;
+async function autoVoice(text,kind,el,slow){
+  const src=kind==='honza'?AUD[HZ[text]]:EL[kind+'|'+text];
+  if(!src)return talk(text,kind,el,slow);
+  const t0=Date.now();while(busyNow()&&Date.now()-t0<25000)await new Promise(r=>setTimeout(r,200));
+  const btn=el.querySelector('.play');let pos=0,ok=false;
+  return new Promise(res=>{
+    const off=()=>{AP.onended=AP.onerror=AP.onpause=AP.onplaying=AP.onplay=null};
+    const fin=()=>{if(ok)return;ok=true;off();autoEl=autoGo=null;if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY;comp.innerHTML='';res()};
+    const paused=()=>{if(ok||AP.ended)return;pos=AP.currentTime;if(current===el)current=null;el.classList.remove('on');btn.innerHTML=PLAY;
+      comp.innerHTML='<span class="lbl" style="text-transform:none;letter-spacing:0">Pozastaveno. Lekce počká, až budeš chtít pokračovat.</span><button class="btn" id="goOn" type="button">Pokračovat ▶</button>';
+      document.getElementById('goOn').onclick=go;if(!hold)requestAnimationFrame(scroll)};
+    const go=()=>{if(ok)return;comp.innerHTML='';try{speechSynthesis.cancel()}catch(e){}log.querySelectorAll('video').forEach(v=>v.pause());
+      if(current&&current!==el){current.classList.remove('on');const b=current.querySelector('.play');if(b)b.innerHTML=PLAY}
+      off();AP.pause();const same=AP.src.endsWith(src.split('/').pop())||AP.src===src;if(!same){AP.src=src;pos=pos||0}
+      AP.playbackRate=(slow&&kind!=='honza')?0.8:1;player=AP;current=el;el.classList.add('on');btn.innerHTML=STOP;
+      const start=()=>{try{if(pos)AP.currentTime=pos}catch(e){}AP.onended=fin;AP.onerror=fin;AP.onpause=paused;AP.play().catch(paused)};
+      if(!same&&pos){AP.onloadedmetadata=()=>{AP.onloadedmetadata=null;start()}}else start()};
+    autoEl=el;autoGo=go;go()});
+}
 async function run(instant){
   while(queue.length){
     const m=queue.shift();
     if(m.t==='c'){showChoice(m);return}
     if(m.t==='end'){showEnd();return}
-    if(!instant&&(m.t==='v'||m.t==='x'||m.t==='fb'||m.t==='video'||m.t==='g'))await typing(m.t==='v'?900:600);
-    if(m.t==='v'){const d=voiceMsg(m,instant||!!m.fb);if(!instant)await talk(m.es,m.who,d,m.slow)}
+    if(!instant&&(m.t==='v'||m.t==='x'||m.t==='fb'||m.t==='video'||m.t==='g'))await typing(m.t==='v'?650:500);
+    if(m.t==='v'){const d=voiceMsg(m,instant||!!m.fb);if(!instant)await autoVoice(m.es,m.who,d,m.slow)}
     else if(m.t==='video'){await videoMsg(m,!instant)}
     else if(m.t==='x')textMsg(m);
     else if(m.t==='g')gramMsg(m);
     else if(m.t==='h')hint(m.text);
     else if(m.t==='fb')feedback();
-    if(!instant)await new Promise(r=>setTimeout(r,450));
+    if(!instant&&(m.t==='x'||m.t==='g')){const nx=queue.find(q=>q.t!=='h');if(nx&&(nx.t==='v'||nx.t==='video'))await waitRead()}
+    if(!instant)await new Promise(r=>setTimeout(r,300));
   }
 }
+/* po vysvětlení slovíček nebo gramatiky počkej, až si to student přečte */
+function waitRead(){return new Promise(r=>{comp.innerHTML='<span class="lbl" style="text-transform:none;letter-spacing:0">Přečti si vysvětlení. Až budeš mít, pokračuj.</span><button class="btn" id="goOn" type="button">Pokračovat ▶</button>';if(!hold)requestAnimationFrame(scroll);document.getElementById('goOn').onclick=()=>{comp.innerHTML='';r()}})}
 function showChoice(m){
   comp.innerHTML=`<span class="lbl">${m.label} <span style="text-transform:none;letter-spacing:0">${U.vyberUkazka}</span></span><div class="chips"></div>`;
   const box=comp.querySelector('.chips');
@@ -734,7 +760,7 @@ function showEnd(){
   comp.innerHTML='<span class="lbl">'+U.konec+'</span><button class="btn ghost" id="again">'+U.znovu+'</button>';
   document.getElementById('again').onclick=reset;
 }
-function reset(){stopAll();notes=[];queue=[...S];log.innerHTML='<span class="day">'+U.den+'</span>';hold=true;run(true).finally(()=>{hold=false;log.scrollTop=0;moreUpd()})}
+function reset(){stopAll();notes=[];queue=[...S];log.innerHTML='<span class="day">'+U.den+'</span>';run(false)}
 
 /* grammar of the day on the left (membership lessons) */
 if(O.gramatika){const g=document.getElementById('gram');g.hidden=false;document.getElementById('gramH').innerHTML=O.gramatika.nadpis;document.getElementById('gramB').innerHTML=O.gramatika.html}
@@ -748,7 +774,9 @@ phrases.forEach(([es,cz])=>{
 });
 
 /* open in a ready state: conversation shown from its start, waiting for the student's first voice reply */
-hold=true;run(true).finally(()=>{hold=false;log.scrollTop=0;moreUpd()});
+/* start: lekce se pustí jedním klepnutím a pak běží sama, zastaví se jen u tvé odpovědi */
+function startBtn(){comp.innerHTML='<button class="btn" id="startL" type="button">▶ Spustit lekci</button><span class="lbl" style="text-transform:none;letter-spacing:0">Hlasovky poběží samy za sebou a zastaví se u tvé odpovědi.</span>';document.getElementById('startL').onclick=()=>{comp.innerHTML='';try{AP.src=SIL;AP.play().catch(()=>{})}catch(e){}run(false)}}
+startBtn();
 </script>
 
 <script>(function(){var h=document.querySelector('.shead'),b=h&&h.querySelector('.shead-menu');if(!b)return;
