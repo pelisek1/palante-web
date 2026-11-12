@@ -26,3 +26,4 @@ Web je v češtině. Ceny jsou v Kč, provozovatel není plátce DPH. Na placen�
 ## Kontakt
 - [Kontakt](https://palante.cz/kontakt.html): info@palante.cz
 - [Obchodní podmínky](https://palante.cz/obchodni-podminky.html)
+- [Mapa webu (sitemap)](https://palante.cz/sitemap.xml)
