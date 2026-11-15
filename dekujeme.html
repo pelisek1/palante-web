@@ -165,8 +165,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <script>
 (function(){
-  // Stejná adresa jako v objednavka.html
-  var OBCHOD='';
+  // Adresa platebního serveru (stejná jako v objednavka.html). Bez obj a t ze serveru ukáže chybu.
+  var OBCHOD='https://palante-obchod.palante.workers.dev';
   var $=function(i){return document.getElementById(i)};
   var q=new URLSearchParams(location.search), obj=q.get('obj'), t=q.get('t');
   function ukaz(id){['cekame','hotovo','zruseno','chyba'].forEach(function(k){$(k).hidden=(k!==id)});
