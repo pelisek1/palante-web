@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Platba a doručení | Pa&#x27;lante!</title>
+<link rel="canonical" href="https://palante.cz/platba.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Pa&#x27;lante! španělština">
+<meta property="og:locale" content="cs_CZ">
+<meta property="og:title" content="Platba a doručení | Pa&#x27;lante!">
+<meta property="og:description" content="Platba a doručení v Pa&#x27;lante!: jak zaplatit kartou, Apple Pay, Google Pay nebo převodem přes bránu Comgate, kdy dostaneš e-book a audiokurz a kontakt na Comgate.">
+<meta property="og:url" content="https://palante.cz/platba.html">
+<meta property="og:image" content="https://palante.cz/media/sdileni.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Platba a doručení v Pa&#x27;lante!: jak zaplatit kartou, Apple Pay, Google Pay nebo převodem přes bránu Comgate, kdy dostaneš e-book a audiokurz a kontakt na Comgate.">
+<link rel="stylesheet" href="/media/fonty/fonty.css">
+<style>:root{
+  --paper:#F1E8D8; --paper-2:#E8DCC6; --card:#FBF8F1; --ink:#2B2116; --muted:#6B5B45; --rule:rgba(90,65,30,.13);
+  --red:#B23A22; --blue:#2340C8; --green:#2F6B3A; --tape:rgba(236,196,92,.78); --on-dark:#FBF8F1;
+  --display:"Bricolage Grotesque", "Arial Black", system-ui, sans-serif;
+  --body:"Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --hand:"Caveat", "Segoe Print", "Comic Sans MS", cursive;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#1D1813; --paper-2:#262019; --card:#2C251D; --ink:#F1E8D8; --muted:#B9A98F; --rule:rgba(241,232,216,.08);
+  --red:#FF8A6E; --blue:#9DB0FF; --green:#7FC48C; --tape:rgba(236,196,92,.55); color-scheme:dark}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65}
+body::after{content:"";position:fixed;inset:0;background-image:var(--grain);opacity:.14;pointer-events:none;z-index:50;mix-blend-mode:multiply}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,env(safe-area-inset-left,0px))}
+.narrow{max-width:720px}
+h1,h2,h3{font-family:var(--display);line-height:1.06;text-wrap:balance;margin:0;letter-spacing:-.025em}
+h1{font-size:clamp(34px,5.4vw,58px);font-weight:800}
+h2{font-size:26px;font-weight:800;margin-top:42px}
+a{color:var(--blue)}
+.hand{font-family:var(--hand);font-weight:700;color:var(--red);font-size:28px;line-height:1.1;display:inline-block;transform:rotate(-2deg)}
+.ruled{background-color:var(--paper);background-image:repeating-linear-gradient(transparent 0 33px,var(--rule) 33px 34px)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 24px;font-weight:600;background:var(--ink);color:var(--paper);text-decoration:none;transition:transform .15s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+header.top{background:var(--ink);color:var(--paper);padding-block:16px}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.logo{font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.03em;color:var(--paper);text-decoration:none}
+.logo span{color:#FFC860}
+header.top nav{display:flex;gap:20px;flex-wrap:wrap}
+header.top nav a{color:var(--paper);opacity:.85;text-decoration:none;font-weight:500;font-size:15px}
+header.top nav a:hover,header.top nav a[aria-current]{opacity:1;text-decoration:underline}
+main{padding-block:56px 80px}
+.lead{color:var(--muted);font-size:19px;margin-top:16px;max-width:60ch}
+.meta{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.meta .rub{color:var(--c,var(--red))}
+/* list */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:26px;margin-top:44px}
+.card{position:relative;background:var(--card);box-shadow:0 10px 22px rgba(60,40,10,.16);border-top:6px solid var(--c);text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s}
+.card:hover{transform:translateY(-3px) rotate(-.4deg)}
+.card img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;filter:sepia(.18) saturate(.88)}
+.card .in{padding:18px 18px 20px;display:flex;flex-direction:column;gap:8px}
+.card .meta{margin:0;font-size:12px}
+.card h2{font-size:22px;margin:0}
+.card p{font-size:15px;line-height:1.5;margin:0;color:var(--muted)}
+/* article */
+article .pol{background:var(--card);padding:12px 12px 44px;box-shadow:0 14px 30px rgba(60,40,10,.22);margin:34px 0 8px;position:relative;transform:rotate(-1deg)}
+article .pol img{width:100%;max-height:440px;object-fit:cover;display:block;filter:sepia(.18) saturate(.88)}
+article .pol figcaption{position:absolute;left:16px;right:16px;bottom:8px;font-family:var(--hand);font-size:24px}
+.tape::before{content:"";position:absolute;top:-13px;left:50%;width:92px;height:26px;margin-left:-46px;background:var(--tape);transform:rotate(-4deg);z-index:2}
+.body p,.body ul{margin:18px 0 0}
+.body li{margin-top:6px}
+.dlg{background:var(--card);padding:22px 22px 18px;margin-top:20px;box-shadow:0 8px 18px rgba(60,40,10,.12);border-left:6px solid var(--c)}
+.dlg p{margin:0 0 8px;font-family:var(--hand);font-size:25px;line-height:1.15;color:var(--blue)}
+.dlg p b{font-family:var(--body);font-size:14px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-right:8px}
+.dlg .cz{font-family:var(--body);font-size:15px;color:var(--muted);margin-top:12px;line-height:1.5}
+.words{list-style:none;padding:0;margin:16px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.words li{background:var(--card);padding:12px 14px;border-bottom:2px dashed color-mix(in srgb,var(--ink) 22%,transparent)}
+.words b{display:block;font-family:var(--display);font-size:20px}
+.words span{font-size:15px;color:var(--muted)}
+.src{font-size:14px;color:var(--muted);margin-top:40px;padding-top:16px;border-top:1px solid var(--rule)}
+.src ul{padding-left:18px;margin:8px 0 0}
+.cta{margin-top:44px;background:var(--ink);color:var(--paper);padding:28px 24px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.cta p{margin:0;max-width:44ch}
+.cta .btn{background:var(--paper);color:var(--ink)}
+.back{display:inline-block;margin-top:28px}
+footer{padding-block:36px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+footer .hand{font-size:24px}
+
+/* bilingual */
+.mode{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:28px;font-size:15px;color:var(--muted)}
+.mode button{font:inherit;font-weight:600;border:2px solid var(--ink);background:transparent;color:var(--ink);border-radius:999px;padding:6px 14px;cursor:pointer}
+.mode button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.par{margin-top:22px}
+.par .es{font-size:19px;margin:0}
+.par .tr{font:inherit;font-size:14px;font-weight:600;color:var(--c,var(--red));background:none;border:0;padding:6px 0 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.par .cz{margin:8px 0 0;padding:10px 14px;background:var(--card);border-left:4px solid var(--c,var(--red));color:var(--muted);font-size:16px}
+.show-cz .par .tr{display:none}
+.show-cz .par .cz{display:block!important}
+.w{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:underline dotted var(--c,var(--red));text-decoration-thickness:2px;text-underline-offset:4px;position:relative}
+.w.on{background:color-mix(in srgb,var(--c,var(--red)) 14%,transparent)}
+.tip{position:absolute;z-index:5;background:var(--ink);color:var(--paper);font-size:15px;padding:6px 10px;border-radius:8px;box-shadow:0 6px 16px rgba(0,0,0,.25);max-width:240px;pointer-events:none}
+.real{margin:34px 0 8px}.real img{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;box-shadow:0 14px 30px rgba(60,40,10,.22);background:var(--paper-2)}.real figcaption{font-size:13px;color:var(--muted);margin-top:8px}.real a{color:inherit}
+article .pol.small{max-width:300px;margin:18px auto 22px;transform:rotate(1.5deg)}article .pol.small img{max-height:300px}
+.mine{margin-top:16px;display:none}
+.mine.has{display:block}
+.mine h3{font-size:18px}
+.mine ul{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.mine li{background:var(--card);padding:6px 12px;border-radius:999px;font-size:15px}
+.mine li b{font-family:var(--display)}
+.h1es{font-family:var(--hand);font-size:30px;color:var(--c,var(--red));margin-top:10px;line-height:1.1}
+@media (max-width:600px){main{padding-block:36px 60px}.dlg p{font-size:22px}}
+</style>
+<style>
+.shead{position:sticky;top:0;z-index:40;background:#2B2116;color:#FBF8F1;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.shead-in{max-width:1120px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-left,0px));display:flex;align-items:center;gap:18px}
+.shead-logo{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;font-weight:800;font-size:26px;letter-spacing:-.03em;color:#FBF8F1;text-decoration:none;margin-right:auto}
+.shead-logo span{color:#FFC860}
+.shead nav{display:flex;gap:16px;flex-wrap:wrap}
+.shead nav a{color:#FBF8F1;opacity:.85;text-decoration:none;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:500;font-size:15px}
+.shead nav a:hover{opacity:1}
+.shead-btn{background:#FBF8F1;color:#2B2116;border-radius:999px;padding:9px 16px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
+.shead-menu{display:none;background:transparent;border:1px solid rgba(251,248,241,.5);color:#FBF8F1;border-radius:999px;width:42px;height:42px;padding:0;cursor:pointer;place-items:center}
+.shead-menu svg{width:20px;height:20px}
+@media (max-width:1000px){.shead-menu{display:grid}.shead-in{flex-wrap:wrap;gap:10px}
+.shead nav{display:none;order:3;flex-basis:100%;flex-direction:column;gap:0;padding:6px 0}
+.shead.open nav{display:flex}.shead nav a{padding:11px 4px;font-size:18px;border-top:1px solid rgba(251,248,241,.1)}}
+</style>
+</head>
+<body>
+<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#test">Úrovně</a><a href="/index.html#produkty">Produkty</a><a href="/index.html#spanelsko">Španělsko</a><a href="/kontakt.html">Kontakt</a></nav><a class="shead-btn" href="/index.html#zdarma">Kurz zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
+<main class="ruled"><div class="wrap narrow"><article class="body"><h1>Platba a doručení</h1>
+<p class="lead">Všechny naše produkty jsou digitální. Nic se neposílá poštou a za dopravu nic neplatíš.</p>
+<h2>Jak zaplatit</h2><p>Online platby zajišťuje platební brána <a href="https://www.comgate.eu/cs/platebni-brana" target="_blank" rel="noopener">Comgate</a>. Comgate, a.s. je licencovaná platební instituce pod dohledem České národní banky. Platby jsou plně zabezpečené a všechny údaje se přenášejí šifrovaně. Údaje o kartě zadáváš přímo u Comgate, my je nevidíme.</p>
+<ul>
+<li><b>Platba kartou</b> (Visa, Mastercard), případně Apple Pay nebo Google Pay: po kliknutí na Zaplatit tě objednávka přesměruje na zabezpečenou stránku brány Comgate. Zadáš údaje karty a platbu potvrdíš ve své bance, třeba v mobilní aplikaci nebo kódem z SMS. <a href="https://help.comgate.eu/v1/docs/cs/platby-kartou" target="_blank" rel="noopener">Jak platba kartou probíhá</a></li>
+<li><b>Bankovní převod tlačítkem</b>: na stránce brány vybereš svou banku, přihlásíš se do internetového bankovnictví a platbu jen potvrdíš. Údaje pro platbu se vyplní samy a o zaplacení víme hned. <a href="https://help.comgate.eu/docs/bankovni-prevody" target="_blank" rel="noopener">Jak probíhá bankovní převod</a></li>
+</ul>
+<p>Které způsoby platby uvidíš, určuje brána. Ceny jsou konečné, nejsem plátce DPH.</p>
+<h2>Doručení</h2><p>Hned po zaplacení se vrátíš na naši stránku, kde si e-book nebo audiokurz rovnou stáhneš. Stejný odkaz ke stažení a doklad o zaplacení ti zároveň pošleme e-mailem, obvykle do pár minut. Odkaz funguje i později. Kdyby e-mail nepřišel ani do 24 hodin, podívej se do spamu a napiš nám na <a href="mailto:info@palante.cz">info@palante.cz</a>.</p>
+<h2>Vrácení peněz</h2><p>Když ti produkt nebude vyhovovat, do 14 dnů od nákupu ti vrátíme celou částku. Stačí odpovědět na e-mail s odkazem ke stažení. Podrobnosti najdeš v <a href="obchodni-podminky.html">obchodních podmínkách</a>.</p>
+<h2>Dotazy k platbám</h2><p>K objednávce a produktům nám piš na <a href="mailto:info@palante.cz">info@palante.cz</a>. Reklamace a dotazy přímo k průběhu platby vyřizuje i provozovatel platební brány:</p>
+<p><b>Comgate, a.s.</b><br>Gočárova třída 1754/48b, Hradec Králové<br>E-mail: <a href="mailto:podpora@comgate.cz">podpora@comgate.cz</a><br>Telefon: <a href="tel:+420228224267">+420 228 224 267</a><br><a href="https://www.comgate.eu" target="_blank" rel="noopener">www.comgate.eu</a></p>
+</article></div></main>
+<footer class="ruled"><div class="wrap">
+  <span>Pa'lante! · Lucía, Paco, Rafa a Honza jsou AI postavy, španělština je skutečná<br><a href="blog/index.html" style="color:inherit">Články o Španělsku</a> · <a href="./kontakt.html" style="color:inherit">Kontakt</a> · <a href="./obchodni-podminky.html" style="color:inherit">Obchodní podmínky</a> · <a href="./ochrana-osobnich-udaju.html" style="color:inherit">Ochrana osobních údajů</a></span>
+  <span class="hand">Hecho con cariño en Chequia</span>
+</div><div class="wrap platby" style="margin-top:18px;display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:14px;font-size:13px"><span class="karty" style="display:inline-flex;gap:8px;padding:0;margin:0;border:0;background:none"><span class="karta" title="Visa" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:34px;padding:0;margin:0;flex:none;background:#fff;border-radius:6px;box-shadow:0 0 0 1px rgba(0,0,0,.12)"><svg viewBox="0 8 24 8" width="40" height="13" style="display:block;width:40px;height:13px;flex:none" aria-hidden="true"><path fill="#1A1F71" d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></svg><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Visa</span></span><span class="karta" title="Mastercard" style="display:inline-flex;align-items:center;justify-content:center;width:52px;height:34px;padding:0;margin:0;flex:none;background:#fff;border-radius:6px;box-shadow:0 0 0 1px rgba(0,0,0,.12)"><svg viewBox="0 0 38 24" width="34" height="22" style="display:block;width:34px;height:22px;flex:none" aria-hidden="true"><circle cx="13" cy="12" r="9" fill="#EB001B"/><circle cx="25" cy="12" r="9" fill="#F79E1B"/><path fill="#FF5F00" d="M19 5.29a9 9 0 0 1 0 13.42 9 9 0 0 1 0-13.42z"/></svg><span class="sr" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Mastercard</span></span></span><span>Platby kartou a převodem zajišťuje platební brána <a href="https://www.comgate.eu/cs/platebni-brana" target="_blank" rel="noopener" style="color:inherit">Comgate</a> · <a href="/platba.html" style="color:inherit">Platba a doručení</a></span></div>
+</footer>
+<script>(function(){var h=document.querySelector('.shead'),b=h&&h.querySelector('.shead-menu');if(!b)return;
+b.addEventListener('click',function(){var o=h.classList.toggle('open');b.setAttribute('aria-expanded',o)})})();</script>
+</body>
+</html>
