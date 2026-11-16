@@ -157,9 +157,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
             </div>
 
             <div class="upgrade" id="upgradeBox">
-              <b id="upgradeTit">Nebo vezmi rovnou všechno za 690 Kč</b>
-              <p id="upgradeText">K e-booku a 100 frázím do uší přidáme i audiokurz Španělsky do uší: 20 lekcí, 4 hodiny 19 minut, úroveň A1 až A2. Zvlášť by všechno stálo 788 Kč, v balíčku ušetříš 98 Kč.</p>
-              <button class="btn ghost" type="button" id="upgrade">Chci balíček za 690 Kč</button>
+              <b id="upgradeTit">Nebo vezmi rovnou všechno za 590 Kč</b>
+              <p id="upgradeText">K e-booku a 100 frázím do uší přidáme i audiokurz Španělsky do uší: 20 lekcí, 4 hodiny 19 minut, úroveň A1 až A2. Zvlášť by všechno stálo 688 Kč, v balíčku ušetříš 98 Kč.</p>
+              <button class="btn ghost" type="button" id="upgrade">Chci balíček za 590 Kč</button>
             </div>
 
             <label class="souhlas"><input type="checkbox" id="souhlas"><span>Chci obsah hned ke stažení. Beru na vědomí, že u digitálního obsahu tím zaniká zákonné právo odstoupit od smlouvy do 14 dní.</span></label>
@@ -190,8 +190,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="pohled">
         <span class="hand" style="color:var(--blue)">Pro ty, kdo chtějí pokračovat</span>
         <h3>Půlroční členství v ¡Pa'lante!</h3>
-        <p class="cena">1&nbsp;251&nbsp;Kč <small>/ půl roku</small></p>
-        <p class="vypocet">Běžná cena 1 450 Kč, odečteme 199 Kč, které jsi teď zaplatil(a) za e-book.</p>
+        <p class="cena">1&nbsp;751&nbsp;Kč <small>/ půl roku</small></p>
+        <p class="vypocet">Běžná cena 1 950 Kč, odečteme 199 Kč, které jsi teď zaplatil(a) za e-book.</p>
         <ul><li>Všechny lekce od nuly po B1</li><li>Hodina rozhovorů s Lucíou každý měsíc</li><li>Jedna platba na šest měsíců</li></ul>
         <fieldset class="uroven" id="uroven">
           <legend>Odkud začínáš?</legend>
@@ -204,7 +204,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
           <p class="pozn">Nevíš? <a href="index.html#test" target="_blank" rel="noopener">Udělej si test úrovně, trvá 3 minuty.</a> Úroveň půjde kdykoli změnit.</p>
         </fieldset>
         <div class="akce">
-          <button class="btn" type="button" id="ano">Ano, přidat členství za 1&nbsp;251&nbsp;Kč</button>
+          <button class="btn" type="button" id="ano">Ano, přidat členství za 1&nbsp;751&nbsp;Kč</button>
           <button class="btn link" type="button" id="ne">Ne, díky</button>
         </div>
         <p class="pozn">Na rozmyšlenou máš 14 dní, odkaz s touto cenou najdeš i v e-mailu.</p>
@@ -216,7 +216,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <h2 id="h2b" tabindex="-1">Chceš to nejdřív zkusit na měsíc?</h2>
       <div class="pohled">
         <h3>Měsíční členství</h3>
-        <p class="cena">290 Kč <small>/ měsíc</small></p>
+        <p class="cena">390 Kč <small>/ měsíc</small></p>
         <ul><li>Vše z členství</li><li>5 dní zdarma na vyzkoušení</li><li>Obnovuje se sám, zrušíš kdykoli</li></ul>
         <div id="misto2"></div>
         <div class="akce">
@@ -250,14 +250,14 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   var kc=function(n){return n.toLocaleString('cs-CZ').replace(/\s/g,' ')+' Kč'};
   // Adresa platebního serveru (Cloudflare). Prázdná = objednávka jako prototyp bez platby. Ostrý prodej od 15. 11. 2026.
   var OBCHOD='https://palante-obchod.palante.workers.dev';
-  var C={ebook:199,bump:99,pulrok:1450,mesic:290};
+  var C={ebook:199,bump:99,pulrok:1950,mesic:390};
   // Druhý produkt na stejné stránce: objednavka.html?produkt=audiokurz
-  var PRODUKTY={audiokurz:{cena:490,hand:'Španělština do sluchátek',h1:'Audiokurz Španělsky do uší',lead:'20 lekcí ke stažení: MP3 a tahák v PDF ke každé lekci. Stáhneš hned po zaplacení.',obal:'Španělsky do uší',nazev:'Audiokurz Španělsky do uší',body:['20 audiolekcí, dohromady 4 hodiny 19 minut, úroveň A1 až A2','Příběh na pokračování z Málagy, odpovídáš nahlas','Ke každé lekci tahák v PDF'],radek:'Audiokurz, 20 lekcí MP3 + PDF'},balicek:{cena:690,hand:'Všechno na poslech i do kapsy',h1:'Balíček: e-book, 100 frází do uší a audiokurz',lead:'Tři produkty v jednom: zvlášť by stály 788 Kč. Stáhneš hned po zaplacení.',obal:'Balíček',nazev:'Balíček Pa\'lante!',body:['E-book 100 frází na dovolenou se 100 nahrávkami (199 Kč)','100 frází do uší, 19 minut MP3 (99 Kč)','Audiokurz Španělsky do uší, 20 lekcí A1 až A2 (490 Kč)'],radek:'Balíček: e-book, 100 frází do uší, audiokurz'}};
+  var PRODUKTY={audiokurz:{cena:390,hand:'Španělština do sluchátek',h1:'Audiokurz Španělsky do uší',lead:'20 lekcí ke stažení: MP3 a tahák v PDF ke každé lekci. Stáhneš hned po zaplacení.',obal:'Španělsky do uší',nazev:'Audiokurz Španělsky do uší',body:['20 audiolekcí, dohromady 4 hodiny 19 minut, úroveň A1 až A2','Příběh na pokračování z Málagy, odpovídáš nahlas','Ke každé lekci tahák v PDF'],radek:'Audiokurz, 20 lekcí MP3 + PDF'},balicek:{cena:590,hand:'Všechno na poslech i do kapsy',h1:'Balíček: e-book, 100 frází do uší a audiokurz',lead:'Tři produkty v jednom: zvlášť by stály 688 Kč. Stáhneš hned po zaplacení.',obal:'Balíček',nazev:'Balíček Pa\'lante!',body:['E-book 100 frází na dovolenou se 100 nahrávkami (199 Kč)','100 frází do uší, 19 minut MP3 (99 Kč)','Audiokurz Španělsky do uší, 20 lekcí A1 až A2 (390 Kč)'],radek:'Balíček: e-book, 100 frází do uší, audiokurz'}};
   var produkt=(location.search.match(/[?&]produkt=([a-z]+)/)||[])[1];
   if(!PRODUKTY[produkt])produkt='ebook';
   // Balíček se nenabízí v ceníku, jen jako doprodej tady v objednávce e-booku nebo audiokurzu.
   if(produkt==='audiokurz'){$('upgradeTit').textContent='Přidej e-book a 100 frází do uší jen za 200 Kč navíc';
-    $('upgradeText').textContent='V balíčku za 690 Kč dostaneš k audiokurzu i e-book 100 frází na dovolenou se 100 nahrávkami a 100 frází do uší na poslech. Zvlášť by všechno stálo 788 Kč, ušetříš 98 Kč.'}
+    $('upgradeText').textContent='V balíčku za 590 Kč dostaneš k audiokurzu i e-book 100 frází na dovolenou se 100 nahrávkami a 100 frází do uší na poslech. Zvlášť by všechno stálo 688 Kč, ušetříš 98 Kč.'}
   function nastavProdukt(){if(produkt==='ebook')return;var P=PRODUKTY[produkt];C.ebook=P.cena;
     $('pHand').textContent=P.hand;$('h1').textContent=P.h1;$('pLead').textContent=P.lead;
     $('pObal').innerHTML='<small>¡Pa\'lante!</small>'+P.obal;$('pNazev').textContent=P.nazev;
