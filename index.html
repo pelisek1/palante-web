@@ -239,7 +239,7 @@ form .btn{align-self:flex-start;margin-top:10px}
 .plan{position:relative;background:var(--card);border-radius:4px;padding:30px 26px 26px;display:flex;flex-direction:column;gap:12px;box-shadow:0 10px 24px rgba(60,40,10,.14)}
 .plan:nth-child(1){transform:rotate(-1deg)}.plan:nth-child(3){transform:rotate(1deg)}
 .plan .hand{position:absolute;top:-22px;right:14px;font-size:26px;transform:rotate(4deg)}
-.plan.star{outline:3px solid var(--red);outline-offset:-3px}
+.plan.star{outline:3px solid var(--red);outline-offset:-3px}.cesta{margin:48px 0 4px;font-size:clamp(22px,3vw,28px)}.cesta-pod{margin:0;color:var(--muted);max-width:640px}.cesta-pod+.plans{margin-top:20px}
 .price{font-family:var(--display);font-size:44px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.05}
 .price small{font-size:16px;font-weight:500;color:var(--muted)}
 .price s{display:block;font-size:16px;color:var(--muted);font-weight:500}
@@ -322,7 +322,7 @@ footer .hand{font-size:24px}
 .plan h3{grid-area:t}.plan .price{grid-area:p}.plan ul{grid-area:u}.plan>.btn{grid-area:b;position:relative;z-index:2;white-space:nowrap;justify-self:end}
 .plan-link{color:inherit;text-decoration:none}.plan-link::after{content:"";position:absolute;inset:0;z-index:1}.plan:hover h3{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:760px){.plan{grid-template-columns:1fr;grid-template-areas:"t" "p" "u" "b"}.plan>.btn{justify-self:start}}
-.rozcesti{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:stretch}.rc-karta{background:var(--card);border-radius:4px;padding:28px 26px;box-shadow:0 10px 24px rgba(60,40,10,.14);display:flex;flex-direction:column;gap:12px;align-items:flex-start}.rc-karta h3{margin:0}.rc-karta p{margin:0}.rc-vyber{font-weight:600}.rc-urovne{display:flex;gap:10px;flex-wrap:wrap}.rc-urovne .btn{padding:11px 20px}.rc-test{margin-top:22px}.rc-test a{color:var(--red);font-weight:600}@media (max-width:760px){.rozcesti{grid-template-columns:1fr}}
+.lucia-grid{display:grid;grid-template-columns:1fr minmax(0,440px);gap:48px;align-items:center}.lseznam{margin:18px 0 22px;padding-left:20px}.lseznam li{margin:6px 0}.lchat{background:var(--card);border-radius:22px;padding:22px 18px;box-shadow:0 10px 24px rgba(60,40,10,.14)}.lb{display:flex;gap:10px;align-items:flex-start;padding:11px 14px;border-radius:18px;margin:10px 0;max-width:88%;line-height:1.4}.lb.lu{background:var(--paper-2);border-bottom-left-radius:6px}.lb.ty{background:var(--ink);color:var(--paper);margin-left:auto;border-bottom-right-radius:6px;justify-content:flex-end}.lb small{display:block;margin-top:4px;font-size:15px;color:var(--muted)}.lb .loprava{border-left:3px solid var(--red);padding-left:8px;color:var(--ink)}.lplay{flex:none;width:34px;height:34px;border-radius:50%;border:0;background:var(--red);color:#fff;font-size:13px;cursor:pointer;line-height:34px;padding:0}.lplay.hraje{background:var(--ink)}.lpozn{font-size:14px;color:var(--muted);margin:14px 4px 0}@media (max-width:880px){.lucia-grid{grid-template-columns:1fr;gap:28px}}.rozcesti{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:stretch}.rc-karta{background:var(--card);border-radius:4px;padding:28px 26px;box-shadow:0 10px 24px rgba(60,40,10,.14);display:flex;flex-direction:column;gap:12px;align-items:flex-start}.rc-karta h3{margin:0}.rc-karta p{margin:0}.rc-vyber{font-weight:600}.rc-urovne{display:flex;gap:10px;flex-wrap:wrap}.rc-urovne .btn{padding:11px 20px}.rc-test{margin-top:22px}.rc-test a{color:var(--red);font-weight:600}@media (max-width:760px){.rozcesti{grid-template-columns:1fr}}
 @media (max-width:430px){header.site .btn{padding:10px 11px;font-size:14px}header.site .akce{gap:6px}}
 </style>
 
@@ -423,6 +423,26 @@ footer .hand{font-size:24px}
     </div>
   </section>
 
+  <section class="ruled" id="lucia">
+    <div class="wrap lucia-grid">
+      <div>
+        <span class="hand">Rozhovor s Lucíou</span>
+        <h2>Mluv španělsky hned od první lekce</h2>
+        <p class="lead">Lucía tě provází celým kurzem. V rozhovoru píšeš nebo mluvíš, ona odpovídá hlasem, a když uděláš chybu, hned ti ji česky vysvětlí. Pusť si, jak to zní.</p>
+        <ul class="lseznam"><li>Mluví podle tvé úrovně, od úplných začátků po B1</li><li>Chyby opraví a vysvětlí česky</li><li>V členství na zkoušku máš 15 minut rozhovoru zdarma</li></ul>
+        <div class="cta-row"><a class="btn" href="#zacni">Začni zdarma</a></div>
+      </div>
+      <div class="lchat" aria-label="Ukázka rozhovoru s Lucíou">
+        <div class="lb lu"><button class="lplay" type="button" data-src="media/lucia-ukazka-1.mp3" aria-label="Pustit Lucíin hlas">▶</button><span>¡Hola! ¿Qué te pongo?<small class="cz">Ahoj! Co ti dám?</small></span></div>
+        <div class="lb ty">Una café con leche, por favor.</div>
+        <div class="lb lu"><button class="lplay" type="button" data-src="media/lucia-ukazka-2.mp3" aria-label="Pustit Lucíin hlas">▶</button><span>Casi. Café es masculino: un café.<small class="loprava"><b>una café → un café</b> Café je mužského rodu.</small></span></div>
+        <div class="lb ty">Un café con leche, por favor.</div>
+        <div class="lb lu"><button class="lplay" type="button" data-src="media/lucia-ukazka-3.mp3" aria-label="Pustit Lucíin hlas">▶</button><span>Muy bien. ¿Y el café, cómo lo quieres? ¿Mitad o nube?<small class="cz">Výborně. A jak chceš kávu? Mitad (napůl s mlékem), nebo nube (mléko s kapkou kávy)?</small></span></div>
+        <p class="lpozn">Ukázka z lekce 3. V aplikaci Lucía reaguje na to, co sám(a) napíšeš nebo řekneš. Lucía je AI postava, španělština je skutečná.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="alt" id="zacni">
     <div class="wrap">
       <span class="hand">Začni zdarma</span>
@@ -473,18 +493,14 @@ footer .hand{font-size:24px}
     <div class="wrap">
       <span class="hand">Produkty</span>
       <h2>Vyber si, kolik španělštiny chceš</h2>
+      <h3 class="cesta">Chci se naučit španělsky</h3>
+      <p class="cesta-pod">Celý kurz od nuly po B1: každý den krátká lekce s příběhem z Málagy a rozhovory s Lucíou. Prvních 5 dní je zdarma a bez karty.</p>
       <div class="plans">
         <div class="plan">
-          <h3><a class="plan-link" href="produkty/kurz-zdarma.html">5 lekcí zdarma</a></h3>
-          <p class="price">0 Kč <small>stačí e-mail</small></p>
-          <ul><li>5 lekcí po 10 minutách, každé ráno e-mailem</li><li>30 frází na dovolenou s nahrávkou</li><li>Tahák do mobilu</li></ul>
-          <a class="btn ghost" href="#zdarma">Chci 5 lekcí zdarma</a>
-        </div>
-        <div class="plan">
-          <h3><a class="plan-link" href="produkty/ebook.html">E-book na dovolenou</a></h3>
-          <p class="price">199 Kč <small>jednorázově</small></p>
-          <ul><li>E-book: 100 frází v 10 situacích na dovolené</li><li>100 nahrávek a výslovnost psaná česky</li><li>Stáhneš hned, ukázku si poslechneš zdarma</li></ul>
-          <a class="btn" href="objednavka.html">Koupit e-book</a>
+          <h3><a class="plan-link" href="produkty/clenstvi.html">Měsíčně</a></h3>
+          <p class="price">390 Kč <small>/ měsíc</small></p>
+          <ul><li>Lekce na každý den a rozhovory s Lucíou</li><li>Platíš vždy na měsíc, nic se samo nestrhává</li><li>Členství na zkoušku zdarma</li></ul>
+          <a class="btn ghost" href="https://app.palante.cz/app/prihlaseni">Vyzkoušet členství zdarma</a>
         </div>
         <div class="plan star">
           <span class="hand">Vyjde nejlevněji</span>
@@ -493,11 +509,15 @@ footer .hand{font-size:24px}
           <ul><li>Lekce na každý den, od úplné nuly po B1</li><li>Rozhovory s Lucíou, píšeš nebo mluvíš</li><li>Jedna platba, sama se neobnovuje</li></ul>
           <a class="btn ghost" href="produkty/clenstvi.html">Více o členství</a>
         </div>
+      </div>
+      <h3 class="cesta">Chci se domluvit na dovolené</h3>
+      <p class="cesta-pod">Fráze a poslech do auta. Koupíš jednou a máš navždy.</p>
+      <div class="plans">
         <div class="plan">
-          <h3><a class="plan-link" href="produkty/clenstvi.html">Měsíčně</a></h3>
-          <p class="price">390 Kč <small>/ měsíc</small></p>
-          <ul><li>Vše z členství</li><li>Platíš vždy na měsíc, nic se samo nestrhává</li><li>Členství na zkoušku zdarma</li></ul>
-          <a class="btn ghost" href="https://app.palante.cz/app/prihlaseni">Vyzkoušet členství zdarma</a>
+          <h3><a class="plan-link" href="produkty/ebook.html">E-book na dovolenou</a></h3>
+          <p class="price">199 Kč <small>jednorázově</small></p>
+          <ul><li>E-book: 100 frází v 10 situacích na dovolené</li><li>100 nahrávek a výslovnost psaná česky</li><li>Stáhneš hned, ukázku si poslechneš zdarma</li></ul>
+          <a class="btn" href="objednavka.html">Koupit e-book</a>
         </div>
         <div class="plan">
           <h3><a class="plan-link" href="produkty/audiokurz.html">Audiokurz Španělsky do uší</a></h3>
@@ -505,14 +525,8 @@ footer .hand{font-size:24px}
           <ul><li>20 lekcí, dohromady 4 h 19 min, úroveň A1 až A2</li><li>Příběh z Málagy a Rondy s Lucíou, Pacem a Honzou</li><li>Lekce 1 zdarma na ukázku</li></ul>
           <a class="btn ghost" href="produkty/audiokurz.html">Poslechnout lekci 1</a>
         </div>
-        <div class="plan">
-          <h3><a class="plan-link" href="produkty/100-frazi-do-usi.html">100 frází do uší</a></h3>
-          <p class="price">99 Kč <small>doplněk k e-booku</small></p>
-          <ul><li>Všech 100 frází z e-booku na poslech</li><li>11 stop, 19 minut, MP3 do mobilu</li><li>Přidáš zaškrtnutím při objednávce e-booku</li></ul>
-          <a class="btn ghost" href="objednavka.html">Přidat k e-booku</a>
-        </div>
       </div>
-      <p class="cenik-pozn">Než se rozhodneš, vyzkoušej si <a href="lekce/lekce-1-ukazka.html">ukázkovou lekci</a> a kurz zdarma.</p>
+      <p class="cenik-pozn">Nevíš, co vybrat? <a href="#zacni">Začni zdarma</a>, nebo si projdi <a href="lekce/lekce-1-ukazka.html">ukázkovou lekci</a>.</p>
     </div>
   </section>
 
@@ -912,6 +926,11 @@ footer .hand{font-size:24px}
     document.getElementById('again').onclick=function(){qi=0;score=0;renderQ()};
   }
   renderQ();
+
+  // ---------- ukázka rozhovoru s Lucíou ----------
+  (function(){var a=null,b0=null;document.querySelectorAll('.lplay').forEach(function(b){b.addEventListener('click',function(){
+    if(a){a.pause();if(b0)b0.classList.remove('hraje');if(b0===b){a=null;b0=null;return}}
+    a=new Audio(b.dataset.src);b0=b;b.classList.add('hraje');a.onended=function(){b.classList.remove('hraje');a=null;b0=null};a.play().catch(function(){b.classList.remove('hraje')})})})})();
 
   // ---------- signup ----------
   document.getElementById('signup').addEventListener('submit',function(e){
