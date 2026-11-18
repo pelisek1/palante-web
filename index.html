@@ -322,6 +322,7 @@ footer .hand{font-size:24px}
 .plan h3{grid-area:t}.plan .price{grid-area:p}.plan ul{grid-area:u}.plan>.btn{grid-area:b;position:relative;z-index:2;white-space:nowrap;justify-self:end}
 .plan-link{color:inherit;text-decoration:none}.plan-link::after{content:"";position:absolute;inset:0;z-index:1}.plan:hover h3{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:760px){.plan{grid-template-columns:1fr;grid-template-areas:"t" "p" "u" "b"}.plan>.btn{justify-self:start}}
+.rozcesti{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:stretch}.rc-karta{background:var(--card);border-radius:4px;padding:28px 26px;box-shadow:0 10px 24px rgba(60,40,10,.14);display:flex;flex-direction:column;gap:12px;align-items:flex-start}.rc-karta h3{margin:0}.rc-karta p{margin:0}.rc-vyber{font-weight:600}.rc-urovne{display:flex;gap:10px;flex-wrap:wrap}.rc-urovne .btn{padding:11px 20px}.rc-test{margin-top:22px}.rc-test a{color:var(--red);font-weight:600}@media (max-width:760px){.rozcesti{grid-template-columns:1fr}}
 @media (max-width:430px){header.site .btn{padding:10px 11px;font-size:14px}header.site .akce{gap:6px}}
 </style>
 
@@ -329,7 +330,7 @@ footer .hand{font-size:24px}
   <div class="wrap">
     <a class="logo" href="#top">pa<span>'</span>lante<span>!</span></a>
     <nav id="hlavni-menu"><a href="#scena">Ukázka lekce</a><a href="#metoda">Metoda</a><a href="#test">Úrovně</a><a href="#produkty">Produkty</a><a href="#spanelsko">Španělsko</a><a href="kontakt.html">Kontakt</a><a class="menu-prihlasit" href="https://app.palante.cz/app/">Přihlásit se</a></nav>
-    <div class="akce"><a class="prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="btn" href="#zdarma">5 lekcí zdarma</a></div>
+    <div class="akce"><a class="prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="btn" href="#zacni">Začni zdarma</a></div>
     <button class="menu" type="button" aria-expanded="false" aria-controls="hlavni-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
   </div>
 </header>
@@ -419,6 +420,18 @@ footer .hand{font-size:24px}
         <div class="reel"><div class="phone"><div class="screen snd"><video data-lazy preload="none" class="clip" src="media/reel-naranjos.mp4" poster="media/reel-naranjos-poster.jpg" muted loop playsinline aria-label="Honza si u Paca omylem řekne o pomerančovníky"></video><button class="sound" type="button" aria-label="Zapnout zvuk">🔇 Klepni pro zvuk</button></div></div><span class="hand">Středa: Honza v Málaze</span></div>
       </div>
       <div class="cta-row sec-cta"><a class="btn" href="#zdarma">Chci 5 lekcí zdarma</a></div>
+    </div>
+  </section>
+
+  <section class="alt" id="zacni">
+    <div class="wrap">
+      <span class="hand">Začni zdarma</span>
+      <h2>Odkud začínáš?</h2>
+      <div class="rozcesti">
+        <div class="rc-karta"><h3>Úplně od nuly</h3><p>5 krátkých lekcí e-mailem, každé ráno jedna. 30 frází na dovolenou i s nahrávkami. Stačí e-mail.</p><a class="btn" href="#zdarma">Chci 5 lekcí zdarma</a></div>
+        <div class="rc-karta"><h3>Už něco umím</h3><p>Vyzkoušej členství od své úrovně: lekce s příběhem z Málagy a 15 minut rozhovoru s Lucíou. 5 dní zdarma, bez karty.</p><p class="rc-vyber">Vyber, odkud začneš:</p><div class="rc-urovne"><a class="btn ghost" href="https://app.palante.cz/app/prihlaseni?uroven=A1">A1</a><a class="btn ghost" href="https://app.palante.cz/app/prihlaseni?uroven=A2">A2</a><a class="btn ghost" href="https://app.palante.cz/app/prihlaseni?uroven=B1">B1</a></div></div>
+      </div>
+      <p class="rc-test">Nevíš, kam patříš? <a href="#test">Test úrovně za 3 minuty</a></p>
     </div>
   </section>
 
