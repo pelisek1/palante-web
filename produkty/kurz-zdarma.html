@@ -319,6 +319,8 @@ footer .hand{font-size:24px}
 .plan h3{grid-area:t}.plan .price{grid-area:p}.plan ul{grid-area:u}.plan>.btn{grid-area:b;position:relative;z-index:2;white-space:nowrap;justify-self:end}
 .plan-link{color:inherit;text-decoration:none}.plan-link::after{content:"";position:absolute;inset:0;z-index:1}.plan:hover h3{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:760px){.plan{grid-template-columns:1fr;grid-template-areas:"t" "p" "u" "b"}.plan>.btn{justify-self:start}}
+.rozcesti{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:stretch}.rc-karta{background:var(--card);border-radius:4px;padding:28px 26px;box-shadow:0 10px 24px rgba(60,40,10,.14);display:flex;flex-direction:column;gap:12px;align-items:flex-start}.rc-karta h3{margin:0}.rc-karta p{margin:0}.rc-vyber{font-weight:600}.rc-urovne{display:flex;gap:10px;flex-wrap:wrap}.rc-urovne .btn{padding:11px 20px}.rc-test{margin-top:22px}.rc-test a{color:var(--red);font-weight:600}@media (max-width:760px){.rozcesti{grid-template-columns:1fr}}
+@media (max-width:430px){header.site .btn{padding:10px 11px;font-size:14px}header.site .akce{gap:6px}}
 </style>
 <style>
 .ptop{background:var(--ink);padding-block:16px}.ptop .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -343,6 +345,7 @@ footer .hand{font-size:24px}
 .shead-btn{background:#FBF8F1;color:#2B2116;border-radius:999px;padding:9px 16px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
 .shead-prihlasit{display:inline-flex;align-items:center;gap:6px;color:#FBF8F1;opacity:.9;text-decoration:none;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;white-space:nowrap}
 .shead nav .shead-menu-prihlasit{display:none}
+@media (max-width:430px){.shead-btn{padding:8px 12px;font-size:14px}.shead-in{gap:8px}}
 @media (max-width:380px){.shead-prihlasit{display:none!important}.shead nav .shead-menu-prihlasit{display:block}}
 .shead-prihlasit:hover{opacity:1}.shead-prihlasit svg{width:20px;height:20px}
 .shead-menu{display:none;background:transparent;border:1px solid rgba(251,248,241,.5);color:#FBF8F1;border-radius:999px;width:42px;height:42px;padding:0;cursor:pointer;place-items:center}
@@ -355,14 +358,14 @@ footer .hand{font-size:24px}
 <style id="img-auto">:where(img[width][height]){height:auto}</style>
 </head>
 <body>
-<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#test">Úrovně</a><a href="/index.html#produkty">Produkty</a><a href="/index.html#spanelsko">Španělsko</a><a href="/kontakt.html">Kontakt</a><a class="shead-menu-prihlasit" href="https://app.palante.cz/app/">Přihlásit se</a></nav><a class="shead-prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="shead-btn" href="/index.html#zdarma">5 lekcí zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
+<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#test">Úrovně</a><a href="/index.html#produkty">Produkty</a><a href="/index.html#spanelsko">Španělsko</a><a href="/kontakt.html">Kontakt</a><a class="shead-menu-prihlasit" href="https://app.palante.cz/app/">Přihlásit se</a></nav><a class="shead-prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="shead-btn" href="/index.html#zacni">Začni zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
 <main class="ruled pmain"><div class="wrap">
   <a class="back" href="../index.html#produkty">← Zpět na produkty</a>
   <article class="prod" id="kurz-zdarma">
           <div>
             <h1 class="ph1">Kurz španělštiny zdarma: na dovolenou za 5 dní</h1>
             <p class="tag">Zdarma <small>· stačí e-mail</small></p>
-            <p>Pro tebe, jestli chceš nejdřív zjistit, jestli tě náš styl baví.</p>
+            <p>Pro úplné začátky: zjistíš, jestli tě náš styl baví. Už něco umíš? <a href="/index.html#zacni">Vyzkoušej rovnou členství od své úrovně.</a></p>
             <h4>Co v tom je</h4>
             <ul><li>5 e-mailů, každé ráno jeden, jako pohled z Málagy</li><li>Každý je krátká lekce na 10 minut</li><li>30 nejdůležitějších frází s nahrávkou</li><li>Tahák 30 frází do mobilu</li></ul>
             <h4>Co tím získáš</h4>
@@ -372,8 +375,8 @@ footer .hand{font-size:24px}
             <figure class="pfoto"><img width="640" height="641" src="../media/espeto.jpg" alt="Espetos, sardinky na rožni na pláži v Málaze" loading="lazy"><figcaption>¡Saludos desde Málaga!</figcaption></figure>
             <p><a href="/kurz/den-1.html">Podívej se, jak vypadá lekce 1 →</a></p>
             <h4>Rozdíl proti e-booku</h4>
-            <p>Kurz zdarma je ochutnávka: 30 frází. E-book jich má 100 v deseti situacích, ke každé výslovnost a tip, k tomu scénky a bonusy. A zůstane ti navždy v PDF.</p>
-            <a class="btn ghost" href="../index.html#zdarma">Chci kurz zdarma</a>
+            <p>5 lekcí zdarma je ochutnávka: 30 frází. E-book jich má 100 v deseti situacích, ke každé výslovnost a tip, k tomu scénky a bonusy. A zůstane ti navždy v PDF.</p>
+            <a class="btn ghost" href="../index.html#zdarma">Chci 5 lekcí zdarma</a>
           </div>
         </article>
   <div class="dalsi"><h2>Další produkty</h2><ul><li><a href="ebook.html">E-book 100 frází na dovolenou</a></li><li><a href="clenstvi.html">Členství Pa&#x27;lante!</a></li><li><a href="100-frazi-do-usi.html">100 frází do uší</a></li><li><a href="audiokurz.html">Audiokurz Španělsky do uší</a></li></ul></div>

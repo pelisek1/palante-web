@@ -319,6 +319,8 @@ footer .hand{font-size:24px}
 .plan h3{grid-area:t}.plan .price{grid-area:p}.plan ul{grid-area:u}.plan>.btn{grid-area:b;position:relative;z-index:2;white-space:nowrap;justify-self:end}
 .plan-link{color:inherit;text-decoration:none}.plan-link::after{content:"";position:absolute;inset:0;z-index:1}.plan:hover h3{text-decoration:underline;text-underline-offset:4px}
 @media (max-width:760px){.plan{grid-template-columns:1fr;grid-template-areas:"t" "p" "u" "b"}.plan>.btn{justify-self:start}}
+.rozcesti{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;align-items:stretch}.rc-karta{background:var(--card);border-radius:4px;padding:28px 26px;box-shadow:0 10px 24px rgba(60,40,10,.14);display:flex;flex-direction:column;gap:12px;align-items:flex-start}.rc-karta h3{margin:0}.rc-karta p{margin:0}.rc-vyber{font-weight:600}.rc-urovne{display:flex;gap:10px;flex-wrap:wrap}.rc-urovne .btn{padding:11px 20px}.rc-test{margin-top:22px}.rc-test a{color:var(--red);font-weight:600}@media (max-width:760px){.rozcesti{grid-template-columns:1fr}}
+@media (max-width:430px){header.site .btn{padding:10px 11px;font-size:14px}header.site .akce{gap:6px}}
 </style>
 <style>
 .ptop{background:var(--ink);padding-block:16px}.ptop .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
@@ -343,6 +345,7 @@ footer .hand{font-size:24px}
 .shead-btn{background:#FBF8F1;color:#2B2116;border-radius:999px;padding:9px 16px;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;text-decoration:none;white-space:nowrap}
 .shead-prihlasit{display:inline-flex;align-items:center;gap:6px;color:#FBF8F1;opacity:.9;text-decoration:none;font-family:"Instrument Sans",system-ui,sans-serif;font-weight:600;font-size:15px;white-space:nowrap}
 .shead nav .shead-menu-prihlasit{display:none}
+@media (max-width:430px){.shead-btn{padding:8px 12px;font-size:14px}.shead-in{gap:8px}}
 @media (max-width:380px){.shead-prihlasit{display:none!important}.shead nav .shead-menu-prihlasit{display:block}}
 .shead-prihlasit:hover{opacity:1}.shead-prihlasit svg{width:20px;height:20px}
 .shead-menu{display:none;background:transparent;border:1px solid rgba(251,248,241,.5);color:#FBF8F1;border-radius:999px;width:42px;height:42px;padding:0;cursor:pointer;place-items:center}
@@ -355,7 +358,7 @@ footer .hand{font-size:24px}
 <style id="img-auto">:where(img[width][height]){height:auto}</style>
 </head>
 <body>
-<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#test">Úrovně</a><a href="/index.html#produkty">Produkty</a><a href="/index.html#spanelsko">Španělsko</a><a href="/kontakt.html">Kontakt</a><a class="shead-menu-prihlasit" href="https://app.palante.cz/app/">Přihlásit se</a></nav><a class="shead-prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="shead-btn" href="/index.html#zdarma">5 lekcí zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
+<header class="shead"><div class="shead-in"><a class="shead-logo" href="/index.html">pa<span>'</span>lante<span>!</span></a><nav id="shead-menu"><a href="/index.html#scena">Ukázka lekce</a><a href="/index.html#metoda">Metoda</a><a href="/index.html#test">Úrovně</a><a href="/index.html#produkty">Produkty</a><a href="/index.html#spanelsko">Španělsko</a><a href="/kontakt.html">Kontakt</a><a class="shead-menu-prihlasit" href="https://app.palante.cz/app/">Přihlásit se</a></nav><a class="shead-prihlasit" href="https://app.palante.cz/app/" aria-label="Přihlásit se do aplikace"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8a4 4 0 0 0 0 8z M4 21c1-4 4-6 8-6s7 2 8 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Přihlásit se</span></a><a class="shead-btn" href="/index.html#zacni">Začni zdarma</a><button class="shead-menu" type="button" aria-expanded="false" aria-controls="shead-menu" aria-label="Menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button></div></header>
 <main class="ruled pmain"><div class="wrap">
   <a class="back" href="../index.html#produkty">← Zpět na produkty</a>
   <article class="prod" id="clenstvi">
@@ -374,12 +377,12 @@ footer .hand{font-size:24px}
             </ul>
             <h4>Jak se platí</h4>
             <ul><li>Členství na zkoušku: 5 dní zdarma, bez karty, stačí e-mail. Máš v něm i 15 minut rozhovoru s Lucíou. Když si pak členství nevybereš, nic neplatíš a přístup jen skončí</li><li>Měsíčně 390 Kč kartou, převodem nebo QR kódem. Platíš vždy na jeden měsíc, nic se samo nestrhává. 3 dny před koncem ti připomeneme e-mailem</li><li>Půl roku 1 950 Kč jednou platbou, 6 měsíců za cenu 5. Samo se neobnovuje, před koncem ti připomeneme e-mailem</li><li>Hodinu rozhovorů navíc si kdykoli dokoupíš za 290 Kč, nepropadá</li></ul>
-            <p>Měsíc i půl roku zaplatíš v aplikaci kartou, převodem nebo QR kódem.</p>
+            <p>Měsíc i půl roku zaplatíš v aplikaci kartou, převodem nebo QR kódem. Tlačítko „Koupit členství“ tě přihlásí a otevře výběr členství.</p>
             <h4 id="urovne">Vyber si, odkud začneš</h4>
             <p>Lekce jsou na čtyřech úrovních, na každé je jich aspoň deset a pak přibývají. Začneš tam, kam patříš, a v aplikaci můžeš kdykoli přeskočit dopředu nebo se vrátit. Nevíš? <a href="../index.html#test">Test úrovně</a> trvá 3 minuty.</p>
             <ul class="lvls"><li class="lvl" data-u="A0"><div class="lvl-h"><b>A0</b><span>Úplně od nuly</span></div><p>Nakoupíš na trhu, objednáš v baru, představíš se, zeptáš se na cestu. Čísla, ser a estar, me gusta.</p><div class="lvl-a"><a href="../lekce/lekce-1-ukazka.html">Ukázka: Lekce 1: Na trhu</a><button type="button" class="lvl-btn" data-u="A0">Začnu tady</button></div></li><li class="lvl" data-u="A1"><div class="lvl-h"><b>A1</b><span>Pár frází znám</span></div><p>Mluvíš o rodině a o svém dni, plánuješ výlet, nakupuješ oblečení, porovnáváš. Přítomný čas všech běžných sloves, ir a + infinitiv.</p><div class="lvl-a"><a href="../lekce/ukazka-lekce-11.html">Ukázka: Lekce 11: Paco ukazuje fotky</a><button type="button" class="lvl-btn" data-u="A1">Začnu tady</button></div></li><li class="lvl" data-u="A2"><div class="lvl-h"><b>A2</b><span>Domluvím se v obchodě</span></div><p>Vyprávíš, co se stalo dnes, včera i kdysi. Všechny minulé časy, zájmena lo, la, se lo, rozkazovací způsob, por a para.</p><div class="lvl-a"><a href="../lekce/ukazka-lekce-21.html">Ukázka: Lekce 21: Co jsi dneska dělal(a)?</a><button type="button" class="lvl-btn" data-u="A2">Začnu tady</button></div></li><li class="lvl" data-u="B1"><div class="lvl-h"><b>B1</b><span>Zvládnu delší rozhovor</span></div><p>Říkáš názor, nesouhlasíš, radíš, mluvíš o přáních a představách. Subjunktiv, kondicionál, nepřímá řeč.</p><div class="lvl-a"><a href="../lekce/ukazka-lekce-31.html">Ukázka: Lekce 31: Turisté na trhu</a><button type="button" class="lvl-btn" data-u="B1">Začnu tady</button></div></li></ul>
             <p class="lvl-ok" id="lvl-ok" hidden></p>
-            <div class="lvl-start"><a class="btn" id="lvl-start" href="https://app.palante.cz/app/prihlaseni">Vyzkoušet členství zdarma</a></div>
+            <div class="lvl-start"><a class="btn" id="lvl-start" href="https://app.palante.cz/app/prihlaseni">Vyzkoušet členství zdarma</a><a class="btn ghost" href="https://app.palante.cz/app/ucet">Koupit členství</a></div>
             <style>
               .prod ul.lvls{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:10px}
               .prod .lvls li.lvl{margin:0;padding-left:16px;background:var(--paper);border:2px solid transparent;border-radius:6px;padding:14px 16px;display:grid;gap:6px}
@@ -391,7 +394,7 @@ footer .hand{font-size:24px}
               .lvl.on .lvl-btn{background:var(--ink);color:var(--paper)}
               .prod .lvls li.lvl{cursor:pointer;transition:border-color .15s,box-shadow .15s}.prod .lvls li.lvl:hover{border-color:rgba(192,57,43,.45);box-shadow:0 4px 12px rgba(60,40,10,.1)}
               .lvl-btn:focus-visible{outline:3px solid var(--red);outline-offset:2px}
-              .lvl-ok{margin-top:10px;font-weight:600}.lvl-start{margin-top:14px}
+              .lvl-ok{margin-top:10px;font-weight:600}.lvl-start{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
             </style>
             <script>
             (function(){
@@ -410,6 +413,7 @@ footer .hand{font-size:24px}
             <figure class="pfoto"><img width="412" height="512" src="../media/lucia-bar.jpg" alt="Lucía za barem na tržnici" loading="lazy"><figcaption>Lucía, bar na tržnici</figcaption></figure>
             <p>Jak lekce vypadá, si můžeš vyzkoušet hned.</p>
             <a class="btn" href="https://app.palante.cz/app/prihlaseni">Vyzkoušet členství zdarma</a>
+            <a class="btn ghost" href="https://app.palante.cz/app/ucet">Koupit členství</a>
             <a class="btn ghost" href="../lekce/lekce-1-ukazka.html">Zkusit ukázkovou lekci</a>
           </div>
         </article>
